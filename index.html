@@ -2,16 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:wght@600&display=swap"
       rel="stylesheet"
     />
-    <title>Konga Yakata 2026 | Biggest Black Friday LG Deals</title>
+    <title>Konga Yakata - LG Deals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <meta name="description" content="Experience Konga Yakata 2026! Shop the biggest Black Friday deals on LG Home Appliances, TVs, Air Conditioners, and Audio. Limited time offers, huge discounts, and fast delivery." />
     <style>
+      /* Base Resets */
+      :root {
+        --konga-red: #a50034;
+        --konga-pink: #ed017f;
+      }
+
       /* Reset matching Yakata feel */
       *,
       *::before,
@@ -25,6 +32,7 @@
         margin: 0;
         padding: 0;
         border: 0;
+        overflow-x: hidden;
       }
 
       body {
@@ -1740,14 +1748,10 @@
           padding: 0.75rem 1rem !important;
         }
         .countdown-tag {
-          font-size: 0.8rem !important;
-          padding: 8px 16px !important;
-          gap: 8px !important;
+          transform: scale(0.65) !important;
+          transform-origin: top center !important;
           white-space: nowrap !important;
-        }
-        .countdown-tag span.time-box {
-          font-size: 0.9rem !important;
-          padding: 2px 4px !important;
+          margin-bottom: -1rem !important; /* Compensate for scaled down height */
         }
 
         /* Banner & Image Aspect Ratios */

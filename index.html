@@ -1751,6 +1751,7 @@
           transform: scale(0.65) !important;
           transform-origin: top center !important;
           white-space: nowrap !important;
+          width: max-content !important;
           margin-bottom: -1rem !important; /* Compensate for scaled down height */
         }
 
@@ -1883,7 +1884,7 @@
             <label class="banner-arrow banner-next" for="banner2" aria-label="Next banner">&gt;</label>
           </div>
           <div class="countdown-tag">
-            Deals End In:
+            <span style="white-space: nowrap;">Deals End In:</span>
             <div style="display: flex; gap: 8px;">
               <span class="time-box" id="days">02</span> :
               <span class="time-box" id="hours">14</span> :

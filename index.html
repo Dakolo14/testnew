@@ -1748,11 +1748,32 @@
           padding: 0.75rem 1rem !important;
         }
         .countdown-tag {
-          transform: scale(0.65) !important;
-          transform-origin: top center !important;
+          font-size: 0.85rem !important;
+          padding: 8px 16px !important;
+          gap: 6px !important;
+          border-bottom-left-radius: 16px !important;
+          border-bottom-right-radius: 16px !important;
           white-space: nowrap !important;
-          width: max-content !important;
-          margin-bottom: -1rem !important; /* Compensate for scaled down height */
+          width: fit-content !important;
+          margin-bottom: 0 !important;
+          transform: none !important;
+        }
+        .countdown-tag::before,
+        .countdown-tag::after {
+          width: 16px !important;
+          height: 16px !important;
+        }
+        .countdown-tag::before {
+          left: -16px !important;
+          background: radial-gradient(circle at 0% 100%, transparent 15.5px, #a50034 16px) !important;
+        }
+        .countdown-tag::after {
+          right: -16px !important;
+          background: radial-gradient(circle at 100% 100%, transparent 15.5px, #a50034 16px) !important;
+        }
+        .countdown-tag span.time-box {
+          font-size: 0.9rem !important;
+          padding: 4px 6px !important;
         }
 
         /* Banner & Image Aspect Ratios */

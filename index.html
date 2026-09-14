@@ -1681,12 +1681,24 @@
         .featured-hubs-section,
         .flash-deals-section,
         .our-deals-section,
-        .best-prices-header-section,
-        .bento-grid-section,
         .category-collections-section,
         .our-partners-section,
         .twin-banners-section {
           margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
+          padding-left: 0.5rem !important;
+          padding-right: 0.5rem !important;
+        }
+
+        /* Fix gap between Best Prices Header and Bento Grid */
+        .best-prices-header-section {
+          margin-top: 2rem !important;
+          margin-bottom: 0 !important;
+          padding-left: 0.5rem !important;
+          padding-right: 0.5rem !important;
+        }
+        .bento-grid-section {
+          margin-top: 0 !important;
           margin-bottom: 1rem !important;
           padding-left: 0.5rem !important;
           padding-right: 0.5rem !important;
@@ -1725,7 +1737,7 @@
         .shop-by-category-header, 
         .centered-red-header {
           font-size: 1rem !important;
-          padding: 1rem !important;
+          padding: 0.75rem 1rem !important;
         }
         .countdown-tag {
           font-size: 0.8rem !important;

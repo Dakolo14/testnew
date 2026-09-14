@@ -1672,6 +1672,108 @@
       .written-seo a {
         color: #e6007e;
         text-decoration: underline;
+      /* ========================================= */
+      /* --- COMPREHENSIVE MOBILE OPTIMIZATIONS -- */
+      /* ========================================= */
+      @media (max-width: 768px) {
+        /* Spacing & Padding Fixes */
+        .shop-by-category-section,
+        .featured-hubs-section,
+        .flash-deals-section,
+        .our-deals-section,
+        .best-prices-header-section,
+        .bento-grid-section,
+        .category-collections-section,
+        .our-partners-section,
+        .twin-banners-section {
+          margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
+          padding-left: 0.5rem !important;
+          padding-right: 0.5rem !important;
+        }
+
+        .dotd-section,
+        .promo-banners-section {
+          padding: 2rem 1rem !important;
+        }
+
+        .written-seo {
+          margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
+          padding: 1.5rem 1rem !important;
+        }
+
+        /* Typography Scaling */
+        .written-seo h2 {
+          font-size: 1.5rem !important;
+        }
+        .written-seo h3 {
+          font-size: 1.15rem !important;
+        }
+        .written-seo p, .written-seo ul li {
+          font-size: 0.95rem !important;
+        }
+        .promo-title {
+          font-size: 1.5rem !important;
+        }
+        .dotd-title {
+          font-size: 1.2rem !important;
+        }
+        .flash-deals-title-area h2 {
+          font-size: 1.1rem !important;
+        }
+        .shop-by-category-header, 
+        .centered-red-header {
+          font-size: 1rem !important;
+          padding: 1rem !important;
+        }
+        .countdown-tag {
+          font-size: 0.9rem !important;
+          padding: 10px 24px !important;
+        }
+        .countdown-tag span.time-box {
+          font-size: 1rem !important;
+          padding: 3px 6px !important;
+        }
+
+        /* Banner & Image Aspect Ratios */
+        .banner-carousel-container {
+          aspect-ratio: 16 / 9 !important;
+          border-radius: 8px !important;
+        }
+        .twin-banners-container .banner-placeholder {
+          aspect-ratio: 16 / 9 !important;
+        }
+        .our-deals-card {
+          aspect-ratio: 1 / 1 !important;
+        }
+        .dotd-image-area {
+          aspect-ratio: 1 / 1 !important;
+        }
+
+        /* Grid Collapsing Enforcements */
+        .shop-category-grid {
+          grid-template-columns: 1fr 1fr !important;
+          gap: 1rem !important;
+        }
+        .our-deals-grid,
+        .bento-grid,
+        .collections-grid {
+          gap: 1rem !important;
+        }
+        .partners-grid {
+          grid-template-columns: repeat(3, 1fr) !important;
+          gap: 0.75rem !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .partners-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .shop-category-grid {
+          grid-template-columns: 1fr !important;
+        }
       }
     </style>
   </head>

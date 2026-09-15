@@ -789,52 +789,71 @@
       }
 
       
-      .hub-editorial-hero {
-        width: 100%;
-        aspect-ratio: 16 / 10;
-        margin-bottom: 1.25rem;
+      
+      /* Top Section: Circular Avatars */
+      .hub-avatar-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        flex-grow: 1;
+        margin-bottom: 1.5rem;
+        justify-content: center;
       }
-      .hub-hero-placeholder {
-        width: 100%;
-        height: 100%;
-        background-color: #f4f4f4;
-        border: 2px dashed #ddd;
-        border-radius: 6px;
-      }
-      .hub-editorial-list {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 1.5rem 0;
+      .hub-avatar-item {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+      .hub-avatar-placeholder {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #f9f9f9;
+        border: 2px dashed #ccc;
+        transition: border-color 0.3s, transform 0.3s;
+      }
+      .hub-avatar-item:hover .hub-avatar-placeholder {
+        border-color: #ed017f;
+        transform: scale(1.05);
+      }
+      .hub-avatar-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #444;
+      }
+
+      /* Bottom Section: Chips/Tag Cloud */
+      .hub-chips-hero {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background-color: #f4f4f4;
+        border: 2px dashed #ddd;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .hub-chips-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
         flex-grow: 1;
       }
-      .hub-editorial-list li a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: none;
-        color: #333;
-        font-size: 0.875rem;
+      .hub-chip {
+        padding: 0.35rem 0.75rem;
+        background-color: #f0f0f0;
+        border-radius: 16px;
+        font-size: 0.75rem;
         font-weight: 500;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid #f0f0f0;
-        transition: color 0.2s ease;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.2s, color 0.2s;
       }
-      .hub-editorial-list li a:last-child {
-        border-bottom: none;
-      }
-      .hub-editorial-list li a:hover {
-        color: #ed017f;
-      }
-      .hub-editorial-list li a .arrow {
-        color: #ccc;
-        transition: transform 0.2s ease, color 0.2s ease;
-      }
-      .hub-editorial-list li a:hover .arrow {
-        transform: translateX(4px);
-        color: #ed017f;
+      .hub-chip:hover {
+        background-color: #ed017f;
+        color: #fff;
       }
 
       .hub-footer {
@@ -2116,14 +2135,24 @@
           
           <div class="hub-card">
             <h3 class="hub-title">Top Computing & Tech</h3>
-            <div class="hub-editorial-hero">
-              <div class="hub-hero-placeholder"></div>
+            <div class="hub-avatar-grid">
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Laptops</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Consoles</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Starlink</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Printers</span>
+              </a>
             </div>
-            <ul class="hub-editorial-list">
-              <li><a href="#">HP & Asus Laptops <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Gaming Consoles <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Starlink Kits <span class="arrow">&rarr;</span></a></li>
-            </ul>
             <div class="hub-footer">
               <a href="#">Shop Tech Deals</a>
             </div>
@@ -2131,44 +2160,74 @@
 
           <div class="hub-card">
             <h3 class="hub-title">Bestselling Smartphones</h3>
-            <div class="hub-editorial-hero">
-              <div class="hub-hero-placeholder"></div>
+            <div class="hub-avatar-grid">
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Samsung</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">iPhones</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Xiaomi</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Tecno</span>
+              </a>
             </div>
-            <ul class="hub-editorial-list">
-              <li><a href="#">Samsung Galaxy <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Apple iPhones <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Xiaomi & Redmi <span class="arrow">&rarr;</span></a></li>
-            </ul>
             <div class="hub-footer">
               <a href="#">Upgrade Now</a>
             </div>
           </div>
 
           <div class="hub-card">
-            <h3 class="hub-title">Home & Power Essentials</h3>
-            <div class="hub-editorial-hero">
-              <div class="hub-hero-placeholder"></div>
+            <h3 class="hub-title">Home & Power</h3>
+            <div class="hub-avatar-grid">
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Generators</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Fridges</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Washers</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">ACs</span>
+              </a>
             </div>
-            <ul class="hub-editorial-list">
-              <li><a href="#">Solar Generators <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Refrigerators <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Washing Machines <span class="arrow">&rarr;</span></a></li>
-            </ul>
             <div class="hub-footer">
               <a href="#">Shop Home Deals</a>
             </div>
           </div>
 
           <div class="hub-card">
-            <h3 class="hub-title">Health & Beauty Deals</h3>
-            <div class="hub-editorial-hero">
-              <div class="hub-hero-placeholder"></div>
+            <h3 class="hub-title">Health & Beauty</h3>
+            <div class="hub-avatar-grid">
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Oral Care</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Vitamins</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Fragrances</span>
+              </a>
+              <a href="#" class="hub-avatar-item">
+                <div class="hub-avatar-placeholder"></div>
+                <span class="hub-avatar-label">Makeup</span>
+              </a>
             </div>
-            <ul class="hub-editorial-list">
-              <li><a href="#">Oral Care <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Vitamins <span class="arrow">&rarr;</span></a></li>
-              <li><a href="#">Fragrances <span class="arrow">&rarr;</span></a></li>
-            </ul>
             <div class="hub-footer">
               <a href="#">Discover Beauty</a>
             </div>
@@ -2517,14 +2576,13 @@
                 
         <div class="hub-card">
           <h3 class="hub-title">Grooming & Personal Care</h3>
-          <div class="hub-editorial-hero">
-            <div class="hub-hero-placeholder"></div>
+          <div class="hub-chips-hero"></div>
+          <div class="hub-chips-container">
+            <a href="#" class="hub-chip">Hair & Beard</a>
+            <a href="#" class="hub-chip">Shaving Gear</a>
+            <a href="#" class="hub-chip">Deodorants</a>
+            <a href="#" class="hub-chip">Trimmers</a>
           </div>
-          <ul class="hub-editorial-list">
-            <li><a href="#">Hair & Beard <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Shaving Gear <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Deodorants <span class="arrow">&rarr;</span></a></li>
-          </ul>
           <div class="hub-footer">
             <a href="#">Shop Grooming</a>
           </div>
@@ -2532,14 +2590,13 @@
 
         <div class="hub-card">
           <h3 class="hub-title">Skincare & Beauty</h3>
-          <div class="hub-editorial-hero">
-            <div class="hub-hero-placeholder"></div>
+          <div class="hub-chips-hero"></div>
+          <div class="hub-chips-container">
+            <a href="#" class="hub-chip">Face Serums</a>
+            <a href="#" class="hub-chip">Cleansers</a>
+            <a href="#" class="hub-chip">Sun Protection</a>
+            <a href="#" class="hub-chip">Masks</a>
           </div>
-          <ul class="hub-editorial-list">
-            <li><a href="#">Face Serums <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Cleansers <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Sun Protection <span class="arrow">&rarr;</span></a></li>
-          </ul>
           <div class="hub-footer">
             <a href="#">Discover Beauty</a>
           </div>
@@ -2547,14 +2604,13 @@
 
         <div class="hub-card">
           <h3 class="hub-title">Groceries & Pantry</h3>
-          <div class="hub-editorial-hero">
-            <div class="hub-hero-placeholder"></div>
+          <div class="hub-chips-hero"></div>
+          <div class="hub-chips-container">
+            <a href="#" class="hub-chip">Rice & Grains</a>
+            <a href="#" class="hub-chip">Cooking Oils</a>
+            <a href="#" class="hub-chip">Seasonings</a>
+            <a href="#" class="hub-chip">Canned Foods</a>
           </div>
-          <ul class="hub-editorial-list">
-            <li><a href="#">Rice & Grains <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Cooking Oils <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Seasonings <span class="arrow">&rarr;</span></a></li>
-          </ul>
           <div class="hub-footer">
             <a href="#">Shop Groceries</a>
           </div>
@@ -2562,14 +2618,13 @@
 
         <div class="hub-card">
           <h3 class="hub-title">Household Essentials</h3>
-          <div class="hub-editorial-hero">
-            <div class="hub-hero-placeholder"></div>
+          <div class="hub-chips-hero"></div>
+          <div class="hub-chips-container">
+            <a href="#" class="hub-chip">Tissue Paper</a>
+            <a href="#" class="hub-chip">Air Fresheners</a>
+            <a href="#" class="hub-chip">Hand Washes</a>
+            <a href="#" class="hub-chip">Detergents</a>
           </div>
-          <ul class="hub-editorial-list">
-            <li><a href="#">Tissue Paper <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Air Fresheners <span class="arrow">&rarr;</span></a></li>
-            <li><a href="#">Hand Washes <span class="arrow">&rarr;</span></a></li>
-          </ul>
           <div class="hub-footer">
             <a href="#">Stock Up Now</a>
           </div>

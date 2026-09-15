@@ -788,80 +788,53 @@
         color: #111;
       }
 
-      .hub-content {
-        flex-grow: 1;
-        display: grid;
-        gap: 1rem;
-        margin-bottom: 1.25rem;
-        aspect-ratio: 1 / 1;
+      
+      .hub-editorial-hero {
         width: 100%;
+        aspect-ratio: 16 / 10;
+        margin-bottom: 1.25rem;
       }
-
-      .hub-item {
+      .hub-hero-placeholder {
+        width: 100%;
+        height: 100%;
+        background-color: #f4f4f4;
+        border: 2px dashed #ddd;
+        border-radius: 6px;
+      }
+      .hub-editorial-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      .hub-placeholder {
-        background-color: #f9f9f9;
-        border: 2px dashed #ccc;
-        border-radius: 4px;
-        width: 100%;
+        gap: 0.75rem;
         flex-grow: 1;
+      }
+      .hub-editorial-list li a {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 0.875rem;
+        font-weight: 500;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        transition: color 0.2s ease;
       }
-
-      .hub-item-label {
-        font-size: 0.75rem;
-        color: #444;
-        margin-top: 0.5rem;
-        text-align: center;
-        font-weight: 400;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      .hub-editorial-list li a:last-child {
+        border-bottom: none;
       }
-
-      /* Layout 1 */
-      .hub-layout-1 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+      .hub-editorial-list li a:hover {
+        color: #ed017f;
       }
-      .hub-layout-1 .tall {
-        grid-column: 1;
-        grid-row: 1 / 3;
+      .hub-editorial-list li a .arrow {
+        color: #ccc;
+        transition: transform 0.2s ease, color 0.2s ease;
       }
-
-      /* Layout 2 */
-      .hub-layout-2 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-      }
-      .hub-layout-2 .wide {
-        grid-column: 1 / 3;
-        grid-row: 1;
-      }
-
-      /* Layout 3 */
-      .hub-layout-3 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-      }
-      .hub-layout-3 .wide {
-        grid-column: 1 / 3;
-        grid-row: 2;
-      }
-
-      /* Layout 4 */
-      .hub-layout-4 {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-      }
-      .hub-layout-4 .full {
-        grid-column: 1;
-        grid-row: 1;
+      .hub-editorial-list li a:hover .arrow {
+        transform: translateX(4px);
+        color: #ed017f;
       }
 
       .hub-footer {
@@ -2141,80 +2114,61 @@
       <div class="container">
         <div class="featured-hubs-grid">
           
-          
           <div class="hub-card">
             <h3 class="hub-title">Top Computing & Tech</h3>
-            <div class="hub-content hub-layout-1">
-              <div class="hub-item tall">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">HP & Asus Laptops</span>
-              </div>
-              <div class="hub-item small">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Gaming Consoles</span>
-              </div>
-              <div class="hub-item small">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Starlink Kits</span>
-              </div>
+            <div class="hub-editorial-hero">
+              <div class="hub-hero-placeholder"></div>
             </div>
+            <ul class="hub-editorial-list">
+              <li><a href="#">HP & Asus Laptops <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Gaming Consoles <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Starlink Kits <span class="arrow">&rarr;</span></a></li>
+            </ul>
             <div class="hub-footer">
               <a href="#">Shop Tech Deals</a>
             </div>
           </div>
 
-          
           <div class="hub-card">
             <h3 class="hub-title">Bestselling Smartphones</h3>
-            <div class="hub-content hub-layout-2">
-              <div class="hub-item wide">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Samsung Galaxy</span>
-              </div>
-              <div class="hub-item small">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Apple iPhones</span>
-              </div>
-              <div class="hub-item small">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Xiaomi & Redmi</span>
-              </div>
+            <div class="hub-editorial-hero">
+              <div class="hub-hero-placeholder"></div>
             </div>
+            <ul class="hub-editorial-list">
+              <li><a href="#">Samsung Galaxy <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Apple iPhones <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Xiaomi & Redmi <span class="arrow">&rarr;</span></a></li>
+            </ul>
             <div class="hub-footer">
               <a href="#">Upgrade Now</a>
             </div>
           </div>
 
-          
           <div class="hub-card">
             <h3 class="hub-title">Home & Power Essentials</h3>
-            <div class="hub-content hub-layout-3">
-              <div class="hub-item small">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Solar Generators</span>
-              </div>
-              <div class="hub-item small">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Refrigerators</span>
-              </div>
-              <div class="hub-item wide">
-                <div class="hub-placeholder"></div>
-                <span class="hub-item-label">Washing Machines</span>
-              </div>
+            <div class="hub-editorial-hero">
+              <div class="hub-hero-placeholder"></div>
             </div>
+            <ul class="hub-editorial-list">
+              <li><a href="#">Solar Generators <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Refrigerators <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Washing Machines <span class="arrow">&rarr;</span></a></li>
+            </ul>
             <div class="hub-footer">
               <a href="#">Shop Home Deals</a>
             </div>
           </div>
 
-          
           <div class="hub-card">
             <h3 class="hub-title">Health & Beauty Deals</h3>
-            <div class="hub-content hub-layout-4">
-              <div class="hub-item full">
-                <div class="hub-placeholder"></div>
-              </div>
+            <div class="hub-editorial-hero">
+              <div class="hub-hero-placeholder"></div>
             </div>
+            <ul class="hub-editorial-list">
+              <li><a href="#">Oral Care <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Vitamins <span class="arrow">&rarr;</span></a></li>
+              <li><a href="#">Fragrances <span class="arrow">&rarr;</span></a></li>
+            </ul>
             <div class="hub-footer">
               <a href="#">Discover Beauty</a>
             </div>
@@ -2563,20 +2517,14 @@
                 
         <div class="hub-card">
           <h3 class="hub-title">Grooming & Personal Care</h3>
-          <div class="hub-content hub-layout-1">
-            <div class="hub-item tall">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Hair & Beard</span>
-            </div>
-            <div class="hub-item small">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Shaving Gear</span>
-            </div>
-            <div class="hub-item small">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Deodorants</span>
-            </div>
+          <div class="hub-editorial-hero">
+            <div class="hub-hero-placeholder"></div>
           </div>
+          <ul class="hub-editorial-list">
+            <li><a href="#">Hair & Beard <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Shaving Gear <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Deodorants <span class="arrow">&rarr;</span></a></li>
+          </ul>
           <div class="hub-footer">
             <a href="#">Shop Grooming</a>
           </div>
@@ -2584,20 +2532,14 @@
 
         <div class="hub-card">
           <h3 class="hub-title">Skincare & Beauty</h3>
-          <div class="hub-content hub-layout-2">
-            <div class="hub-item wide">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Face Serums</span>
-            </div>
-            <div class="hub-item small">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Cleansers</span>
-            </div>
-            <div class="hub-item small">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Sun Protection</span>
-            </div>
+          <div class="hub-editorial-hero">
+            <div class="hub-hero-placeholder"></div>
           </div>
+          <ul class="hub-editorial-list">
+            <li><a href="#">Face Serums <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Cleansers <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Sun Protection <span class="arrow">&rarr;</span></a></li>
+          </ul>
           <div class="hub-footer">
             <a href="#">Discover Beauty</a>
           </div>
@@ -2605,20 +2547,14 @@
 
         <div class="hub-card">
           <h3 class="hub-title">Groceries & Pantry</h3>
-          <div class="hub-content hub-layout-3">
-            <div class="hub-item small">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Rice & Grains</span>
-            </div>
-            <div class="hub-item small">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Cooking Oils</span>
-            </div>
-            <div class="hub-item wide">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Seasonings</span>
-            </div>
+          <div class="hub-editorial-hero">
+            <div class="hub-hero-placeholder"></div>
           </div>
+          <ul class="hub-editorial-list">
+            <li><a href="#">Rice & Grains <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Cooking Oils <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Seasonings <span class="arrow">&rarr;</span></a></li>
+          </ul>
           <div class="hub-footer">
             <a href="#">Shop Groceries</a>
           </div>
@@ -2626,16 +2562,19 @@
 
         <div class="hub-card">
           <h3 class="hub-title">Household Essentials</h3>
-          <div class="hub-content hub-layout-4">
-            <div class="hub-item full">
-              <div class="hub-placeholder"></div>
-              <span class="hub-item-label">Tissue Paper</span>
-            </div>
+          <div class="hub-editorial-hero">
+            <div class="hub-hero-placeholder"></div>
           </div>
+          <ul class="hub-editorial-list">
+            <li><a href="#">Tissue Paper <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Air Fresheners <span class="arrow">&rarr;</span></a></li>
+            <li><a href="#">Hand Washes <span class="arrow">&rarr;</span></a></li>
+          </ul>
           <div class="hub-footer">
             <a href="#">Stock Up Now</a>
           </div>
         </div>
+
       </div>
     </section>
 

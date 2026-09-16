@@ -790,40 +790,7 @@
 
       
       
-      /* Top Section: Circular Avatars */
-      .hub-avatar-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        flex-grow: 1;
-        margin-bottom: 1.5rem;
-        justify-content: center;
-      }
-      .hub-avatar-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 0.5rem;
-        text-decoration: none;
-      }
-      .hub-avatar-placeholder {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background-color: #f9f9f9;
-        border: 2px dashed #ccc;
-        transition: border-color 0.3s, transform 0.3s;
-      }
-      .hub-avatar-item:hover .hub-avatar-placeholder {
-        border-color: #ed017f;
-        transform: scale(1.05);
-      }
-      .hub-avatar-label {
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: #444;
-      }
+      
 
       /* Bottom Section: Chips/Tag Cloud */
       .hub-chips-hero {
@@ -855,6 +822,52 @@
         background-color: #ed017f;
         color: #fff;
       }
+
+      
+      /* Top Section: Full-Bleed Quarters */
+      .hub-quad-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 6px;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 1.25rem;
+        flex-grow: 1;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .hub-quad-item {
+        position: relative;
+        background-color: #f4f4f4;
+        text-decoration: none;
+        overflow: hidden;
+      }
+      .hub-quad-placeholder {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        transition: transform 0.4s ease;
+      }
+      .hub-quad-item:hover .hub-quad-placeholder {
+        transform: scale(1.1);
+      }
+      .hub-quad-label {
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #fff;
+        background-color: rgba(0,0,0,0.6);
+        padding: 4px 8px;
+        border-radius: 4px;
+        z-index: 2;
+        max-width: 85%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      
 
       .hub-footer {
         border-top: 1px solid #eee;
@@ -2135,22 +2148,22 @@
           
           <div class="hub-card">
             <h3 class="hub-title">Top Computing & Tech</h3>
-            <div class="hub-avatar-grid">
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Laptops</span>
+            <div class="hub-quad-grid">
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
+                <span class="hub-quad-label">Laptops</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Consoles</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
+                <span class="hub-quad-label">Consoles</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Starlink</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #94a3b8;"></div>
+                <span class="hub-quad-label">Starlink</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Printers</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #64748b;"></div>
+                <span class="hub-quad-label">Printers</span>
               </a>
             </div>
             <div class="hub-footer">
@@ -2160,22 +2173,22 @@
 
           <div class="hub-card">
             <h3 class="hub-title">Bestselling Smartphones</h3>
-            <div class="hub-avatar-grid">
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Samsung</span>
+            <div class="hub-quad-grid">
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #f1f5f9;"></div>
+                <span class="hub-quad-label">Samsung</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">iPhones</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
+                <span class="hub-quad-label">iPhones</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Xiaomi</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
+                <span class="hub-quad-label">Xiaomi</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Tecno</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #94a3b8;"></div>
+                <span class="hub-quad-label">Tecno</span>
               </a>
             </div>
             <div class="hub-footer">
@@ -2185,22 +2198,22 @@
 
           <div class="hub-card">
             <h3 class="hub-title">Home & Power</h3>
-            <div class="hub-avatar-grid">
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Generators</span>
+            <div class="hub-quad-grid">
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #f8fafc;"></div>
+                <span class="hub-quad-label">Generators</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Fridges</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #f1f5f9;"></div>
+                <span class="hub-quad-label">Fridges</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Washers</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
+                <span class="hub-quad-label">Washers</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">ACs</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
+                <span class="hub-quad-label">ACs</span>
               </a>
             </div>
             <div class="hub-footer">
@@ -2210,22 +2223,22 @@
 
           <div class="hub-card">
             <h3 class="hub-title">Health & Beauty</h3>
-            <div class="hub-avatar-grid">
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Oral Care</span>
+            <div class="hub-quad-grid">
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #f1f5f9;"></div>
+                <span class="hub-quad-label">Oral Care</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Vitamins</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
+                <span class="hub-quad-label">Vitamins</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Fragrances</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
+                <span class="hub-quad-label">Fragrances</span>
               </a>
-              <a href="#" class="hub-avatar-item">
-                <div class="hub-avatar-placeholder"></div>
-                <span class="hub-avatar-label">Makeup</span>
+              <a href="#" class="hub-quad-item">
+                <div class="hub-quad-placeholder" style="background-color: #94a3b8;"></div>
+                <span class="hub-quad-label">Makeup</span>
               </a>
             </div>
             <div class="hub-footer">

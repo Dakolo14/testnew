@@ -1255,6 +1255,208 @@
         background-color: #333;
       }
 
+      /* ============================================================== */
+      /* --- DEAL OF THE DAY ANIMATION VARIANTS (4 EXPLORATIONS) ------ */
+      /* ============================================================== */
+
+      /* Variant Tag Label */
+      .dotd-variant-tag {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: fit-content;
+      }
+
+      /* --- VARIANT 1: 3D Floating Console & Shimmering Stock Bar --- */
+      @keyframes dotdFloat {
+        0%, 100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(-1deg);
+        }
+      }
+      @keyframes dotdShimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(200%); }
+      }
+      .dotd-variant-1 .dotd-image-area img {
+        animation: dotdFloat 3.8s ease-in-out infinite;
+        transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15));
+      }
+      .dotd-variant-1 .dotd-image-area:hover img {
+        animation-play-state: paused;
+        transform: scale(1.08) translateY(-4px);
+      }
+      .dotd-variant-1 .dotd-progress-fill {
+        position: relative;
+        overflow: hidden;
+      }
+      .dotd-variant-1 .dotd-progress-fill::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        background: linear-gradient(90deg, transparent, rgba(237, 1, 127, 0.85), transparent);
+        animation: dotdShimmer 1.8s infinite linear;
+      }
+
+      /* --- VARIANT 2: Radar Pulse "HOT" Beacon & Glow Breathing Halo --- */
+      @keyframes hotBeaconPulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 14px rgba(255, 255, 255, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+      }
+      @keyframes haloBreathe {
+        0%, 100% {
+          box-shadow: 0 10px 40px -10px rgba(0,0,0,0.3);
+        }
+        50% {
+          box-shadow: 0 15px 50px 0px rgba(255,255,255,0.45);
+        }
+      }
+      .dotd-variant-2 .dotd-hot-badge {
+        animation: hotBeaconPulse 1.8s infinite;
+      }
+      .dotd-variant-2 .dotd-image-area {
+        animation: haloBreathe 3s ease-in-out infinite;
+        transition: transform 0.35s ease;
+      }
+      .dotd-variant-2:hover .dotd-image-area {
+        transform: scale(1.02);
+      }
+
+      /* --- VARIANT 3: Cyber Magnetic Sheen CTA & Glass Glint Sweep --- */
+      @keyframes buttonSheen {
+        0%, 70% { left: -100%; }
+        100% { left: 160%; }
+      }
+      @keyframes cardGlint {
+        0%, 75% { transform: translateX(-150%) rotate(25deg); }
+        100% { transform: translateX(250%) rotate(25deg); }
+      }
+      .dotd-variant-3 .dotd-image-area::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 40%;
+        height: 200%;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
+        transform: rotate(25deg);
+        animation: cardGlint 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        pointer-events: none;
+      }
+      .dotd-variant-3 .dotd-claim-btn {
+        position: relative;
+        overflow: hidden;
+        background: #000;
+        border: 1px solid rgba(255,255,255,0.2);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .dotd-variant-3 .dotd-claim-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+        transform: skewX(-20deg);
+        animation: buttonSheen 3.2s infinite ease-in-out;
+      }
+      .dotd-variant-3 .dotd-claim-btn:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        background: #111;
+      }
+
+      /* --- VARIANT 4: Ultra Dynamic "Everything Combined" Premium Stage --- */
+      @keyframes discountPop {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.12); }
+      }
+      @keyframes stockDotBlink {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.3; transform: scale(0.8); }
+      }
+      .dotd-variant-4 .dotd-image-area img {
+        animation: dotdFloat 3.4s ease-in-out infinite;
+        filter: drop-shadow(0 18px 30px rgba(0,0,0,0.18));
+      }
+      .dotd-variant-4 .dotd-discount {
+        animation: discountPop 2.2s ease-in-out infinite;
+        background: #ffeb3b;
+        color: #000;
+        font-weight: 700;
+        box-shadow: 0 2px 10px rgba(255,235,59,0.4);
+      }
+      .dotd-variant-4 .dotd-hot-badge {
+        animation: hotBeaconPulse 1.6s infinite;
+      }
+      .dotd-variant-4 .stock-live-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #ffeb3b;
+        margin-right: 6px;
+        animation: stockDotBlink 1.2s infinite ease-in-out;
+      }
+      .dotd-variant-4 .dotd-progress-fill {
+        background: linear-gradient(90deg, #fff, #ffeb3b);
+        position: relative;
+        overflow: hidden;
+      }
+      .dotd-variant-4 .dotd-progress-fill::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        background: linear-gradient(90deg, transparent, rgba(237, 1, 127, 0.9), transparent);
+        animation: dotdShimmer 1.5s infinite linear;
+      }
+      .dotd-variant-4 .dotd-claim-btn {
+        background: #000;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+      }
+      .dotd-variant-4 .dotd-claim-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+        transform: skewX(-20deg);
+        animation: buttonSheen 2.8s infinite ease-in-out;
+      }
+      .dotd-variant-4 .dotd-claim-btn:hover {
+        background: #fff;
+        color: #ed017f;
+        font-weight: 700;
+        transform: translateY(-3px) scale(1.04);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      }
+
       @media (max-width: 900px) {
         .dotd-container {
           grid-template-columns: 1fr;
@@ -1588,8 +1790,8 @@
         gap: 1.5rem;
       }
       .bento-item {
-        background-color: #444;
-        border: 2px dashed #888;
+        background-color: #0b0b0f;
+        border: none;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -1602,8 +1804,24 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         text-align: center;
-        padding: 1rem;
+        padding: 0;
         box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        text-decoration: none;
+      }
+      .bento-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px;
+        transition: transform 0.4s ease;
+      }
+      .bento-item.has-image {
+        padding: 0;
+        background-color: #0b0b0f;
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
       }
       
       /* Bento Layout specific rules */
@@ -2263,10 +2481,11 @@
       </div>
     </section>
 
-    <section class="dotd-section section-reset">
+    <!-- Deal of the Day Section (Option 3: Cyber Sheen CTA & Glass Glint Sweep) -->
+    <section class="dotd-section dotd-variant-3 section-reset">
       <div class="dotd-container">
         <div class="dotd-image-area" style="background: #fff; border: none; overflow: hidden; padding: 2rem; position: relative;">
-          <div style="position: absolute; top: 16px; left: 16px; background-color: #ed017f; color: #fff; padding: 4px 12px; font-size: 0.875rem; font-weight: 600; border-radius: 20px; z-index: 10; display: flex; align-items: center; gap: 4px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+          <div class="dotd-hot-badge" style="position: absolute; top: 16px; left: 16px; background-color: #ed017f; color: #fff; padding: 4px 12px; font-size: 0.875rem; font-weight: 600; border-radius: 20px; z-index: 10; display: flex; align-items: center; gap: 4px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
             HOT
           </div>
           <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1280,c_limit/media/catalog/product/T/W/56319_1786710666.jpg" alt="ROG Ally" style="width: 100%; height: 100%; object-fit: contain;">
@@ -2737,26 +2956,18 @@
     
     <section class="bento-grid-section section-reset">
       <div class="bento-grid">
-        <div class="bento-item bento-large">
-          <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff;">Groceries</span>
-          <span style="font-size: 14px; font-weight: 300; color: #f0f0f0;">Shop & Chop</span>
-          <span style="font-size: 13px; font-weight: 300; color: #ccc;">3300 x 2600</span>
-        </div>
-        <div class="bento-item bento-wide">
-          <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff; letter-spacing: 1px;">Fashion & Footwear</span>
-          <span style="font-size: 14px; font-weight: 300; color: #f0f0f0;">Head to Toe</span>
-          <span style="font-size: 13px; font-weight: 300; color: #ccc;">3300 x 1250</span>
-        </div>
-        <div class="bento-item">
-          <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff; text-align: center;">Fitness & Sports</span>
-          <span style="font-size: 14px; font-weight: 300; color: #f0f0f0; text-align: center;">Stay Active</span>
-          <span style="font-size: 13px; font-weight: 300; color: #ccc; text-align: center;">1600 x 1250</span>
-        </div>
-        <div class="bento-item">
-          <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff; text-align: center;">Baby & Kids</span>
-          <span style="font-size: 14px; font-weight: 300; color: #f0f0f0; text-align: center;">Little Treasures</span>
-          <span style="font-size: 13px; font-weight: 300; color: #ccc; text-align: center;">1600 x 1250</span>
-        </div>
+        <a href="#" class="bento-item bento-large has-image deal-style-2">
+          <img src="newgroceries.gif" alt="Groceries - Shop & Chop">
+        </a>
+        <a href="#" class="bento-item bento-wide has-image deal-style-2">
+          <img src="newheadtoe.gif" alt="Fashion & Footwear - Head to Toe">
+        </a>
+        <a href="#" class="bento-item has-image deal-style-2">
+          <img src="Stay Active New.gif" alt="Fitness & Sports - Stay Active">
+        </a>
+        <a href="#" class="bento-item has-image deal-style-2">
+          <img src="Little Treasures New.gif" alt="Baby & Kids - Little Treasures">
+        </a>
       </div>
     </section>
 

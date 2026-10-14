@@ -864,6 +864,16 @@
       .hub-quad-item:hover .hub-quad-placeholder {
         transform: scale(1.1);
       }
+      .hub-quad-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .hub-quad-item:hover img {
+        transform: scale(1.08);
+      }
       .hub-quad-label {
         position: absolute;
         bottom: 8px;
@@ -1547,16 +1557,22 @@
       }
 
       .promo-image-placeholder {
-        background: #222;
-        border: 2px dashed #444;
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 8px;
-        height: 250px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #888;
-        font-style: italic;
+        width: 100%;
+        height: auto;
         margin-top: auto;
+        overflow: hidden;
+      }
+      .promo-image-placeholder img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .promo-card:hover .promo-image-placeholder img {
+        transform: scale(1.02);
       }
 
       .promo-action {
@@ -2054,6 +2070,409 @@
         }
       }
 
+      /* --- Authentic Booze Carousel Section --- */
+      .booze-section {
+        width: 100%;
+        max-width: 1400px;
+        margin: 3.5rem auto 0 auto !important;
+        padding: 0 1rem;
+      }
+      .booze-slider-wrapper {
+        position: relative;
+        background: #ffffff;
+        border-radius: 0 0 12px 12px;
+        padding: 0.5rem 1rem 1.5rem 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+      .booze-track {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-behavior: smooth;
+        gap: 12px;
+        padding: 1rem 0.5rem;
+        scrollbar-width: none;
+      }
+      .booze-track::-webkit-scrollbar {
+        display: none;
+      }
+      .booze-nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.65);
+        color: #ffffff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      }
+      .booze-nav-btn:hover {
+        background-color: rgba(0, 0, 0, 0.85);
+        transform: translateY(-50%) scale(1.08);
+      }
+      .booze-nav-btn.prev {
+        left: 8px;
+      }
+      .booze-nav-btn.next {
+        right: 8px;
+      }
+      .booze-product-card {
+        width: 200px;
+        flex-shrink: 0;
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        position: relative;
+        border: 1px solid #f0f0f0;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .booze-product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .booze-card-top-badges {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 5;
+        pointer-events: none;
+      }
+      .booze-discount-pill {
+        background: #029063;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid #fbdcdc;
+      }
+      .booze-img-wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .booze-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        background-color: #ffffff !important;
+        transition: transform 0.35s ease;
+      }
+      .booze-product-card:hover .booze-img-wrap img {
+        transform: scale(1.06);
+      }
+      .booze-info-wrap {
+        padding: 10px 12px 12px 12px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .booze-card-title {
+        font-size: 12px;
+        font-weight: 500;
+        color: #111827;
+        line-height: 1.4;
+        margin-bottom: 6px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 34px;
+      }
+      .booze-pricing-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+      }
+      .booze-cur-price {
+        font-size: 14px;
+        font-weight: 700;
+        color: #111827;
+      }
+      .booze-old-price {
+        font-size: 10px;
+        color: #6b7280;
+        text-decoration: line-through;
+        margin-top: 2px;
+      }
+      .booze-heart-btn {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        color: #9ca3af;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+      }
+      .booze-heart-btn:hover {
+        color: #ed017f;
+      }
+      .booze-delivery-tag {
+        font-size: 10px;
+        color: #ed017f;
+        font-weight: 500;
+        margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .booze-seller-tag {
+        font-size: 10px;
+        color: #4b5563;
+        margin-bottom: 6px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .booze-seller-tag span {
+        color: #ed017f;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .booze-seller-tag span:hover {
+        text-decoration: underline;
+      }
+      .booze-rating-row {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 8px;
+      }
+      .booze-stars {
+        display: flex;
+        align-items: center;
+      }
+      .booze-stars svg {
+        width: 12px;
+        height: 12px;
+      }
+      .booze-stars svg.filled {
+        color: #facc15;
+        fill: #facc15;
+      }
+      .booze-stars svg.empty {
+        color: #d1d5db;
+        fill: none;
+      }
+      .booze-review-count {
+        font-size: 10px;
+        color: #4b5563;
+      }
+      .booze-cart-btn {
+        margin-top: auto;
+        width: 100%;
+        background-color: #ed017f;
+        color: #ffffff;
+        border: none;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.15s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .booze-cart-btn:hover {
+        background-color: #c7016b;
+      }
+
+      /* --- Best Prices Section --- */
+      .best-prices-section {
+        width: 100%;
+        max-width: 1400px;
+        margin: 3.5rem auto 0 auto !important;
+        padding: 0 1rem;
+      }
+      .best-prices-slider-wrapper {
+        position: relative;
+        background: #ffffff;
+        border-radius: 0 0 12px 12px;
+        padding: 0.5rem 1rem 1.5rem 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+      .best-prices-track {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-behavior: smooth;
+        gap: 12px;
+        padding: 1rem 0.5rem;
+        scrollbar-width: none;
+      }
+      .best-prices-track::-webkit-scrollbar {
+        display: none;
+      }
+      .best-prices-nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0.65);
+        color: #ffffff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      }
+      .best-prices-nav-btn:hover {
+        background-color: rgba(0, 0, 0, 0.85);
+        transform: translateY(-50%) scale(1.08);
+      }
+      .best-prices-nav-btn.prev {
+        left: 8px;
+      }
+      .best-prices-nav-btn.next {
+        right: 8px;
+      }
+      .best-prices-product-card {
+        width: 200px;
+        flex-shrink: 0;
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        position: relative;
+        border: 1px solid #f0f0f0;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .best-prices-product-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+      .best-prices-card-top-badges {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        z-index: 5;
+        pointer-events: none;
+      }
+      .best-prices-discount-pill {
+        background: #029063;
+        color: #ffffff;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 4px;
+        border: 1px solid #fbdcdc;
+      }
+      .best-prices-img-wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      .best-prices-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        background-color: #ffffff !important;
+        transition: transform 0.35s ease;
+      }
+      .best-prices-product-card:hover .best-prices-img-wrap img {
+        transform: scale(1.06);
+      }
+      .best-prices-info-wrap {
+        padding: 10px 12px 12px 12px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      .best-prices-card-title {
+        font-size: 12px;
+        font-weight: 500;
+        color: #111827;
+        line-height: 1.4;
+        margin-bottom: 6px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 34px;
+      }
+      .best-prices-pricing-row {
+        margin-bottom: 12px;
+        min-height: 38px;
+      }
+      .best-prices-cur-price {
+        font-size: 14px;
+        font-weight: 700;
+        color: #111827;
+      }
+      .best-prices-old-price {
+        font-size: 10px;
+        color: #6b7280;
+        text-decoration: line-through;
+        margin-top: 2px;
+      }
+      .best-prices-cart-btn {
+        margin-top: auto;
+        width: 100%;
+        background-color: #ed017f;
+        color: #ffffff;
+        border: none;
+        padding: 8px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.15s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .best-prices-cart-btn:hover {
+        background-color: #c7016b;
+      }
+
       /* --- Written SEO Section --- */
       .written-seo {
         width: 100%;
@@ -2367,7 +2786,7 @@
               <a href="#" class="banner-slide">
                 <img src="Hot Deals.jpg" alt="Hot Deals">
               </a>
-              <a href="#" class="banner-slide">
+              <a href="https://www.konga.com/product/7022754" target="_blank" rel="noopener noreferrer" class="banner-slide">
                 <img src="Deal of the Day.jpg" alt="Deal of the Day">
               </a>
               <a href="#" class="banner-slide">
@@ -2484,27 +2903,47 @@
     <!-- Deal of the Day Section (Option 3: Cyber Sheen CTA & Glass Glint Sweep) -->
     <section class="dotd-section dotd-variant-3 section-reset">
       <div class="dotd-container">
-        <div class="dotd-image-area" style="background: #fff; border: none; overflow: hidden; padding: 2rem; position: relative;">
+        <a href="https://www.konga.com/product/7022754" target="_blank" rel="noopener noreferrer" class="dotd-image-area" style="background: #fff; border: none; overflow: hidden; padding: 2rem; position: relative; text-decoration: none; display: flex; align-items: center; justify-content: center; cursor: pointer;">
           <div class="dotd-hot-badge" style="position: absolute; top: 16px; left: 16px; background-color: #ed017f; color: #fff; padding: 4px 12px; font-size: 0.875rem; font-weight: 600; border-radius: 20px; z-index: 10; display: flex; align-items: center; gap: 4px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
             HOT
           </div>
-          <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1280,c_limit/media/catalog/product/T/W/56319_1786710666.jpg" alt="ROG Ally" style="width: 100%; height: 100%; object-fit: contain;">
-        </div>
+          <img id="dotdMainImg" src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/V/P/118566_1785231737.jpg" alt="Samsung 55&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua55m70hauxke" style="width: 100%; height: 100%; object-fit: contain; background: #ffffff !important;">
+        </a>
         <div class="dotd-details">
           <div class="dotd-subtitle">DEAL OF THE DAY &#183; RESETS AT 12PM</div>
-          <h2 class="dotd-title">ROG Ally</h2>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+            <span style="background: linear-gradient(90deg, #fde047, #eab308); color: #000; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 9999px; text-transform: uppercase;">Official Store</span>
+            <span style="font-size: 12px; color: rgba(255,255,255,0.85);">Product Code: <b>7022754</b></span>
+          </div>
+          <h2 class="dotd-title" style="font-size: 1.35rem; line-height: 1.35; margin-bottom: 0.75rem;">
+            <a href="https://www.konga.com/product/7022754" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none;">Samsung 55" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026)</a>
+          </h2>
           <div class="dotd-price-row">
-            <span class="dotd-current-price">&#8358;690,112</span>
-            <span class="dotd-old-price">&#8358;1,084,200</span>
-            <span class="dotd-discount">-36%</span>
+            <span class="dotd-current-price">&#8358;589,999</span>
+            <span class="dotd-old-price">&#8358;1,000,000</span>
+            <span class="dotd-discount">-30%</span>
           </div>
           <div class="dotd-progress-container">
             <div class="dotd-progress-bar">
-              <div class="dotd-progress-fill" style="width: 70%;"></div>
+              <div class="dotd-progress-fill" style="width: 73%;"></div>
             </div>
-            <div class="dotd-progress-text">14 left of 20 &#8211; going fast</div>
+            <div class="dotd-progress-text">27% left of stock &#8211; going fast</div>
           </div>
-          <button class="dotd-claim-btn">Claim This Deal</button>
+
+          <!-- Thumbnail switcher -->
+          <div style="display: flex; gap: 8px; margin-bottom: 1.25rem;">
+            <button type="button" onclick="document.getElementById('dotdMainImg').src='https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/V/P/118566_1785231737.jpg'; this.parentElement.querySelectorAll('button').forEach(b => b.style.borderColor='rgba(255,255,255,0.4)'); this.style.borderColor='#ffffff';" style="width: 44px; height: 44px; border-radius: 6px; border: 2px solid #ffffff; background: #ffffff; padding: 2px; cursor: pointer; overflow: hidden;">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_120,c_limit/media/catalog/product/V/P/118566_1785231737.jpg" alt="View 1" style="width: 100%; height: 100%; object-fit: contain;">
+            </button>
+            <button type="button" onclick="document.getElementById('dotdMainImg').src='https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/F/H/118566_1785231754.jpg'; this.parentElement.querySelectorAll('button').forEach(b => b.style.borderColor='rgba(255,255,255,0.4)'); this.style.borderColor='#ffffff';" style="width: 44px; height: 44px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.4); background: #ffffff; padding: 2px; cursor: pointer; overflow: hidden;">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_120,c_limit/media/catalog/product/F/H/118566_1785231754.jpg" alt="View 2" style="width: 100%; height: 100%; object-fit: contain;">
+            </button>
+            <button type="button" onclick="document.getElementById('dotdMainImg').src='https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/V/I/118566_1785231772.jpg'; this.parentElement.querySelectorAll('button').forEach(b => b.style.borderColor='rgba(255,255,255,0.4)'); this.style.borderColor='#ffffff';" style="width: 44px; height: 44px; border-radius: 6px; border: 2px solid rgba(255,255,255,0.4); background: #ffffff; padding: 2px; cursor: pointer; overflow: hidden;">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_120,c_limit/media/catalog/product/V/I/118566_1785231772.jpg" alt="View 3" style="width: 100%; height: 100%; object-fit: contain;">
+            </button>
+          </div>
+
+          <a href="https://www.konga.com/product/7022754" target="_blank" rel="noopener noreferrer" class="dotd-claim-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; text-align: center;">Claim This Deal</a>
         </div>
       </div>
     </section>
@@ -2531,19 +2970,19 @@
             <h3 class="hub-title">Top Computing & Tech</h3>
             <div class="hub-quad-grid">
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/R/H/_1784902533.png" alt="Laptops">
                 <span class="hub-quad-label">Laptops</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg" alt="Consoles">
                 <span class="hub-quad-label">Consoles</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #94a3b8;"></div>
-                <span class="hub-quad-label">Starlink</span>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/D/B/230034_1777037383.jpg" alt="Starlinks">
+                <span class="hub-quad-label">Starlinks</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #64748b;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/I/W/57289_1753523509.jpg" alt="Printers">
                 <span class="hub-quad-label">Printers</span>
               </a>
             </div>
@@ -2556,19 +2995,19 @@
             <h3 class="hub-title">Bestselling Smartphones</h3>
             <div class="hub-quad-grid">
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #f1f5f9;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/B/M/186576_1785291116.jpg" alt="Samsung">
                 <span class="hub-quad-label">Samsung</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/T/T/161515_1790884755.jpg" alt="iPhones">
                 <span class="hub-quad-label">iPhones</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg" alt="Xiaomi">
                 <span class="hub-quad-label">Xiaomi</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #94a3b8;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/H/A/118566_1789549980.jpg" alt="Infinix">
                 <span class="hub-quad-label">Infinix</span>
               </a>
             </div>
@@ -2581,19 +3020,19 @@
             <h3 class="hub-title">Home & Power</h3>
             <div class="hub-quad-grid">
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #f8fafc;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/E/_1790166368.png" alt="Generators">
                 <span class="hub-quad-label">Generators</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #f1f5f9;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/G/229301_1750257650.jpg" alt="Refrigerator">
                 <span class="hub-quad-label">Fridges</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/A/O/231472_1777545584.jpg" alt="Washer">
                 <span class="hub-quad-label">Washers</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg" alt="ACs">
                 <span class="hub-quad-label">ACs</span>
               </a>
             </div>
@@ -2605,21 +3044,21 @@
           <div class="hub-card">
             <h3 class="hub-title">Health & Beauty</h3>
             <div class="hub-quad-grid">
-              <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #f1f5f9;"></div>
-                <span class="hub-quad-label">Oral Care</span>
+              <a href="#" class="hub-quad-item" style="background-color: #ffffff !important;">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png" alt="Sexual Wellness" style="background-color: #ffffff !important;">
+                <span class="hub-quad-label">Sexual Wellness</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #e2e8f0;"></div>
-                <span class="hub-quad-label">Vitamins</span>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/S/B/214895_1750108195.jpg" alt="Skincare">
+                <span class="hub-quad-label">Skincare</span>
               </a>
               <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #cbd5e1;"></div>
-                <span class="hub-quad-label">Fragrances</span>
-              </a>
-              <a href="#" class="hub-quad-item">
-                <div class="hub-quad-placeholder" style="background-color: #94a3b8;"></div>
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg" alt="Makeup">
                 <span class="hub-quad-label">Makeup</span>
+              </a>
+              <a href="#" class="hub-quad-item">
+                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg" alt="Wigs">
+                <span class="hub-quad-label">Wigs</span>
               </a>
             </div>
             <div class="hub-footer">
@@ -2874,16 +3313,16 @@
         
         <div class="promo-card">
           <h3 class="promo-title">BlackOut Hour</h3>
-          <p class="promo-desc">Surprise 60-minute windows dropping throughout the month. No countdown, no heads up; we just launch it.</p>
+          <p class="promo-desc">Surprise 60-minute windows with live countdowns dropping throughout the month. Exclusive surprise for web users; App users get the heads-up first!</p>
           
           <ul class="promo-features">
-            <li>Instant push notification when live</li>
-            <li>Extra discounts & free delivery</li>
-            <li>Hidden bundles & surprise vouchers</li>
+            <li>Instant app notifications before it goes live</li>
+            <li>Live countdown timer on web & app</li>
+            <li>Hidden mega bundles, vouchers & free delivery</li>
           </ul>
 
           <div class="promo-image-placeholder">
-            <span>[Phone App Notification Placeholder]</span>
+            <img src="Backout Hour .jpg" alt="Blackout Hour Banner">
           </div>
           <a href="#" class="promo-action">Learn More</a>
         </div>
@@ -2891,16 +3330,16 @@
         
         <div class="promo-card">
           <h3 class="promo-title">Yakata Live</h3>
-          <p class="promo-desc">Live shopping experiences held every Friday on TikTok. Join us for exclusive deals and giveaways.</p>
+          <p class="promo-desc">Live interactive shopping experiences streamed on Instagram Live. Join us for exclusive flash drops, giveaways, and special guests.</p>
           
           <ul class="promo-features">
-            <li>Influencer hosts & internal experts</li>
+            <li>Broadcast live on Instagram Live</li>
             <li>Exclusive Live-Only Deals & Voucher Drops</li>
             <li>Product showcases, Music, and Comedy</li>
           </ul>
 
           <div class="promo-image-placeholder">
-            <span>[TikTok Live Screen Placeholder]</span>
+            <img src="yakatalive.gif" alt="Yakata Live GIF">
           </div>
           <a href="#" class="promo-action">Watch Live</a>
         </div>
@@ -2949,9 +3388,399 @@
     </section>
 
     
-    <section class="products-image-section section-reset" style="width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 16px;">
-      <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1789420343/landingPages/2026%20Marketing/Yakata11/products.png" alt="Best Prices Products" style="width: 100%; height: auto; border-radius: 0 0 12px 12px; display: block;">
-    </section>
+    <!-- Best Prices Slider Section -->
+    <div style="width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+      <div class="best-prices-slider-wrapper">
+        <button class="best-prices-nav-btn prev" aria-label="Scroll left" onclick="document.getElementById('bestPricesTrack').scrollBy({left: -280, behavior: 'smooth'})">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="best-prices-nav-btn next" aria-label="Scroll right" onclick="document.getElementById('bestPricesTrack').scrollBy({left: 280, behavior: 'smooth'})">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+
+        <div class="best-prices-track" id="bestPricesTrack">
+
+          <!-- Product 1: Samsung 115'' Class Neo Qled TV - Qn90f -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-20%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/U/K/231472_1779798572.jpg" alt="Samsung 115'' Class Neo Qled TV - Qn90f">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Samsung 115'' Class Neo Qled TV - Qn90f">Samsung 115'' Class Neo Qled TV - Qn90f</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;16,000,000</div>
+                  <div class="best-prices-old-price">&#8358;20,000,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 2: Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-28%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/J/N/231472_1750755789.jpg" alt="Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b">Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;466,800</div>
+                  <div class="best-prices-old-price">&#8358;645,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 3: HP 240R G10 Notebook PC Intel Core 5 120U -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-25%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/N/_1785245883.png" alt="HP 240R G10 Notebook PC – Intel Core 5 120U, 14&quot; FHD, 8GB RAM, 512GB SSD – C80YRAT">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="HP 240R G10 Notebook PC – Intel Core 5 120U, 14&quot; FHD, 8GB RAM, 512GB SSD – C80YRAT">HP 240R G10 Notebook PC – Intel Core 5 120U, 14" FHD, 8GB RAM, 512GB SSD – C80YRAT</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;759,000</div>
+                  <div class="best-prices-old-price">&#8358;1,012,815</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 4: HP ProOne 240 G10 AIO DESKTOP PC -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-32%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/J/118566_1784888900.png" alt="HP ProOne 240 G10 AIO DESKTOP PC, 24&quot; FULL HD, CORE i3-N300, 8GB RAM, 512GB SSD">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="HP ProOne 240 G10 AIO DESKTOP PC, 24&quot; FULL HD, CORE i3-N300, 8GB RAM, 512GB SSD">HP ProOne 240 G10 AIO DESKTOP PC, 24" FULL HD, CORE i3-N300, 8GB RAM, 512GB SSD</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;819,717</div>
+                  <div class="best-prices-old-price">&#8358;1,200,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 5: Xiaomi Redmi Note 15 Pro P 5g -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-2%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/Y/118566_1768920113.jpg" alt="Xiaomi Redmi Note 15 Pro P 5g- 6.83&quot; 12gb Ram - 512gb Rom - 6500mah-black">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Xiaomi Redmi Note 15 Pro P 5g- 6.83&quot; 12gb Ram - 512gb Rom - 6500mah-black">Xiaomi Redmi Note 15 Pro P 5g- 6.83" 12gb Ram - 512gb Rom - 6500mah-black</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;712,000</div>
+                  <div class="best-prices-old-price">&#8358;727,700</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 6: HP 240R G10 Notebook PC Intel Core 7-150U -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-16%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png" alt="HP 240R G10 Notebook PC – Intel Core 7-150U, 14&quot; FHD, 8GB RAM, 512GB SSD">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="HP 240R G10 Notebook PC – Intel Core 7-150U, 14&quot; FHD, 8GB RAM, 512GB SSD">HP 240R G10 Notebook PC – Intel Core 7-150U, 14" FHD, 8GB RAM, 512GB SSD</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;859,999</div>
+                  <div class="best-prices-old-price">&#8358;1,027,114</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 7: Hisense 2hp Split Air Conditioner -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-20%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/W/118566_1788273396.jpg" alt="Hisense 2hp Split Air Conditioner - Copper Condenser">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Hisense 2hp Split Air Conditioner - Copper Condenser">Hisense 2hp Split Air Conditioner - Copper Condenser</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;477,700</div>
+                  <div class="best-prices-old-price">&#8358;600,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 8: Asus Zenbook 14 TouchScreen Ultra9 285H -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-26%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/Y/56319_1786712399.jpg" alt="Asus Zenbook-14-TouchScreen-Ultra9-285H-32GBRAM-1TBSSD-14'-WIN11-Silver">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Asus Zenbook-14-TouchScreen-Ultra9-285H-32GBRAM-1TBSSD-14'-WIN11-Silver">Asus Zenbook-14-TouchScreen-Ultra9-285H-32GBRAM-1TBSSD-14'-WIN11-Silver</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;2,380,740</div>
+                  <div class="best-prices-old-price">&#8358;3,213,999</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 9: Samsung Galaxy S26 Ultra 5g -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-6%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/X/118566_1774944999.jpg" alt="Samsung Galaxy S26 Ultra 5g - 6.9&quot; - 256gb Rom - 12gb Ram - Violet">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Samsung Galaxy S26 Ultra 5g - 6.9&quot; - 256gb Rom - 12gb Ram - Violet">Samsung Galaxy S26 Ultra 5g - 6.9" - 256gb Rom - 12gb Ram - Violet</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;1,595,700</div>
+                  <div class="best-prices-old-price">&#8358;1,689,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 10: Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-1%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/H/118566_1747148808.png" alt="Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L">Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;1,635,000</div>
+                  <div class="best-prices-old-price">&#8358;1,655,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 11: Samsung 65" Mini Led M70h 4k Samsung Vision Ai Smart Tv -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-39%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/E/L/118566_1785232593.jpg" alt="Samsung 65&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026)">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Samsung 65&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026)">Samsung 65" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026)</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;850,999</div>
+                  <div class="best-prices-old-price">&#8358;1,385,832</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 12: JBL Partybox Ultimate Speaker -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/J/118566_1788443010.jpg" alt="JBL Partybox Ultimate - Multi Purpose Party Speaker">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="JBL Partybox Ultimate - Multi Purpose Party Speaker">JBL Partybox Ultimate - Multi Purpose Party Speaker</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;2,950,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 13: Aeon 1hp Split Ac Asa091j3 Inverter -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-30%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/O/X/118566_1761055372.jpg" alt="Aeon 1hp Split Ac Asa091j3 Inverter With Kit">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Aeon 1hp Split Ac Asa091j3 Inverter With Kit">Aeon 1hp Split Ac Asa091j3 Inverter With Kit</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;365,500</div>
+                  <div class="best-prices-old-price">&#8358;525,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 14: Haier Thermocool Large Chest Freezer -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/W/118566_1544086101.jpg" alt="Haier Thermocool Large Chest Freezer Htf-429is R600 Gas">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Haier Thermocool Large Chest Freezer Htf-429is R600 Gas">Haier Thermocool Large Chest Freezer Htf-429is R600 Gas</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;1,959,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 15: Apple 2025 Macbook Pro 14-inch Laptop -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-28%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/163129_1770105285.jpg" alt="Apple 2025 Macbook Pro 14-inch Laptop - M5 Chip- 512GB SSD- 16GB RAM">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Apple 2025 Macbook Pro 14-inch Laptop - M5 Chip- 512GB SSD- 16GB RAM">Apple 2025 Macbook Pro 14-inch Laptop - M5 Chip- 512GB SSD- 16GB RAM</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;2,680,000</div>
+                  <div class="best-prices-old-price">&#8358;3,700,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 16: BOSCON 18inch Rechargeable Fan -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-26%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/I/86527_1680006892.jpg" alt="BOSCON 18inch Rechargeable Fan - Bos-rf2618r + Remote control">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="BOSCON 18inch Rechargeable Fan - Bos-rf2618r + Remote control">BOSCON 18inch Rechargeable Fan - Bos-rf2618r + Remote control</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;70,999</div>
+                  <div class="best-prices-old-price">&#8358;96,000</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 17: Zyre Steam Iron T-623a -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-15%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/C/A/247593_1771603235.jpg" alt="Zyre Steam Iron T-623a">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Zyre Steam Iron T-623a">Zyre Steam Iron T-623a</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;14,000</div>
+                  <div class="best-prices-old-price">&#8358;16,500</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 18: Zyre 18inch Rechargeable Fan Zf18r (white) -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-9%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/T/247593_1772129616.jpg" alt="Zyre 18inch Rechargeable Fan Zf18r (white)">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Zyre 18inch Rechargeable Fan Zf18r (white)">Zyre 18inch Rechargeable Fan Zf18r (white)</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;72,600</div>
+                  <div class="best-prices-old-price">&#8358;79,600</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 19: Zyre Juice Extractor 600w Zp-je407 -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-20%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/O/247593_1774529063.jpg" alt="Zyre Juice Extractor 600w Zp-je407">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Zyre Juice Extractor 600w Zp-je407">Zyre Juice Extractor 600w Zp-je407</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;45,200</div>
+                  <div class="best-prices-old-price">&#8358;56,200</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 20: Zyre 2in1 Blender Zb-650 1.5l -->
+          <div class="best-prices-product-card">
+            <div class="best-prices-card-top-badges">
+              <span class="best-prices-discount-pill">-12%</span>
+            </div>
+            <div class="best-prices-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/W/Z/247593_1772013748.jpg" alt="Zyre 2in1 Blender Zb-650 1.5l">
+            </div>
+            <div class="best-prices-info-wrap">
+              <p class="best-prices-card-title" title="Zyre 2in1 Blender Zb-650 1.5l">Zyre 2in1 Blender Zb-650 1.5l</p>
+              <div class="best-prices-pricing-row">
+                  <div class="best-prices-cur-price">&#8358;28,300</div>
+                  <div class="best-prices-old-price">&#8358;32,300</div>
+                
+              </div>
+              <button class="best-prices-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    
 
     
     <section class="bento-grid-section section-reset">
@@ -3070,6 +3899,618 @@
             <span class="k-title">Pots & Pans</span>
             <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authentic Booze Section -->
+    <section class="booze-section section-reset">
+      <div class="shop-by-category-header" style="background-color: #ed017f; border-radius: 12px 12px 0 0;">
+        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+          <span>Authentic Booze</span>
+          <a href="#" class="flash-more" style="color: #ffffff; text-transform: lowercase; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+            see more
+            <span class="icon-circle" style="background-color: #ffffff; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#ed017f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="booze-slider-wrapper">
+        <button class="booze-nav-btn prev" aria-label="Scroll left" onclick="document.getElementById('boozeTrack').scrollBy({left: -280, behavior: 'smooth'})">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="booze-nav-btn next" aria-label="Scroll right" onclick="document.getElementById('boozeTrack').scrollBy({left: 280, behavior: 'smooth'})">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+
+        <div class="booze-track" id="boozeTrack">
+
+          <!-- Product 1: Glenfiddich 18 Years Single Bottle -->
+          <div class="booze-product-card">
+            <div class="booze-card-top-badges">
+              <span class="booze-discount-pill">-14%</span>
+            </div>
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/A/59898_1723786501.jpg" alt="Glenfiddich 18 Years Single Bottle">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Glenfiddich 18 Years Single Bottle">Glenfiddich 18 Years Single Bottle</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;86,000</div>
+                  <div class="booze-old-price">&#8358;100,000</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Pan Continental Ventures Limited">Pan Continental Ventures Limited</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="filled" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="filled" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="filled" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="filled" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(1 review)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 2: Martell Vs Spirit - 70cl X 3 -->
+          <div class="booze-product-card">
+            <div class="booze-card-top-badges">
+              <span class="booze-discount-pill">-13%</span>
+            </div>
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/C/K/182332_1760341498.jpg" alt="Martell Vs Spirit - 70cl X 3">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Martell Vs Spirit - 70cl X 3">Martell Vs Spirit - 70cl X 3</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;550,000</div>
+                  <div class="booze-old-price">&#8358;630,000</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Citadel Store">Citadel Store</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 3: Don Royale Brandy Flavoured Spirit 750ml -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/F/251132_1791320766.jpg" alt="Don Royale Brandy Flavoured Spirit 750ml">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Don Royale Brandy Flavoured Spirit 750ml">Don Royale Brandy Flavoured Spirit 750ml</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;5,885</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 4: Gordon’s Moringa Dry Gin – 750ml -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/N/251132_1791398568.jpg" alt="Gordon’s Moringa Dry Gin – 750ml">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Gordon’s Moringa Dry Gin – 750ml">Gordon’s Moringa Dry Gin – 750ml</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;6,741</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 5: Don Royale Gin 75cl -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/J/W/251132_1791484337.jpg" alt="Don Royale Gin 75cl">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Don Royale Gin 75cl">Don Royale Gin 75cl</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;5,885</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 6: Gordon’s Dry Gin Sunset Orange 75cl -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/F/I/251132_1791486429.jpg" alt="Gordon’s Dry Gin Sunset Orange 75cl">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Gordon’s Dry Gin Sunset Orange 75cl">Gordon’s Dry Gin Sunset Orange 75cl</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;8,025</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 7: Smirnoff Chocolate Vodka 75cl -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/F/251132_1791543594.jpg" alt="Smirnoff Chocolate Vodka 75cl">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Smirnoff Chocolate Vodka 75cl">Smirnoff Chocolate Vodka 75cl</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;6,420</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 8: Orijin Bitters – 75cl X6bottles -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/J/251132_1791552369.jpg" alt="Orijin Bitters – 75cl X6bottles">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Orijin Bitters – 75cl X6bottles">Orijin Bitters – 75cl X6bottles</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;21,500</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 9: Buy Orijin Bitters – 20cl -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/C/251132_1791551533.jpg" alt="Buy Orijin Bitters – 20cl">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Buy Orijin Bitters – 20cl">Buy Orijin Bitters – 20cl</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;1,070</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 10: Guinness Can Stout 440ml (x24) -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/O/251132_1791544852.jpg" alt="Guinness Can Stout 440ml (x24)">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Guinness Can Stout 440ml (x24)">Guinness Can Stout 440ml (x24)</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;26,150</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 11: Orijin Bitters – 20cl X24 Bottles -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/S/G/251132_1791545458.jpg" alt="Orijin Bitters – 20cl X24 Bottles">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Orijin Bitters – 20cl X24 Bottles">Orijin Bitters – 20cl X24 Bottles</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;22,000</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 12: Malta Guinness Can X24 330ml -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/K/251132_1791546692.jpg" alt="Malta Guinness Can X24 330ml">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Malta Guinness Can X24 330ml">Malta Guinness Can X24 330ml</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;13,100</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 13: Smirnoff Ice Can 33cl (x24) -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/S/H/251132_1791542385.jpg" alt="Smirnoff Ice Can 33cl (x24)">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Smirnoff Ice Can 33cl (x24)">Smirnoff Ice Can 33cl (x24)</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;22,650</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 14: Guinness Smooth Can 440ml X24 -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/E/251132_1791543190.jpg" alt="Guinness Smooth Can 440ml X24">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Guinness Smooth Can 440ml X24">Guinness Smooth Can 440ml X24</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;26,150</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 15: Smirnoff Double Black Can 330ml x24 -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/H/251132_1791542774.jpg" alt="Smirnoff Double Black Can 330ml x24">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Smirnoff Double Black Can 330ml x24">Smirnoff Double Black Can 330ml x24</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;22,650</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 16: Guinness Foreign Extra Stout Can 44cl X24 -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/G/251132_1791286794.jpg" alt="Guinness Foreign Extra Stout Can 44cl X24">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Guinness Foreign Extra Stout Can 44cl X24">Guinness Foreign Extra Stout Can 44cl X24</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;26,150</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 17: Guinness Foreign Extra Stout 600ml (x6) -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/S/251132_1791487616.jpg" alt="Guinness Foreign Extra Stout 600ml (x6)">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Guinness Foreign Extra Stout 600ml (x6)">Guinness Foreign Extra Stout 600ml (x6)</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;11,000</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 18: Smirnoff Pineapple Punch 330ml x24 -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/U/251132_1791544421.jpg" alt="Smirnoff Pineapple Punch 330ml x24">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Smirnoff Pineapple Punch 330ml x24">Smirnoff Pineapple Punch 330ml x24</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;19,000</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Product 19: Guinness Foreign Extra Stout 600ml (x12 Bottles) -->
+          <div class="booze-product-card">
+            <div class="booze-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/D/251132_1791544110.jpg" alt="Guinness Foreign Extra Stout 600ml (x12 Bottles)">
+            </div>
+            <div class="booze-info-wrap">
+              <p class="booze-card-title" title="Guinness Foreign Extra Stout 600ml (x12 Bottles)">Guinness Foreign Extra Stout 600ml (x12 Bottles)</p>
+              <div class="booze-pricing-row">
+                <div>
+                  <div class="booze-cur-price">&#8358;21,500</div>
+                </div>
+                <button class="booze-heart-btn" aria-label="Save for later">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path></svg>
+                </button>
+              </div>
+              <p class="booze-seller-tag">Sold by: <span title="Guinness Nigeria x Drinksonline">Guinness Nigeria x Drinksonline</span></p>
+              <div class="booze-rating-row">
+                <div class="booze-stars">
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                  <svg class="empty" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                </div>
+                <span class="booze-review-count">(No reviews)</span>
+              </div>
+              <button class="booze-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

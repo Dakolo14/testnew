@@ -683,8 +683,8 @@
       .shop-category-card {
         width: 100%;
         aspect-ratio: 1 / 1;
-        background-color: #444;
-        border: 2px dashed #888;
+        background-color: transparent;
+        border: none;
         border-radius: 20px;
         overflow: hidden;
         position: relative;
@@ -692,6 +692,19 @@
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
+      }
+
+      .shop-category-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .shop-category-item:hover .shop-category-card img {
+        transform: scale(1.05);
       }
 
       .card-fallback-text {
@@ -1382,20 +1395,144 @@
       .our-deals-card {
         width: 100%;
         aspect-ratio: 3 / 4;
-        background-color: #444;
-        border: 2px dashed #888;
+        background-color: #0b0b0f;
         border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #ccc;
-        font-weight: 400;
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-align: center;
-        padding: 1rem;
+        overflow: hidden;
+        display: block;
         box-sizing: border-box;
+        text-decoration: none;
+        position: relative;
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+      }
+      .our-deals-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px;
+        transition: transform 0.4s ease;
+      }
+
+      /* Option 1: Cyber Neon Magenta Hairline + Sleek Angled Beam / Shine Effect */
+      .deal-style-1 {
+        outline: 0.5px solid rgba(237, 1, 127, 0.7);
+        outline-offset: -0.5px;
+        box-shadow: 0 0 12px -2px rgba(237, 1, 127, 0.25);
+      }
+      .deal-style-1::after {
+        content: "";
+        position: absolute;
+        top: -60%;
+        left: -80%;
+        width: 60%;
+        height: 220%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.4) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(25deg);
+        pointer-events: none;
+        transition: left 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+      }
+      .deal-style-1:hover {
+        transform: translateY(-8px) scale(1.02);
+        outline-color: #ed017f;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(237, 1, 127, 0.6);
+      }
+      .deal-style-1:hover::after {
+        left: 140%;
+      }
+      .deal-style-1:hover img {
+        transform: scale(1.04);
+      }
+
+      /* Option 2: Frosted Diamond / Holographic Glass Gradient Hairline + Lift with Soft Aura Glow */
+      .deal-style-2 {
+        border: 0.5px solid rgba(255, 255, 255, 0.22);
+        box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.15), 0 4px 20px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+      }
+      .deal-style-2::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        padding: 0.5px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(237, 1, 127, 0.4), rgba(255, 255, 255, 0.1));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: 2;
+        transition: opacity 0.35s ease;
+      }
+      .deal-style-2:hover {
+        transform: translateY(-8px);
+        border-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 24px rgba(255, 255, 255, 0.25);
+      }
+      .deal-style-2:hover img {
+        transform: scale(1.03);
+      }
+
+      /* Option 3: Two-Tone Fiery Gold & Yakata Pink Gradient Hairline + Pulse Flare on Hover */
+      .deal-style-3 {
+        position: relative;
+        border: 0.5px solid rgba(254, 189, 105, 0.5);
+        box-shadow: 0 0 10px rgba(254, 189, 105, 0.15);
+      }
+      .deal-style-3::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 21px;
+        background: linear-gradient(60deg, #ed017f, #febd69, #ed017f);
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 0.4s ease, filter 0.4s ease;
+        filter: blur(4px);
+      }
+      .deal-style-3:hover {
+        transform: translateY(-8px) scale(1.02);
+        border-color: #febd69;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6), 0 0 22px rgba(254, 189, 105, 0.45);
+      }
+      .deal-style-3:hover::before {
+        opacity: 0.85;
+      }
+      .deal-style-3:hover img {
+        transform: scale(1.03);
+      }
+
+      /* Option 4: Floating Ultra-Sleek Inset Ring + Smooth Spotlight Radial Glow Hover */
+      .deal-style-4 {
+        border: 0.5px solid rgba(255, 255, 255, 0.35);
+        box-shadow: inset 0 0 14px rgba(237, 1, 127, 0.2), 0 8px 24px rgba(0, 0, 0, 0.6);
+      }
+      .deal-style-4::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        background: radial-gradient(circle at center, rgba(237, 1, 127, 0.25) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+        z-index: 2;
+      }
+      .deal-style-4:hover {
+        transform: translateY(-10px);
+        border-color: #ffffff;
+        box-shadow: inset 0 0 18px rgba(237, 1, 127, 0.4), 0 20px 40px rgba(237, 1, 127, 0.35);
+      }
+      .deal-style-4:hover::after {
+        opacity: 1;
+      }
+      .deal-style-4:hover img {
+        transform: scale(1.05);
       }
 
       /* --- Best Prices Header Section --- */
@@ -1455,8 +1592,10 @@
         border: 2px dashed #888;
         border-radius: 20px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 6px;
         color: #ccc;
         font-weight: 400;
         font-size: 1rem;
@@ -1464,6 +1603,7 @@
         letter-spacing: 1px;
         text-align: center;
         padding: 1rem;
+        box-sizing: border-box;
       }
       
       /* Bento Layout specific rules */
@@ -1492,14 +1632,13 @@
         }
         .bento-grid {
           grid-template-columns: 1fr;
-          grid-auto-rows: 200px;
         }
         .bento-large, .bento-wide, .bento-tall {
           grid-column: span 1;
           grid-row: span 1;
         }
         .bento-large {
-          grid-row: span 2;
+          aspect-ratio: 16 / 10;
         }
       }
 
@@ -1633,6 +1772,49 @@
       .twin-banners-container {
         display: flex;
         gap: 1.5rem;
+      }
+      .brand-banner-card {
+        flex: 1;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        display: block;
+        text-decoration: none;
+        border: 0.5px solid rgba(254, 189, 105, 0.5);
+        box-shadow: 0 0 10px rgba(254, 189, 105, 0.15);
+        transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+      }
+      .brand-banner-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 13px;
+        background: linear-gradient(60deg, #ed017f, #febd69, #ed017f);
+        opacity: 0;
+        z-index: 1;
+        pointer-events: none;
+        transition: opacity 0.4s ease, filter 0.4s ease;
+        filter: blur(4px);
+      }
+      .brand-banner-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.4s ease;
+      }
+      .brand-banner-card:hover {
+        transform: translateY(-8px) scale(1.015);
+        border-color: #febd69;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(254, 189, 105, 0.45);
+      }
+      .brand-banner-card:hover::before {
+        opacity: 0.85;
+      }
+      .brand-banner-card:hover img {
+        transform: scale(1.02);
       }
       .twin-banners-container .banner-placeholder {
         flex: 1;
@@ -1958,41 +2140,23 @@
 
             
             <div class="banner-slides-container">
-              <a href="#" class="banner-slide placeholder-slide">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; gap: 6px;">
-                  <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">Yakata Kickoff Deals</span>
-                  <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 350</span>
-                </div>
+              <a href="#" class="banner-slide">
+                <img src="Yakata26 KV.gif" alt="Yakata Kickoff Deals">
               </a>
-              <a href="#" class="banner-slide placeholder-slide">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; gap: 6px;">
-                  <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">BlackOut Hour</span>
-                  <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 350</span>
-                </div>
+              <a href="#" class="banner-slide">
+                <img src="Backout Hour .jpg" alt="BlackOut Hour">
               </a>
-              <a href="#" class="banner-slide placeholder-slide">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; gap: 6px;">
-                  <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">Hot Deals</span>
-                  <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 350</span>
-                </div>
+              <a href="#" class="banner-slide">
+                <img src="Hot Deals.jpg" alt="Hot Deals">
               </a>
-              <a href="#" class="banner-slide placeholder-slide">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; gap: 6px;">
-                  <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">Deal of the day</span>
-                  <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 350</span>
-                </div>
+              <a href="#" class="banner-slide">
+                <img src="Deal of the Day.jpg" alt="Deal of the Day">
               </a>
-              <a href="#" class="banner-slide placeholder-slide">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; gap: 6px;">
-                  <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">Yakata Live</span>
-                  <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 350</span>
-                </div>
+              <a href="#" class="banner-slide">
+                <img src="yakatalive.gif" alt="Yakata Live">
               </a>
-              <a href="#" class="banner-slide placeholder-slide">
-                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%; gap: 6px;">
-                  <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">Brand Space</span>
-                  <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 350</span>
-                </div>
+              <a href="#" class="banner-slide">
+                <img src="Brand Space.jpg" alt="Brand Space">
               </a>
             </div>
 
@@ -2034,7 +2198,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">Home Faves</span>
+              <img src="Home Faves.gif" alt="Home Faves">
             </div>
             <div class="shop-category-label">Home Faves</div>
             <div class="category-discount">Up to 40% Off</div>
@@ -2042,7 +2206,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">TV Steals</span>
+              <img src="TV Series.gif" alt="TV Steals">
             </div>
             <div class="shop-category-label">TV Steals</div>
             <div class="category-discount">Half Price</div>
@@ -2050,7 +2214,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">Cool Zone</span>
+              <img src="Cool Zone.gif" alt="Cool Zone">
             </div>
             <div class="shop-category-label">Cool Zone</div>
             <div class="category-discount">Special Offer</div>
@@ -2058,7 +2222,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">Sound Central</span>
+              <img src="Sound Central.gif" alt="Sound Central">
             </div>
             <div class="shop-category-label">Sound Central</div>
             <div class="category-discount">Hot Deal</div>
@@ -2066,7 +2230,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">Always Fresh</span>
+              <img src="Always Fresh.gif" alt="Always Fresh">
             </div>
             <div class="shop-category-label">Always Fresh</div>
             <div class="category-discount">Top Rated</div>
@@ -2074,7 +2238,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">Easy Laundry</span>
+              <img src="Easy Laundry.gif" alt="Easy Laundry">
             </div>
             <div class="shop-category-label">Easy Laundry</div>
             <div class="category-discount">Best Value</div>
@@ -2082,7 +2246,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">Easy Meals</span>
+              <img src="Easy Meals.gif" alt="Easy Meals">
             </div>
             <div class="shop-category-label">Easy Meals</div>
             <div class="category-discount">Super Deal</div>
@@ -2090,7 +2254,7 @@
           
           <a href="#" class="shop-category-item">
             <div class="shop-category-card">
-              <span class="card-fallback-text">Clear View</span>
+              <img src="Clear View.gif" alt="Clear View">
             </div>
             <div class="shop-category-label">Clear View</div>
             <div class="category-discount">Clearance</div>
@@ -2129,13 +2293,11 @@
     
     <section class="twin-banners-section section-reset">
       <div class="twin-banners-container">
-        <a href="#" class="banner-placeholder" style="aspect-ratio: 2 / 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px;">
-          <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">Brand Space</span>
-          <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 700</span>
+        <a href="#" class="brand-banner-card">
+          <img src="Brand Space - ASUS.jpg" alt="Brand Space - ASUS">
         </a>
-        <a href="#" class="banner-placeholder" style="aspect-ratio: 2 / 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px;">
-          <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">Brand Space</span>
-          <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 700</span>
+        <a href="#" class="brand-banner-card">
+          <img src="Brand Space - SAMSUNG.jpg" alt="Brand Space - SAMSUNG">
         </a>
       </div>
     </section>
@@ -2188,7 +2350,7 @@
               </a>
               <a href="#" class="hub-quad-item">
                 <div class="hub-quad-placeholder" style="background-color: #94a3b8;"></div>
-                <span class="hub-quad-label">Tecno</span>
+                <span class="hub-quad-label">Infinix</span>
               </a>
             </div>
             <div class="hub-footer">
@@ -2534,10 +2696,18 @@
       </div>
       <div class="our-deals-container">
         <div class="our-deals-grid">
-          <div class="our-deals-card">Bundle & Save</div>
-          <div class="our-deals-card">Clearance Blowout</div>
-          <div class="our-deals-card">Deals Under &#8358;20,000</div>
-          <div class="our-deals-card">Half Price Store</div>
+          <a href="#" class="our-deals-card deal-style-1">
+            <img src="Bundle & Save.jpg" alt="Bundle & Save">
+          </a>
+          <a href="#" class="our-deals-card deal-style-1">
+            <img src="Clearance & Blowout.jpg" alt="Clearance Blowout">
+          </a>
+          <a href="#" class="our-deals-card deal-style-1">
+            <img src="Deals under 20k .jpg" alt="Deals Under &#8358;20,000">
+          </a>
+          <a href="#" class="our-deals-card deal-style-1">
+            <img src="Half Price Store.jpg" alt="Half Price Store">
+          </a>
         </div>
       </div>
     </section>
@@ -2567,21 +2737,25 @@
     
     <section class="bento-grid-section section-reset">
       <div class="bento-grid">
-        <div class="bento-item bento-large" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;">
+        <div class="bento-item bento-large">
           <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff;">Groceries</span>
           <span style="font-size: 14px; font-weight: 300; color: #f0f0f0;">Shop & Chop</span>
+          <span style="font-size: 13px; font-weight: 300; color: #ccc;">3300 x 2600</span>
         </div>
-        <div class="bento-item bento-wide" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;">
+        <div class="bento-item bento-wide">
           <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff; letter-spacing: 1px;">Fashion & Footwear</span>
           <span style="font-size: 14px; font-weight: 300; color: #f0f0f0;">Head to Toe</span>
+          <span style="font-size: 13px; font-weight: 300; color: #ccc;">3300 x 1250</span>
         </div>
-        <div class="bento-item" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;">
+        <div class="bento-item">
           <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff; text-align: center;">Fitness & Sports</span>
           <span style="font-size: 14px; font-weight: 300; color: #f0f0f0; text-align: center;">Stay Active</span>
+          <span style="font-size: 13px; font-weight: 300; color: #ccc; text-align: center;">1600 x 1250</span>
         </div>
-        <div class="bento-item" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;">
+        <div class="bento-item">
           <span style="font-size: 16px; font-weight: 500; text-transform: uppercase; color: #fff; text-align: center;">Baby & Kids</span>
           <span style="font-size: 14px; font-weight: 300; color: #f0f0f0; text-align: center;">Little Treasures</span>
+          <span style="font-size: 13px; font-weight: 300; color: #ccc; text-align: center;">1600 x 1250</span>
         </div>
       </div>
     </section>
@@ -2659,26 +2833,31 @@
           <div class="k-content">
             <span class="k-title">Refrigerators & Freezers</span>
             <span class="k-sub">Preserve freshness</span>
+            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">1700 x 1900</span>
           </div>
         </div>
         <div class="kitchen-card k-standard">
           <div class="k-content">
             <span class="k-title">Microwaves</span>
+            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
           </div>
         </div>
         <div class="kitchen-card k-standard">
           <div class="k-content">
             <span class="k-title">Cookers & Ovens</span>
+            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
           </div>
         </div>
         <div class="kitchen-card k-standard">
           <div class="k-content">
             <span class="k-title">Blenders & Juicers</span>
+            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
           </div>
         </div>
         <div class="kitchen-card k-standard">
           <div class="k-content">
             <span class="k-title">Pots & Pans</span>
+            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
           </div>
         </div>
       </div>
@@ -2711,11 +2890,13 @@
     
     <section class="twin-banners-section section-reset">
       <div class="twin-banners-container">
-        <div class="banner-placeholder">
-          <span>KHealth</span>
+        <div class="banner-placeholder" style="aspect-ratio: 2 / 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px;">
+          <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">KHealth</span>
+          <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 700</span>
         </div>
-        <div class="banner-placeholder">
-          <span>KongaPay</span>
+        <div class="banner-placeholder" style="aspect-ratio: 2 / 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px;">
+          <span style="font-size: 16px; font-weight: 500; color: #fff; text-transform: uppercase;">KongaPay</span>
+          <span style="font-size: 14px; font-weight: 300; color: #ccc;">1400 x 700</span>
         </div>
       </div>
     </section>

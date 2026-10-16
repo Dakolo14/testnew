@@ -1577,27 +1577,21 @@
 
       .promo-image-placeholder {
         background: #111;
-        border: 1px dashed rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         width: 100%;
-        aspect-ratio: 4 / 1;
+        height: auto;
         margin-top: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        color: #888;
-        font-size: 14px;
-        font-weight: 500;
-        text-transform: uppercase;
         overflow: hidden;
       }
-      .promo-dim {
-        font-size: 13px;
-        font-weight: 300;
-        color: #aaa;
-        text-transform: lowercase;
+      .promo-image-placeholder img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .promo-card:hover .promo-image-placeholder img {
+        transform: scale(1.02);
       }
 
       .promo-action {
@@ -3566,8 +3560,7 @@
           </ul>
 
           <div class="promo-image-placeholder">
-            <span>Banner Placeholder</span>
-            <span class="promo-dim">1400 x 350</span>
+            <img src="Backout Hour .jpg" alt="Blackout Hour Banner">
           </div>
           <a href="#" class="promo-action">Learn More</a>
         </div>
@@ -3584,8 +3577,7 @@
           </ul>
 
           <div class="promo-image-placeholder">
-            <span>Banner Placeholder</span>
-            <span class="promo-dim">1400 x 350</span>
+            <img src="yakatalive.gif" alt="Yakata Live GIF">
           </div>
           <a href="#" class="promo-action">Watch Live</a>
         </div>

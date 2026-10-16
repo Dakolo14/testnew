@@ -2735,17 +2735,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 24px;
-        transition: transform 0.3s ease;
+        padding: 0;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
       .kitchen-card:hover {
         transform: translateY(-4px);
-        background-color: #252525;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+      .kitchen-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .kitchen-card:hover img {
+        transform: scale(1.03);
       }
       .k-feature {
         grid-row: span 2;
         background: linear-gradient(135deg, #111, #222);
-        border-left: 4px solid #ed017f;
       }
       .k-wide {
         grid-column: span 2;
@@ -2765,10 +2775,25 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
-      .k-sub {
-        font-size: 14px;
-        font-weight: 300;
-        color: #bbb;
+      @media (max-width: 900px) {
+        .kitchen-showcase {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+        }
+        .k-feature {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+      }
+      @media (max-width: 600px) {
+        .kitchen-showcase {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 12px;
+        }
+        .k-feature {
+          grid-column: span 1;
+        }
       }
 
 
@@ -3986,10 +4011,10 @@
     <section class="bento-grid-section section-reset">
       <div class="bento-grid">
         <a href="#" class="bento-item bento-large has-image deal-style-2">
-          <img src="newgroceries.gif" alt="Groceries - Shop & Chop">
+          <img src="Groceries New one.gif" alt="Groceries - Shop & Chop">
         </a>
         <a href="#" class="bento-item bento-wide has-image deal-style-2">
-          <img src="newheadtoe.gif" alt="Fashion & Footwear - Head to Toe">
+          <img src="headtotoe.gif" alt="Fashion & Footwear - Head to Toe">
         </a>
         <a href="#" class="bento-item has-image deal-style-2">
           <img src="Stay Active New.gif" alt="Fitness & Sports - Stay Active">
@@ -4069,37 +4094,21 @@
         <span>Everything Kitchen</span>
       </div>
       <div class="kitchen-showcase">
-        <div class="kitchen-card k-feature">
-          <div class="k-content">
-            <span class="k-title">Refrigerators & Freezers</span>
-            <span class="k-sub">Preserve freshness</span>
-            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">1700 x 1900</span>
-          </div>
-        </div>
-        <div class="kitchen-card k-standard">
-          <div class="k-content">
-            <span class="k-title">Microwaves</span>
-            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
-          </div>
-        </div>
-        <div class="kitchen-card k-standard">
-          <div class="k-content">
-            <span class="k-title">Cookers & Ovens</span>
-            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
-          </div>
-        </div>
-        <div class="kitchen-card k-standard">
-          <div class="k-content">
-            <span class="k-title">Blenders & Juicers</span>
-            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
-          </div>
-        </div>
-        <div class="kitchen-card k-standard">
-          <div class="k-content">
-            <span class="k-title">Pots & Pans</span>
-            <span style="font-size: 13px; font-weight: 300; color: #aaa; margin-top: 4px;">2500 x 900</span>
-          </div>
-        </div>
+        <a href="#" class="kitchen-card k-feature">
+          <img src="Cool Zone.gif" alt="Refrigerators & Freezers - Cool Zone">
+        </a>
+        <a href="#" class="kitchen-card k-standard">
+          <img src="Microwaves New.gif" alt="Microwaves">
+        </a>
+        <a href="#" class="kitchen-card k-standard">
+          <img src="Cookers Oven.gif" alt="Cookers & Ovens">
+        </a>
+        <a href="#" class="kitchen-card k-standard">
+          <img src="Blender Juices.gif" alt="Blenders & Juicers">
+        </a>
+        <a href="#" class="kitchen-card k-standard">
+          <img src="Pots and Pans.gif" alt="Pots & Pans">
+        </a>
       </div>
     </section>
 

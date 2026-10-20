@@ -2587,7 +2587,7 @@
       }
       .shop-all-card-title {
         font-size: 11px;
-        font-weight: 500;
+        font-weight: 400;
         color: #111827;
         line-height: 1.4;
         margin-bottom: 6px;
@@ -2603,11 +2603,12 @@
       }
       .shop-all-cur-price {
         font-size: 13px;
-        font-weight: 700;
+        font-weight: 500;
         color: #111827;
       }
       .shop-all-old-price {
         font-size: 10px;
+        font-weight: 300;
         color: #6b7280;
         text-decoration: line-through;
         margin-top: 1px;
@@ -2620,7 +2621,7 @@
         border: none;
         padding: 7px 8px;
         font-size: 11px;
-        font-weight: 600;
+        font-weight: 400;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.2s ease, transform 0.15s ease;

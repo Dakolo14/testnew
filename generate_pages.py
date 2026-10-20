@@ -254,12 +254,14 @@ def generate_html(key, cat):
         align-items: center;
         gap: 8px;
         font-size: 13px;
+        font-weight: 300;
         color: #9ca3af;
         margin-bottom: 0.5rem;
       }}
       .cat-simple-breadcrumb a {{
         color: #d1d5db;
         text-decoration: none;
+        font-weight: 300;
         transition: color 0.2s;
       }}
       .cat-simple-breadcrumb a:hover {{
@@ -267,12 +269,12 @@ def generate_html(key, cat):
       }}
       .cat-simple-breadcrumb .crumb-active {{
         color: #ed017f;
-        font-weight: 500;
+        font-weight: 400;
       }}
       .cat-simple-title {{
         font-family: 'Poppins', sans-serif;
         font-size: 26px;
-        font-weight: 700;
+        font-weight: 500;
         color: #ffffff;
         margin: 0;
         line-height: 1.25;
@@ -317,7 +319,7 @@ def generate_html(key, cat):
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        border: 3px solid rgba(255, 255, 255, 0.12);
+        border: 2px solid rgba(255, 255, 255, 0.12);
         box-shadow: 0 4px 14px rgba(0,0,0,0.4);
         padding: 14px;
         box-sizing: border-box;
@@ -340,9 +342,9 @@ def generate_html(key, cat):
       .subcat-circle-label {{
         margin-top: 10px;
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 300;
         text-align: center;
-        color: #e5e7eb;
+        color: #d1d5db;
         line-height: 1.3;
         display: -webkit-box;
         -webkit-line-clamp: 2;

@@ -4,419 +4,182 @@ import os
 with open('category_data.json', 'r', encoding='utf-8') as f:
     categories = json.load(f)
 
-# Subcategories configuration for each page with curated promo buckets
+# Subcategories configuration with circular images matching Konga subcategory layout
 PAGE_CONFIG = {
     "samsung-phones": {
-        "badge": "Samsung Galaxy Store",
+        "title": "Samsung Phones",
         "subcategories": [
-            {"name": "Galaxy S Series", "tag": "Flagships", "icon": "👑"},
-            {"name": "Galaxy Z Fold & Flip", "tag": "Foldables", "icon": "📱"},
-            {"name": "Galaxy A Series", "tag": "Best Sellers", "icon": "🔥"},
-            {"name": "Galaxy Watches & Buds", "tag": "Accessories", "icon": "🎧"},
-            {"name": "Tablets & Tab S", "tag": "Productivity", "icon": "💻"},
-            {"name": "Official Chargers", "tag": "Original 25W/45W", "icon": "⚡"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "Galaxy AI Experience Drop",
-                "tag": "Next-Gen Mobile",
-                "desc": "Trade up to Galaxy S24 Ultra & S24+. Enjoy live translation, Circle to Search, and pro-visual engine cameras at unprecedented Yakata markdown prices.",
-                "features": ["Free Official 45W Fast Charger on selected models", "Up to 24 Months Official Samsung Care+ Warranty", "Next-day delivery available across major cities"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-                "cta_text": "Shop Galaxy AI",
-                "cta_link": "https://www.konga.com/search?search=samsung+galaxy+s24"
-            },
-            {
-                "title": "Galaxy A-Series Value Blast",
-                "tag": "Everyday Champions",
-                "desc": "Long-lasting 5000mAh batteries, Super AMOLED 120Hz displays, and multi-lens cameras starting from under ₦150,000.",
-                "features": ["Super AMOLED 120Hz smooth scrolling", "50MP OIS Nightography camera system", "KongaPay Instant 10% Extra Savings applied"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/M/X/118566_1774944999.jpg",
-                "cta_text": "Explore A-Series",
-                "cta_link": "https://www.konga.com/search?search=samsung+galaxy+a"
-            }
+            {"name": "Galaxy S24 Ultra", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+galaxy+s24+ultra"},
+            {"name": "Galaxy S24 Series", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+galaxy+s24"},
+            {"name": "Galaxy Z Fold & Flip", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+galaxy+z+fold"},
+            {"name": "Galaxy A55 & A35", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+galaxy+a55"},
+            {"name": "Galaxy A15 & A05s", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+galaxy+a15"},
+            {"name": "Galaxy Watches", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+galaxy+watch"},
+            {"name": "Galaxy Buds", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+galaxy+buds"},
+            {"name": "Fast Chargers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg", "query": "samsung+45w+charger"}
         ]
     },
     "iphones": {
-        "badge": "Apple Certified Store",
+        "title": "iPhones & Apple",
         "subcategories": [
-            {"name": "iPhone 16 Series", "tag": "Latest Drop", "icon": "🔥"},
-            {"name": "iPhone 15 Series", "tag": "Pro Grade", "icon": "⚡"},
-            {"name": "iPhone 14 & 13", "tag": "Value Deals", "icon": "💎"},
-            {"name": "Apple Watches", "tag": "Ultra & Series 10", "icon": "⌚"},
-            {"name": "AirPods & Max", "tag": "Spatial Audio", "icon": "🎧"},
-            {"name": "Original MagSafe & Power", "tag": "20W / 30W", "icon": "🔌"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "iPhone 16 Pro Max Flash Drop",
-                "tag": "Desert Titanium A18 Pro",
-                "desc": "Experience Camera Control, 4K 120 fps Dolby Vision, and groundbreaking battery life on factory-unlocked iPhone 16 series.",
-                "features": ["100% Factory Unlocked (Nano SIM + eSIM)", "1-Year Official Apple Warranty", "Discreet, fully insured premium courier transit"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-                "cta_text": "Shop iPhone 16",
-                "cta_link": "https://www.konga.com/search?search=iphone+16"
-            },
-            {
-                "title": "Pre-Owned & Open-Box Apple Deals",
-                "tag": "Grade A+ Inspected",
-                "desc": "Get iPhone 13, 14, and 15 flagships in pristine condition with 100% battery health check and 30-day warranty starting under ₦800k.",
-                "features": ["100% Tested 45-point hardware inspection", "Factory original displays and camera sensors", "Complimentary 20W USB-C fast charging kit"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/Z/X/250053_1786663170.jpg",
-                "cta_text": "Explore Certified iPhones",
-                "cta_link": "https://www.konga.com/search?search=apple+iphone"
-            }
+            {"name": "iPhone 16 Pro Max", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "iphone+16+pro+max"},
+            {"name": "iPhone 16 & 16 Pro", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "iphone+16"},
+            {"name": "iPhone 15 Series", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "iphone+15"},
+            {"name": "iPhone 14 Series", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "iphone+14"},
+            {"name": "iPhone 13", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "iphone+13"},
+            {"name": "Apple Watch Ultra", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "apple+watch"},
+            {"name": "AirPods & Max", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "airpods+pro"},
+            {"name": "MagSafe & Adapters", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg", "query": "apple+20w+charger"}
         ]
     },
     "xiaomi-phones": {
-        "badge": "Xiaomi Official Deals",
+        "title": "Xiaomi Phones",
         "subcategories": [
-            {"name": "Redmi Note 13 Series", "tag": "200MP OIS", "icon": "📸"},
-            {"name": "POCO Series", "tag": "Gaming Beasts", "icon": "⚡"},
-            {"name": "Redmi Number Series", "tag": "13C / 14C", "icon": "🔋"},
-            {"name": "Xiaomi Smart Bands", "tag": "Fitness", "icon": "🏃"},
-            {"name": "Fast Power Banks", "tag": "20000mAh", "icon": "🔋"},
-            {"name": "Smart Home & Audio", "tag": "Ecosystem", "icon": "🏠"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "Redmi Note 13 Pro+ 5G Mega Cut",
-                "tag": "120W HyperCharge",
-                "desc": "Curved AMOLED 1.5K screen, 200MP flagship OIS camera, and zero to 100% charge in just 19 minutes with Xiaomi HyperOS.",
-                "features": ["IP68 Water & Dust Resistance rating", "120W In-box Gallium Nitride Charger included", "Huge ₦155,000 instant Yakata discount"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-                "cta_text": "Grab Note 13 Pro+",
-                "cta_link": "https://www.konga.com/search?search=redmi+note+13"
-            },
-            {
-                "title": "POCO Performance Beast Zone",
-                "tag": "Snapdragon 8s Gen 3",
-                "desc": "Built for competitive mobile gamers with LiquidCool 4.0 vapor chambers and WildBoost optimization at mid-range prices.",
-                "features": ["120Hz Flow AMOLED crystal clear visuals", "Ultra-stable frame rates on PUBG & COD Mobile", "Free gamer earbuds on select orders"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/D/Y/118566_1768920113.jpg",
-                "cta_text": "Shop POCO Beasts",
-                "cta_link": "https://www.konga.com/search?search=poco+x6"
-            }
+            {"name": "Redmi Note 13 Pro+", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "redmi+note+13+pro"},
+            {"name": "Redmi Note 13", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "redmi+note+13"},
+            {"name": "POCO X6 Pro", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/Y/118566_1768920113.jpg", "query": "poco+x6+pro"},
+            {"name": "Redmi 13C", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "redmi+13c"},
+            {"name": "Redmi 14C", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "redmi+14c"},
+            {"name": "Redmi A3", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "redmi+a3"},
+            {"name": "Xiaomi Powerbanks", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "xiaomi+power+bank"},
+            {"name": "Fast Chargers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "xiaomi+charger"}
         ]
     },
     "infinix-phones": {
-        "badge": "Infinix Mobile Store",
+        "title": "Infinix Phones",
         "subcategories": [
-            {"name": "Infinix Note 40 Series", "tag": "Wireless All-Round", "icon": "⚡"},
-            {"name": "Infinix Hot 50 Series", "tag": "Smooth 120Hz", "icon": "🔥"},
-            {"name": "Infinix Smart 8 Series", "tag": "Under ₦120k", "icon": "💰"},
-            {"name": "Infinix GT 20 Pro", "tag": "Gaming Flagship", "icon": "🎮"},
-            {"name": "Zero Series Flagships", "tag": "4K 60fps Vlogging", "icon": "🎬"},
-            {"name": "MagCharge & Power", "tag": "Originals", "icon": "🔌"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "Infinix Note 40 Pro 5G Wireless Kit",
-                "tag": "All-Round FastCharge 2.0",
-                "desc": "70W Multi-Speed FastCharge + 20W Wireless MagCharge. Includes 3D-Curved 120Hz AMOLED display and Halo Active Lighting.",
-                "features": ["Free MagCase & MagCharge Wireless Pad in the box", "Cheetah X1 Dedicated Charging Chipset", "2-Year VIP warranty and screen protection"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-                "cta_text": "Shop Note 40 Pro",
-                "cta_link": "https://www.konga.com/search?search=infinix+note+40"
-            },
-            {
-                "title": "Campus & Pocket Super Savers",
-                "tag": "Hot 50 & Smart 8",
-                "desc": "Ultra-slim body, Dynamic Bar notifications, and 5000mAh battery that keeps going all weekend without recharge anxiety.",
-                "features": ["Up to 8GB Extended RAM for smooth multitasking", "Side-mounted biometric fingerprint security", "Prices starting from ₦108,000 only"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-                "cta_text": "Shop Hot Series",
-                "cta_link": "https://www.konga.com/search?search=infinix+hot"
-            }
+            {"name": "Note 40 Pro 5G", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+note+40+pro"},
+            {"name": "Note 40 4G", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+note+40"},
+            {"name": "Hot 50 Pro+", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+hot+50"},
+            {"name": "Hot 50i", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+hot+50i"},
+            {"name": "Smart 8", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+smart+8"},
+            {"name": "GT 20 Pro", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+gt+20+pro"},
+            {"name": "Zero Series", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+zero"},
+            {"name": "MagCharge Kits", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+magcharge"}
         ]
     },
     "laptops": {
-        "badge": "Top Computing & Laptops",
+        "title": "Laptops & Computing",
         "subcategories": [
-            {"name": "HP Business & Pavilion", "tag": "Core i5 / i7", "icon": "💼"},
-            {"name": "ASUS Zenbook & TUF", "tag": "OLED & Gaming", "icon": "💻"},
-            {"name": "Apple MacBooks", "tag": "M2 / M3 / M5", "icon": "🍏"},
-            {"name": "Lenovo IdeaPad & ThinkPad", "tag": "Durability", "icon": "⚙️"},
-            {"name": "Dell Inspiron & Latitude", "tag": "Workhorses", "icon": "🏢"},
-            {"name": "Laptop Bags & Docks", "tag": "Accessories", "icon": "🎒"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "HP 240R G10 Commercial Workhorse",
-                "tag": "Intel Core 7-150U Power",
-                "desc": "Built for modern hybrid professionals with 16GB high-speed memory, 512GB NVMe SSD, and Windows 11 Pro preloaded.",
-                "features": ["14\" Anti-Glare FHD narrow-border display", "Long-lasting HP Fast Charge 3-cell 41Wh battery", "Save over ₦160,000 on official HP stock"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/R/H/_1784902533.png",
-                "cta_text": "Shop HP Notebooks",
-                "cta_link": "https://www.konga.com/search?search=hp+laptop"
-            },
-            {
-                "title": "High-Performance Gaming & Creators",
-                "tag": "RTX 4060 / 4070 Ready",
-                "desc": "High refresh rate ASUS TUF and Zenbook OLED laptops built for 3D rendering, video editing, and AAA esports dominance.",
-                "features": ["144Hz - 240Hz esports display options", "Advanced dual-fan self-cleaning thermal cooling", "Free gaming bag on orders above ₦1.5m"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/H/Y/56319_1786712399.jpg",
-                "cta_text": "Explore Gaming Laptops",
-                "cta_link": "https://www.konga.com/search?search=asus+gaming+laptop"
-            }
+            {"name": "HP Laptops", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png", "query": "hp+laptop"},
+            {"name": "ASUS Laptops", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/Y/56319_1786712399.jpg", "query": "asus+laptop"},
+            {"name": "Apple MacBooks", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/163129_1770105285.jpg", "query": "macbook"},
+            {"name": "Lenovo Laptops", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png", "query": "lenovo+laptop"},
+            {"name": "Dell Inspiron", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/F/Z/149469_1782466044.jpg", "query": "dell+laptop"},
+            {"name": "Gaming Laptops", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/Y/56319_1786712399.jpg", "query": "gaming+laptop"},
+            {"name": "Zinox Laptops", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png", "query": "zinox+laptop"},
+            {"name": "Laptop Bags & Stands", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png", "query": "laptop+bag"}
         ]
     },
     "consoles": {
-        "badge": "Console Gaming Hub",
+        "title": "Consoles & Gaming",
         "subcategories": [
-            {"name": "PlayStation 5 Slim", "tag": "Disc & Digital", "icon": "🎮"},
-            {"name": "Xbox Series X / S", "tag": "Game Pass Hub", "icon": "🟢"},
-            {"name": "Nintendo Switch OLED", "tag": "Portable Fun", "icon": "🕹️"},
-            {"name": "DualSense Controllers", "tag": "Haptic Feedback", "icon": "🎯"},
-            {"name": "EA FC 25 & Hit Games", "tag": "Top Titles", "icon": "⚽"},
-            {"name": "Gaming Headsets & Gear", "tag": "Pulse 3D", "icon": "🎧"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "PS5 Slim Disc + FC 25 Mega Bundle",
-                "tag": "Ultimate Match Day",
-                "desc": "Ultra-fast 1TB NVMe SSD, Ray Tracing, 4K 120Hz HDR output, bundled with two DualSense controllers and EA FC 25 disc.",
-                "features": ["Official Sony Interactive Entertainment warranty", "Includes extra DualSense controller for co-op games", "Save ₦185,000 with Yakata bundle pricing"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/Z/W/240947_1783276152.jpg",
-                "cta_text": "Claim PS5 Bundle",
-                "cta_link": "https://www.konga.com/search?search=playstation+5"
-            },
-            {
-                "title": "Xbox Series X | S Game Pass Vault",
-                "tag": "120 FPS Quick Resume",
-                "desc": "The most powerful console hardware ever engineered. Play hundreds of games on day one with 3-month Game Pass Ultimate included.",
-                "features": ["12 Teraflops GPU processing muscle", "Instant Quick Resume across up to 5 games simultaneously", "Whisper-quiet architecture vapor chamber design"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-                "cta_text": "Explore Xbox Consoles",
-                "cta_link": "https://www.konga.com/search?search=xbox+series"
-            }
+            {"name": "PlayStation 5 Slim", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Z/W/240947_1783276152.jpg", "query": "ps5+slim"},
+            {"name": "PS5 Digital", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Z/W/240947_1783276152.jpg", "query": "ps5+digital"},
+            {"name": "Xbox Series X", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg", "query": "xbox+series+x"},
+            {"name": "Xbox Series S", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg", "query": "xbox+series+s"},
+            {"name": "Nintendo Switch OLED", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg", "query": "nintendo+switch"},
+            {"name": "DualSense Controllers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg", "query": "dualsense+controller"},
+            {"name": "EA Sports FC 25", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg", "query": "ea+fc+25"},
+            {"name": "Pulse 3D Headsets", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/R/122138_1725373498.jpg", "query": "ps5+headset"}
         ]
     },
     "washers": {
-        "badge": "Laundry Appliances",
+        "title": "Washers & Dryers",
         "subcategories": [
-            {"name": "Front Load Washers", "tag": "AI DD Inverters", "icon": "🔄"},
-            {"name": "Top Load Washers", "tag": "Smart Inverters", "icon": "🧺"},
-            {"name": "Twin Tub Washers", "tag": "Gen Compatible", "icon": "⚡"},
-            {"name": "Washer-Dryer Combos", "tag": "All-in-One", "icon": "💨"},
-            {"name": "Commercial Washers", "tag": "Heavy Duty 15kg+", "icon": "🏢"},
-            {"name": "Covers & Detergents", "tag": "Care Kits", "icon": "🧴"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "LG AI DD Intelligent Front Loaders",
-                "tag": "18% More Fabric Care",
-                "desc": "AI Direct Drive detects fabric weight and softness to choose optimal wash motions automatically. Built-in Steam eliminates 99.9% allergens.",
-                "features": ["TurboWash 360 completes clean cycle in 39 mins", "10-Year Inverter Direct Drive motor warranty", "SmartThinQ WiFi remote control from your phone"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-                "cta_text": "Shop LG Washers",
-                "cta_link": "https://www.konga.com/search?search=lg+washing+machine"
-            },
-            {
-                "title": "Low Voltage & Gen-Friendly Twin Tubs",
-                "tag": "Haier Thermocool & Scanfrost",
-                "desc": "Wash full family laundry loads using your small generator. Double tub design allows washing and spinning at the same time.",
-                "features": ["Runs comfortably on 1.5kVA generators", "Rust-free plastic body prevents bathroom corrosion", "Special soak cycle for stubborn collar stains"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/R/I/140630_1725641773.jpg",
-                "cta_text": "Shop Twin Tubs",
-                "cta_link": "https://www.konga.com/search?search=twin+tub+washing+machine"
-            }
+            {"name": "Front Load Washers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg", "query": "front+load+washing+machine"},
+            {"name": "Top Load Washers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg", "query": "top+load+washing+machine"},
+            {"name": "Twin Tub Washers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/I/140630_1725641773.jpg", "query": "twin+tub+washing+machine"},
+            {"name": "Washer & Dryer Combo", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg", "query": "washer+dryer"},
+            {"name": "LG AI DD", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg", "query": "lg+ai+dd"},
+            {"name": "Samsung EcoBubble", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg", "query": "samsung+ecobubble"},
+            {"name": "Haier Thermocool", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/I/140630_1725641773.jpg", "query": "haier+thermocool+washer"},
+            {"name": "Protective Covers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg", "query": "washing+machine+cover"}
         ]
     },
     "acs": {
-        "badge": "Cool Zone & Climate",
+        "title": "Air Conditioners",
         "subcategories": [
-            {"name": "Inverter Split ACs", "tag": "Up to 70% Energy Save", "icon": "❄️"},
-            {"name": "Gen-Cool Compatible", "tag": "Low Voltage", "icon": "⚡"},
-            {"name": "Floor Standing Tower", "tag": "2.0HP - 5.0HP", "icon": "🏢"},
-            {"name": "1.0HP & 1.5HP ACs", "tag": "Bedroom Comfort", "icon": "🛏️"},
-            {"name": "Copper Condenser Units", "tag": "Anti-Rust", "icon": "🛡️"},
-            {"name": "AC Installation Kits", "tag": "Pipes & Brackets", "icon": "🔧"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "LG Dual Inverter Gen-Cool ACs",
-                "tag": "Runs on Small Generators",
-                "desc": "Dual Inverter compressor saves up to 70% electricity and cools 40% faster. Gen-Mode allows the AC to run on your generator without tripping.",
-                "features": ["10-Year compressor manufacturer warranty", "Gold Fin anti-corrosion coating for coastal humidity", "Ultra-quiet operation at just 19 decibels"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-                "cta_text": "Shop Dual Inverter ACs",
-                "cta_link": "https://www.konga.com/search?search=lg+inverter+ac"
-            },
-            {
-                "title": "Carrier & Hisense Fast-Cool Specials",
-                "tag": "100% Pure Copper Pipes",
-                "desc": "Heavy-duty outdoor condensers engineered for Nigerian power fluctuations and tropical heat waves. Immediate freezing cold air in minutes.",
-                "features": ["R410A Eco-friendly zero ozone depletion gas", "High-density multi-stage air purification filter", "Free installation pipe and bracket kit included"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/M/X/104208_1630012306.jpg",
-                "cta_text": "Explore Split ACs",
-                "cta_link": "https://www.konga.com/search?search=split+air+conditioner"
-            }
+            {"name": "1.0 HP Split ACs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg", "query": "1hp+split+ac"},
+            {"name": "1.5 HP Split ACs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg", "query": "1.5hp+split+ac"},
+            {"name": "2.0 HP Split ACs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/W/118566_1788273396.jpg", "query": "2hp+split+ac"},
+            {"name": "Inverter ACs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg", "query": "inverter+split+ac"},
+            {"name": "Floor Standing ACs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg", "query": "floor+standing+ac"},
+            {"name": "LG Dual Inverter", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg", "query": "lg+dual+inverter+ac"},
+            {"name": "Hisense Copper ACs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/W/118566_1788273396.jpg", "query": "hisense+ac"},
+            {"name": "AC Pipe & Kits", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg", "query": "ac+installation+kit"}
         ]
     },
     "fridges": {
-        "badge": "Cool Zone Refrigeration",
+        "title": "Fridges & Freezers",
         "subcategories": [
-            {"name": "Double Door Fridges", "tag": "No Frost Inverter", "icon": "🧊"},
-            {"name": "Chest Freezers", "tag": "100-Hour Frost", "icon": "❄️"},
-            {"name": "French Door & Side-by-Side", "tag": "Luxury 450L+", "icon": "💎"},
-            {"name": "Single Door & Bedside", "tag": "Compact 90L-150L", "icon": "🚪"},
-            {"name": "Bottom Freezer Units", "tag": "Easy Access", "icon": "🍓"},
-            {"name": "Surge Guards & Voltage", "tag": "Compressor Safety", "icon": "⚡"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "Haier Thermocool 100-Hour Frost Retention",
-                "tag": "Beat Blackouts",
-                "desc": "Deep chest freezers engineered with extra thick foaming to keep meats, soups, and drinks frozen for over 4 days after power outage.",
-                "features": ["Low voltage operation down to 160V", "Anti-rust zinc galvanized cabinet body", "Super freezing function with LED cabinet lighting"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/X/W/118566_1544086101.jpg",
-                "cta_text": "Shop Chest Freezers",
-                "cta_link": "https://www.konga.com/search?search=chest+freezer"
-            },
-            {
-                "title": "Samsung Twin Cooling Plus Multi-Door",
-                "tag": "Keeps Food Fresh 2X Longer",
-                "desc": "Separate cooling evaporators for fridge and freezer compartments eliminate odor mixing and preserve 70% natural food humidity.",
-                "features": ["Convertible 5-in-1 smart cooling modes", "Digital Inverter Compressor with 20-Year warranty", "Fingerprint-resistant premium matte silver finish"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/K/H/118566_1747148808.png",
-                "cta_text": "Shop Multi-Door Fridges",
-                "cta_link": "https://www.konga.com/search?search=samsung+refrigerator"
-            }
+            {"name": "Double Door Fridges", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg", "query": "double+door+refrigerator"},
+            {"name": "Deep Chest Freezers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/W/118566_1544086101.jpg", "query": "chest+freezer"},
+            {"name": "French Door & Multi", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/H/118566_1747148808.png", "query": "french+door+refrigerator"},
+            {"name": "Single Door & Bedside", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg", "query": "single+door+refrigerator"},
+            {"name": "Bottom Freezer Units", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg", "query": "bottom+freezer+refrigerator"},
+            {"name": "Samsung Fridges", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/H/118566_1747148808.png", "query": "samsung+refrigerator"},
+            {"name": "Haier Thermocool", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/W/118566_1544086101.jpg", "query": "haier+thermocool+freezer"},
+            {"name": "Surge Protectors", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg", "query": "fridge+surge+guard"}
         ]
     },
     "sexual-wellness": {
-        "badge": "Discrete Care & Wellness",
+        "title": "Sexual Wellness",
         "subcategories": [
-            {"name": "Premium Condoms", "tag": "Durex & Fiesta", "icon": "🛡️"},
-            {"name": "Pleasure Lubricants", "tag": "Water & Silicone", "icon": "💧"},
-            {"name": "Massage & Warming Gels", "tag": "2-in-1 Sensual", "icon": "✨"},
-            {"name": "Performance Aids", "tag": "Endurance & Delay", "icon": "⏱️"},
-            {"name": "Intimate Hygiene", "tag": "pH Balanced", "icon": "🌸"},
-            {"name": "Multipack Value Bundles", "tag": "Save up to 40%", "icon": "📦"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "100% Discrete Packaging Guarantee",
-                "tag": "Total Privacy",
-                "desc": "Your privacy is paramount. Every order is packed in plain, unbranded opaque boxes with zero indication of contents or category on the label.",
-                "features": ["No product names visible on exterior packaging", "Confidential delivery straight to your doorstep or Konga pickup store", "Secure online payment with KongaPay for zero card trace"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-                "cta_text": "Explore Wellness Hub",
-                "cta_link": "https://www.konga.com/search?search=sexual+wellness"
-            },
-            {
-                "title": "Durex Sensation & Pleasure Bundles",
-                "tag": "Fetherlite & Extra Safe",
-                "desc": "World's #1 condom brand with dermatologically tested natural rubber latex and sensual water-based lubricants for silky smooth comfort.",
-                "features": ["Electronically tested 5 times for safety and strength", "Mutual Climax ribbing & delay benzocaine technology", "Bulk multi-pack discounts with up to 35% Yakata savings"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-                "cta_text": "Shop Durex Packs",
-                "cta_link": "https://www.konga.com/search?search=durex"
-            }
+            {"name": "Durex Condoms", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "durex+condoms"},
+            {"name": "Pleasure Lubricants", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "lubricant+gel"},
+            {"name": "Massage & 2-in-1 Gels", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "massage+gel"},
+            {"name": "Fiesta Condoms", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "fiesta+condoms"},
+            {"name": "Gold Circle Value", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "gold+circle+condoms"},
+            {"name": "KY Jelly", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "ky+jelly"},
+            {"name": "Endurance & Delay", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "mutual+climax+condoms"},
+            {"name": "Multipack Bundles", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png", "query": "condom+multipack"}
         ]
     },
     "wigs": {
-        "badge": "Beauty & Hair Lounge",
+        "title": "Wigs & Human Hair",
         "subcategories": [
-            {"name": "Bone Straight Wigs", "tag": "Double Drawn", "icon": "✨"},
-            {"name": "Deep Wave & Curly", "tag": "Bouncy Curls", "icon": "🌊"},
-            {"name": "Glueless Bob Wigs", "tag": "Wear & Go", "icon": "💇‍♀️"},
-            {"name": "HD Lace Frontals", "tag": "13x4 / 13x6 Invisible", "icon": "🎀"},
-            {"name": "Human Hair Bundles", "tag": "Virgin Grade 12A", "icon": "👑"},
-            {"name": "Lace Glues & Tools", "tag": "Hot Combs & Wax", "icon": "💄"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "Virgin Human Hair Bone Straight Vault",
-                "tag": "Zero Tangle & Shed-Free",
-                "desc": "100% unprocessed human hair from single donors. Silky bone straight texture that stays sleek even in tropical humidity, ready to bleach and dye.",
-                "features": ["Pre-plucked natural hairline with baby hairs", "Available from 16-inch to 32-inch lengths", "Free satin bonnet & edge brush with every wig"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-                "cta_text": "Shop Bone Straight",
-                "cta_link": "https://www.konga.com/search?search=bone+straight+wig"
-            },
-            {
-                "title": "5-Minute Wear & Go Glueless Bobs",
-                "tag": "Beginner Friendly",
-                "desc": "No glue, no spray, no headache. Elastic band install gives an undetectable scalp melt in under 3 minutes for office and weekend glam.",
-                "features": ["Pre-cut transparent HD lace for instant fit", "180% full natural density volume", "Yakata price drop starting from under ₦50,000"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-                "cta_text": "Explore Glueless Bobs",
-                "cta_link": "https://www.konga.com/search?search=glueless+bob+wig"
-            }
+            {"name": "Bone Straight Wigs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "bone+straight+wig"},
+            {"name": "Deep Wave & Curls", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "deep+wave+wig"},
+            {"name": "Glueless Bob Wigs", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "glueless+bob+wig"},
+            {"name": "HD Lace Frontals", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "hd+lace+frontal"},
+            {"name": "Human Hair Bundles", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "human+hair+bundles"},
+            {"name": "Piano & Highlight", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "highlight+wig"},
+            {"name": "Lace Glue & Tint", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "lace+tint+glue"},
+            {"name": "Hot Combs & Wax", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/N/240104_1742889486.jpg", "query": "hot+comb+hair"}
         ]
     },
     "makeup": {
-        "badge": "Cosmetics & Glam Store",
+        "title": "Makeup & Cosmetics",
         "subcategories": [
-            {"name": "Foundations & Primers", "tag": "Matte Poreless", "icon": "✨"},
-            {"name": "Setting Powders & Sprays", "tag": "All-Day Lock", "icon": "💨"},
-            {"name": "Eyeshadows & Liners", "tag": "High Pigment", "icon": "👁️"},
-            {"name": "Lip Glosses & Mattes", "tag": "Long Lasting", "icon": "💋"},
-            {"name": "18pc Makeup Brush Sets", "tag": "Pro Grade", "icon": "🖌️"},
-            {"name": "Skincare Prep & Remover", "tag": "Gentle Cleansing", "icon": "🧴"}
-        ],
-        "promo_buckets": [
-            {
-                "title": "Pro Longwear Matte Foundations",
-                "tag": "Shades for Every Melanin Tone",
-                "desc": "Oil-free, shine-control formulas from Fenty Beauty, Maybelline Fit Me, and Mary Kay that resist transfer in heat and humidity.",
-                "features": ["24-Hour humidity-proof and sweat-resistant wear", "Pore-blurring micro-powder technology", "Guaranteed 100% original manufacturer stock"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-                "cta_text": "Shop Foundations",
-                "cta_link": "https://www.konga.com/search?search=matte+foundation"
-            },
-            {
-                "title": "Beauty Bag Must-Haves Under ₦20,000",
-                "tag": "Budget Glam Steals",
-                "desc": "Stock up on Milani setting sprays, classic liquid lipsticks, sponge blenders, and 18-piece soft synthetic brush sets at massive discounts.",
-                "features": ["Complete makeup toolkit essentials in one order", "Cruelty-free dermatologically approved cosmetics", "Discounts up to 40% throughout Yakata season"],
-                "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-                "cta_text": "Shop Budget Glam",
-                "cta_link": "https://www.konga.com/search?search=makeup"
-            }
+            {"name": "Matte Foundations", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "matte+foundation"},
+            {"name": "Fit Me by Maybelline", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "maybelline+fit+me"},
+            {"name": "Setting Powders", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "setting+powder"},
+            {"name": "Setting Sprays", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "setting+spray"},
+            {"name": "Eyeshadow Palettes", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "eyeshadow+palette"},
+            {"name": "Lipsticks & Glosses", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "lipstick+gloss"},
+            {"name": "18pc Makeup Brushes", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "makeup+brush+set"},
+            {"name": "Fenty Beauty", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg", "query": "fenty+beauty"}
         ]
     }
 }
 
-def generate_subcategories_html(subcats, page_key):
-    chips_html = ""
+def generate_subcat_circles_html(subcats):
+    items_html = ""
     for s in subcats:
-        chips_html += f"""
-          <a href="https://www.konga.com/search?search={s['name'].replace(' ', '+').replace('&', '%26')}" target="_blank" class="subcat-chip-card">
-            <div class="subcat-chip-icon">{s['icon']}</div>
-            <div class="subcat-chip-info">
-              <span class="subcat-chip-name">{s['name']}</span>
-              <span class="subcat-chip-tag">{s['tag']}</span>
+        items_html += f"""
+          <a href="https://www.konga.com/search?search={s['query']}" target="_blank" class="subcat-circle-item">
+            <div class="subcat-circle-img-wrap">
+              <img src="{s['img']}" alt="{s['name']}" loading="lazy">
             </div>
+            <span class="subcat-circle-label">{s['name']}</span>
           </a>"""
-    return chips_html
-
-def generate_promo_buckets_html(buckets):
-    cards_html = ""
-    for b in buckets:
-        features_html = "".join([f"<li>{feat}</li>" for feat in b['features']])
-        cards_html += f"""
-        <div class="promo-card">
-          <span class="promo-tag">{b['tag']}</span>
-          <h3 class="promo-title">{b['title']}</h3>
-          <p class="promo-desc">{b['desc']}</p>
-          <ul class="promo-features">
-            {features_html}
-          </ul>
-          <div class="promo-image-placeholder">
-            <img src="{b['img']}" alt="{b['title']}" loading="lazy">
-          </div>
-          <a href="{b['cta_link']}" target="_blank" class="promo-action">{b['cta_text']}</a>
-        </div>"""
-    return cards_html
+    return items_html
 
 def generate_html(key, cat):
     cfg = PAGE_CONFIG.get(key, {
-        "badge": cat.get('badge', 'Yakata Deals'),
-        "subcategories": [],
-        "promo_buckets": []
+        "title": cat['heading'],
+        "subcategories": []
     })
 
     products_html = ""
@@ -439,8 +202,7 @@ def generate_html(key, cat):
             </div>
           </div>"""
 
-    subcats_html = generate_subcategories_html(cfg['subcategories'], key)
-    promo_buckets_html = generate_promo_buckets_html(cfg['promo_buckets'])
+    subcat_circles_html = generate_subcat_circles_html(cfg['subcategories'])
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -454,226 +216,181 @@ def generate_html(key, cat):
     <meta name="description" content="{cat['desc']}" />
     <link rel="stylesheet" href="category-common.css" />
     <style>
-      /* Category Page Specific Enhancements */
+      /* Clean Dark Subpage Styling (No large hero banner) */
       body {{
-        background-color: #000000;
+        background-color: #0b0b0f;
         color: #ffffff;
         font-family: 'Roboto', sans-serif;
       }}
-      .cat-page-hero {{
+
+      /* Navbar Logo Sizing - matching exact Konga Yakata proportions */
+      .navbar-logo {{
+        height: 38px !important;
+        display: flex;
+        align-items: center;
+      }}
+      .navbar-logo a {{
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+      }}
+      .navbar-logo img {{
+        height: 38px !important;
+        max-height: 38px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        display: block;
+      }}
+
+      /* Clean Header & Breadcrumbs (Like Konga Subcategory Page) */
+      .cat-simple-header {{
         width: 100%;
         max-width: 1400px;
-        margin: 1.5rem auto 1rem auto;
+        margin: 1.25rem auto 0.75rem auto;
         padding: 0 1rem;
       }}
-      .cat-hero-banner {{
-        background: {cat['hero_gradient']};
-        border-radius: 16px;
-        padding: 2.5rem 2.25rem;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        border: 1px solid rgba(255,255,255,0.1);
-      }}
-      .cat-hero-banner::after {{
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -10%;
-        width: 380px;
-        height: 380px;
-        background: radial-gradient(circle, rgba(237, 1, 127, 0.3) 0%, transparent 70%);
-        pointer-events: none;
-      }}
-      .cat-breadcrumb {{
+      .cat-simple-breadcrumb {{
         display: flex;
         align-items: center;
         gap: 8px;
         font-size: 13px;
-        color: rgba(255,255,255,0.7);
-        margin-bottom: 0.85rem;
-        flex-wrap: wrap;
+        color: #9ca3af;
+        margin-bottom: 0.5rem;
       }}
-      .cat-breadcrumb a {{
-        color: #ffffff;
+      .cat-simple-breadcrumb a {{
+        color: #d1d5db;
         text-decoration: none;
         transition: color 0.2s;
       }}
-      .cat-breadcrumb a:hover {{
+      .cat-simple-breadcrumb a:hover {{
         color: #ed017f;
       }}
-      .cat-badge {{
-        display: inline-block;
-        background-color: #ed017f;
-        color: #ffffff;
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 4px 12px;
-        border-radius: 9999px;
-        margin-bottom: 0.75rem;
-      }}
-      .cat-hero-title {{
-        font-size: 32px;
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 0.65rem;
-        line-height: 1.2;
-        font-family: 'Poppins', sans-serif;
-      }}
-      .cat-hero-desc {{
-        font-size: 15px;
-        color: rgba(255,255,255,0.9);
-        max-width: 760px;
-        line-height: 1.6;
-        font-weight: 300;
-      }}
-      .cat-filter-bar {{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 1.25rem;
-        padding-top: 1.25rem;
-        border-top: 1px solid rgba(255,255,255,0.15);
-        flex-wrap: wrap;
-        gap: 1rem;
-      }}
-      .cat-count-badge {{
-        font-size: 14px;
-        color: rgba(255,255,255,0.95);
+      .cat-simple-breadcrumb .crumb-active {{
+        color: #ed017f;
         font-weight: 500;
       }}
-      .cat-back-home {{
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(255,255,255,0.15);
-        color: #fff;
-        text-decoration: none;
-        padding: 8px 18px;
-        border-radius: 8px;
-        font-size: 13px;
-        font-weight: 600;
-        transition: background 0.2s;
-      }}
-      .cat-back-home:hover {{
-        background: #ed017f;
+      .cat-simple-title {{
+        font-family: 'Poppins', sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        line-height: 1.25;
       }}
 
-      /* --- Subcategories Grid Section --- */
-      .subcategories-section {{
+      /* Subcategory Circle Grid Section (Dark Version of Konga Circular Layout) */
+      .subcat-circles-section {{
         width: 100%;
         max-width: 1400px;
-        margin: 1.5rem auto 2.5rem auto;
+        margin: 1rem auto 2.5rem auto;
         padding: 0 1rem;
       }}
-      .subcategories-container {{
-        background: #111116;
-        border: 1px solid rgba(255,255,255,0.08);
-        border-top: none;
-        border-radius: 0 0 12px 12px;
-        padding: 1.25rem 1rem;
+      .subcat-circles-container {{
+        background: #14141a;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 1.75rem 1.25rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
       }}
-      .subcategories-grid {{
+      .subcat-circles-grid {{
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 16px;
       }}
-      .subcat-chip-card {{
-        background: #18181f;
-        border: 1px solid rgba(255,255,255,0.1);
-        border-radius: 10px;
-        padding: 12px 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-decoration: none;
-        color: #fff;
-        transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-      }}
-      .subcat-chip-card:hover {{
-        transform: translateY(-3px);
-        border-color: #ed017f;
-        background: #20202a;
-      }}
-      .subcat-chip-icon {{
-        font-size: 22px;
-        line-height: 1;
-        flex-shrink: 0;
-      }}
-      .subcat-chip-info {{
+      .subcat-circle-item {{
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-      }}
-      .subcat-chip-name {{
-        font-size: 13px;
-        font-weight: 600;
+        align-items: center;
+        text-decoration: none;
         color: #ffffff;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        transition: transform 0.25s ease;
       }}
-      .subcat-chip-tag {{
-        font-size: 11px;
-        color: #ed017f;
-        font-weight: 500;
-        margin-top: 2px;
+      .subcat-circle-item:hover {{
+        transform: translateY(-5px);
       }}
-
-      /* Promo Banners Section Overrides for Subpages */
-      .subpage-promo-section {{
-        width: 100%;
-        max-width: 1400px;
-        margin: 3rem auto 2rem auto;
-        padding: 0 1rem;
-      }}
-      .subpage-promo-section .promo-banners-grid {{
-        max-width: 100%;
-      }}
-      .subpage-promo-section .promo-image-placeholder {{
-        height: 220px;
-        background: #1a1a24;
-      }}
-      .subpage-promo-section .promo-image-placeholder img {{
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        padding: 12px;
+      .subcat-circle-img-wrap {{
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
         background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border: 3px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        padding: 14px;
+        box-sizing: border-box;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      }}
+      .subcat-circle-item:hover .subcat-circle-img-wrap {{
+        border-color: #ed017f;
+        box-shadow: 0 6px 20px rgba(237, 1, 127, 0.35);
+      }}
+      .subcat-circle-img-wrap img {{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        transition: transform 0.3s ease;
+      }}
+      .subcat-circle-item:hover .subcat-circle-img-wrap img {{
+        transform: scale(1.08);
+      }}
+      .subcat-circle-label {{
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: center;
+        color: #e5e7eb;
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 32px;
+        transition: color 0.2s ease;
+      }}
+      .subcat-circle-item:hover .subcat-circle-label {{
+        color: #ed017f;
       }}
 
-      @media (max-width: 1024px) {{
-        .subcategories-grid {{
-          grid-template-columns: repeat(3, 1fr);
+      /* Responsive rules for circle subcategories */
+      @media (max-width: 1200px) {{
+        .subcat-circles-grid {{
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px 12px;
+        }}
+        .subcat-circle-img-wrap {{
+          width: 95px;
+          height: 95px;
         }}
       }}
       @media (max-width: 640px) {{
-        .subcategories-grid {{
-          grid-template-columns: repeat(2, 1fr);
-          gap: 8px;
+        .subcat-circles-grid {{
+          grid-template-columns: repeat(4, 1fr);
+          gap: 12px 8px;
         }}
-        .cat-hero-banner {{
-          padding: 1.75rem 1.25rem;
+        .subcat-circles-container {{
+          padding: 1.25rem 0.75rem;
         }}
-        .cat-hero-title {{
-          font-size: 24px;
+        .subcat-circle-img-wrap {{
+          width: 72px;
+          height: 72px;
+          padding: 8px;
         }}
-        .cat-hero-desc {{
-          font-size: 13px;
+        .subcat-circle-label {{
+          font-size: 11px;
+          margin-top: 6px;
         }}
-        .subcat-chip-card {{
-          padding: 10px 8px;
-        }}
-        .subcat-chip-name {{
-          font-size: 12px;
+        .cat-simple-title {{
+          font-size: 20px;
         }}
       }}
     </style>
   </head>
   <body>
-    <!-- Main Top Navigation (Identical to Yakata Main Landing Page) -->
+    <!-- Main Top Navigation (Identical layout to index.html with fixed logo size) -->
     <header class="navbar">
       <nav class="navbar-container">
         <div class="navbar-logo">
@@ -694,58 +411,30 @@ def generate_html(key, cat):
       </nav>
     </header>
 
-    <!-- Category Header Hero -->
-    <section class="cat-page-hero">
-      <div class="cat-hero-banner">
-        <div class="cat-breadcrumb">
-          <a href="index.html">Home</a>
-          <span>&rsaquo;</span>
-          <a href="index.html#featured-categories">Categories</a>
-          <span>&rsaquo;</span>
-          <span>{cat['heading']}</span>
-        </div>
-        
-        <span class="cat-badge">{cfg['badge']}</span>
-        <h1 class="cat-hero-title">{cat['heading']}</h1>
-        <p class="cat-hero-desc">{cat['desc']}</p>
+    <!-- Clean Header & Breadcrumbs (No banner) -->
+    <div class="cat-simple-header">
+      <div class="cat-simple-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <span class="crumb-active">{cat['heading']}</span>
+      </div>
+      <h1 class="cat-simple-title">{cat['heading']}</h1>
+    </div>
 
-        <div class="cat-filter-bar">
-          <div class="cat-count-badge">Showing {len(cat['products'])} Verified Yakata Deals</div>
-          <div>
-            <a href="index.html" class="cat-back-home">&larr; Back to Main Yakata Page</a>
-          </div>
+    <!-- Circular Subcategories Section (Dark version of Konga subcategory pills) -->
+    <section class="subcat-circles-section section-reset">
+      <div class="subcat-circles-container">
+        <div class="subcat-circles-grid">
+          {subcat_circles_html}
         </div>
       </div>
     </section>
 
-    <!-- 1. Sub Categories Section -->
-    <section class="subcategories-section section-reset">
-      <div class="shop-by-category-header" style="background-color: #ed017f; border-radius: 12px 12px 0 0;">
-        <span>Shop Sub-Categories</span>
-        <span class="yakata-badge">Explore All</span>
-      </div>
-      <div class="subcategories-container">
-        <div class="subcategories-grid">
-          {subcats_html}
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. Promo Buckets Section -->
-    <section class="subpage-promo-section section-reset">
-      <div class="centered-red-header" style="margin-bottom: 1.5rem; text-align: left; padding: 0.75rem 1.25rem;">
-        <span>Special Promo Buckets & Exclusive Deals</span>
-      </div>
-      <div class="promo-banners-grid">
-        {promo_buckets_html}
-      </div>
-    </section>
-
-    <!-- 3. Featured Products Grid Section -->
-    <section class="shop-all-section section-reset" style="margin-top: 2rem !important;">
+    <!-- Product Grid Section (Trending in Category) -->
+    <section class="shop-all-section section-reset" style="margin-top: 1rem !important;">
       <div class="shop-by-category-header" style="background-color: #ed017f; border-radius: 12px 12px 0 0;">
         <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
-          <span>{cat['heading']} Deals</span>
+          <span>Trending in {cat['heading']}</span>
           <a href="https://www.konga.com/search?search={key.replace('-', '+')}" target="_blank" class="flash-more" style="color: #ffffff; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 8px;">
             View All On Konga
             <span class="icon-circle" style="background-color: #ffffff; border-radius: 50%; width: 20px; height: 20px; display: flex; justify-content: center; align-items: center;">
@@ -762,7 +451,7 @@ def generate_html(key, cat):
       </div>
     </section>
 
-    <!-- 4. Written SEO Footer Section -->
+    <!-- Written SEO Footer Section -->
     <section class="written-seo" style="margin-top: 3.5rem !important;">
       <h2>Shop Genuine {cat['heading']} During Konga Yakata 2026</h2>
       <p>{cat['desc']}</p>

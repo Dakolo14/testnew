@@ -12,32 +12,33 @@
     <style>
       /* Category Page Specific Enhancements */
       body {
-        background-color: #0b0b0f;
+        background-color: #000000;
         color: #ffffff;
+        font-family: 'Roboto', sans-serif;
       }
       .cat-page-hero {
         width: 100%;
         max-width: 1400px;
-        margin: 1.5rem auto 2rem auto;
+        margin: 1.5rem auto 1rem auto;
         padding: 0 1rem;
       }
       .cat-hero-banner {
         background: linear-gradient(135deg, #15803d 0%, #14532d 100%);
         border-radius: 16px;
-        padding: 3rem 2.5rem;
+        padding: 2.5rem 2.25rem;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        border: 1px solid rgba(255,255,255,0.1);
       }
       .cat-hero-banner::after {
         content: '';
         position: absolute;
         top: -50%;
         right: -10%;
-        width: 350px;
-        height: 350px;
-        background: radial-gradient(circle, rgba(237, 1, 127, 0.25) 0%, transparent 70%);
+        width: 380px;
+        height: 380px;
+        background: radial-gradient(circle, rgba(237, 1, 127, 0.3) 0%, transparent 70%);
         pointer-events: none;
       }
       .cat-breadcrumb {
@@ -46,7 +47,8 @@
         gap: 8px;
         font-size: 13px;
         color: rgba(255,255,255,0.7);
-        margin-bottom: 1rem;
+        margin-bottom: 0.85rem;
+        flex-wrap: wrap;
       }
       .cat-breadcrumb a {
         color: #ffffff;
@@ -64,7 +66,7 @@
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1px;
-        padding: 4px 10px;
+        padding: 4px 12px;
         border-radius: 9999px;
         margin-bottom: 0.75rem;
       }
@@ -72,41 +74,31 @@
         font-size: 32px;
         font-weight: 700;
         color: #ffffff;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.65rem;
         line-height: 1.2;
+        font-family: 'Poppins', sans-serif;
       }
       .cat-hero-desc {
         font-size: 15px;
-        color: rgba(255,255,255,0.85);
-        max-width: 720px;
+        color: rgba(255,255,255,0.9);
+        max-width: 760px;
         line-height: 1.6;
+        font-weight: 300;
       }
       .cat-filter-bar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 1.5rem;
-        padding-top: 1.5rem;
-        border-top: 1px solid rgba(255,255,255,0.12);
+        margin-top: 1.25rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid rgba(255,255,255,0.15);
         flex-wrap: wrap;
         gap: 1rem;
       }
       .cat-count-badge {
         font-size: 14px;
-        color: rgba(255,255,255,0.9);
+        color: rgba(255,255,255,0.95);
         font-weight: 500;
-      }
-      .cat-sort-btn {
-        background: rgba(255,255,255,0.12);
-        color: #fff;
-        border: 1px solid rgba(255,255,255,0.2);
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-size: 12px;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
       }
       .cat-back-home {
         display: inline-flex;
@@ -115,19 +107,111 @@
         background: rgba(255,255,255,0.15);
         color: #fff;
         text-decoration: none;
-        padding: 8px 16px;
+        padding: 8px 18px;
         border-radius: 8px;
         font-size: 13px;
         font-weight: 600;
-        margin-top: 1rem;
         transition: background 0.2s;
       }
       .cat-back-home:hover {
         background: #ed017f;
       }
-      @media (max-width: 768px) {
+
+      /* --- Subcategories Grid Section --- */
+      .subcategories-section {
+        width: 100%;
+        max-width: 1400px;
+        margin: 1.5rem auto 2.5rem auto;
+        padding: 0 1rem;
+      }
+      .subcategories-container {
+        background: #111116;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-top: none;
+        border-radius: 0 0 12px 12px;
+        padding: 1.25rem 1rem;
+      }
+      .subcategories-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+      }
+      .subcat-chip-card {
+        background: #18181f;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 10px;
+        padding: 12px 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #fff;
+        transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      }
+      .subcat-chip-card:hover {
+        transform: translateY(-3px);
+        border-color: #ed017f;
+        background: #20202a;
+      }
+      .subcat-chip-icon {
+        font-size: 22px;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+      .subcat-chip-info {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .subcat-chip-name {
+        font-size: 13px;
+        font-weight: 600;
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .subcat-chip-tag {
+        font-size: 11px;
+        color: #ed017f;
+        font-weight: 500;
+        margin-top: 2px;
+      }
+
+      /* Promo Banners Section Overrides for Subpages */
+      .subpage-promo-section {
+        width: 100%;
+        max-width: 1400px;
+        margin: 3rem auto 2rem auto;
+        padding: 0 1rem;
+      }
+      .subpage-promo-section .promo-banners-grid {
+        max-width: 100%;
+      }
+      .subpage-promo-section .promo-image-placeholder {
+        height: 220px;
+        background: #1a1a24;
+      }
+      .subpage-promo-section .promo-image-placeholder img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        padding: 12px;
+        background: #ffffff;
+      }
+
+      @media (max-width: 1024px) {
+        .subcategories-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 640px) {
+        .subcategories-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
         .cat-hero-banner {
-          padding: 2rem 1.25rem;
+          padding: 1.75rem 1.25rem;
         }
         .cat-hero-title {
           font-size: 24px;
@@ -135,11 +219,17 @@
         .cat-hero-desc {
           font-size: 13px;
         }
+        .subcat-chip-card {
+          padding: 10px 8px;
+        }
+        .subcat-chip-name {
+          font-size: 12px;
+        }
       }
     </style>
   </head>
   <body>
-    <!-- Main Top Navigation -->
+    <!-- Main Top Navigation (Identical to Yakata Main Landing Page) -->
     <header class="navbar">
       <nav class="navbar-container">
         <div class="navbar-logo">
@@ -150,11 +240,11 @@
         <div class="nav-wrapper">
           <ul class="nav-items">
             <li><a href="index.html">Home</a></li>
-            <li><a href="samsung-phones.html">Phones</a></li>
+            <li><a href="samsung-phones.html">Phones & Tablets</a></li>
             <li><a href="laptops.html">Computers</a></li>
-            <li><a href="consoles.html">Gaming</a></li>
-            <li><a href="acs.html">Appliances</a></li>
-            <li><a href="wigs.html">Beauty</a></li>
+            <li><a href="consoles.html">Electronics</a></li>
+            <li><a href="acs.html">Home & Kitchen</a></li>
+            <li><a href="makeup.html">Beauty</a></li>
           </ul>
         </div>
       </nav>
@@ -166,17 +256,17 @@
         <div class="cat-breadcrumb">
           <a href="index.html">Home</a>
           <span>&rsaquo;</span>
-          <a href="index.html#featured-categories">Featured Categories</a>
+          <a href="index.html#featured-categories">Categories</a>
           <span>&rsaquo;</span>
           <span>Infinix Smartphones</span>
         </div>
         
-        <span class="cat-badge">Hot Deals Dropping</span>
+        <span class="cat-badge">Infinix Mobile Store</span>
         <h1 class="cat-hero-title">Infinix Smartphones</h1>
         <p class="cat-hero-desc">Style, rapid charging, and smooth displays at student and everyday pocket-friendly prices. Explore Infinix Note 40, Hot 50, and Smart 8 collections.</p>
 
         <div class="cat-filter-bar">
-          <div class="cat-count-badge">Showing 8 Featured Yakata Deals</div>
+          <div class="cat-count-badge">Showing 8 Verified Yakata Deals</div>
           <div>
             <a href="index.html" class="cat-back-home">&larr; Back to Main Yakata Page</a>
           </div>
@@ -184,8 +274,97 @@
       </div>
     </section>
 
-    <!-- Product Grid Section -->
-    <section class="shop-all-section section-reset" style="margin-top: 1rem !important;">
+    <!-- 1. Sub Categories Section -->
+    <section class="subcategories-section section-reset">
+      <div class="shop-by-category-header" style="background-color: #ed017f; border-radius: 12px 12px 0 0;">
+        <span>Shop Sub-Categories</span>
+        <span class="yakata-badge">Explore All</span>
+      </div>
+      <div class="subcategories-container">
+        <div class="subcategories-grid">
+          
+          <a href="https://www.konga.com/search?search=Infinix+Note+40+Series" target="_blank" class="subcat-chip-card">
+            <div class="subcat-chip-icon">⚡</div>
+            <div class="subcat-chip-info">
+              <span class="subcat-chip-name">Infinix Note 40 Series</span>
+              <span class="subcat-chip-tag">Wireless All-Round</span>
+            </div>
+          </a>
+          <a href="https://www.konga.com/search?search=Infinix+Hot+50+Series" target="_blank" class="subcat-chip-card">
+            <div class="subcat-chip-icon">🔥</div>
+            <div class="subcat-chip-info">
+              <span class="subcat-chip-name">Infinix Hot 50 Series</span>
+              <span class="subcat-chip-tag">Smooth 120Hz</span>
+            </div>
+          </a>
+          <a href="https://www.konga.com/search?search=Infinix+Smart+8+Series" target="_blank" class="subcat-chip-card">
+            <div class="subcat-chip-icon">💰</div>
+            <div class="subcat-chip-info">
+              <span class="subcat-chip-name">Infinix Smart 8 Series</span>
+              <span class="subcat-chip-tag">Under ₦120k</span>
+            </div>
+          </a>
+          <a href="https://www.konga.com/search?search=Infinix+GT+20+Pro" target="_blank" class="subcat-chip-card">
+            <div class="subcat-chip-icon">🎮</div>
+            <div class="subcat-chip-info">
+              <span class="subcat-chip-name">Infinix GT 20 Pro</span>
+              <span class="subcat-chip-tag">Gaming Flagship</span>
+            </div>
+          </a>
+          <a href="https://www.konga.com/search?search=Zero+Series+Flagships" target="_blank" class="subcat-chip-card">
+            <div class="subcat-chip-icon">🎬</div>
+            <div class="subcat-chip-info">
+              <span class="subcat-chip-name">Zero Series Flagships</span>
+              <span class="subcat-chip-tag">4K 60fps Vlogging</span>
+            </div>
+          </a>
+          <a href="https://www.konga.com/search?search=MagCharge+%26+Power" target="_blank" class="subcat-chip-card">
+            <div class="subcat-chip-icon">🔌</div>
+            <div class="subcat-chip-info">
+              <span class="subcat-chip-name">MagCharge & Power</span>
+              <span class="subcat-chip-tag">Originals</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Promo Buckets Section -->
+    <section class="subpage-promo-section section-reset">
+      <div class="centered-red-header" style="margin-bottom: 1.5rem; text-align: left; padding: 0.75rem 1.25rem;">
+        <span>Special Promo Buckets & Exclusive Deals</span>
+      </div>
+      <div class="promo-banners-grid">
+        
+        <div class="promo-card">
+          <span class="promo-tag">All-Round FastCharge 2.0</span>
+          <h3 class="promo-title">Infinix Note 40 Pro 5G Wireless Kit</h3>
+          <p class="promo-desc">70W Multi-Speed FastCharge + 20W Wireless MagCharge. Includes 3D-Curved 120Hz AMOLED display and Halo Active Lighting.</p>
+          <ul class="promo-features">
+            <li>Free MagCase & MagCharge Wireless Pad in the box</li><li>Cheetah X1 Dedicated Charging Chipset</li><li>2-Year VIP warranty and screen protection</li>
+          </ul>
+          <div class="promo-image-placeholder">
+            <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/H/A/118566_1789549980.jpg" alt="Infinix Note 40 Pro 5G Wireless Kit" loading="lazy">
+          </div>
+          <a href="https://www.konga.com/search?search=infinix+note+40" target="_blank" class="promo-action">Shop Note 40 Pro</a>
+        </div>
+        <div class="promo-card">
+          <span class="promo-tag">Hot 50 & Smart 8</span>
+          <h3 class="promo-title">Campus & Pocket Super Savers</h3>
+          <p class="promo-desc">Ultra-slim body, Dynamic Bar notifications, and 5000mAh battery that keeps going all weekend without recharge anxiety.</p>
+          <ul class="promo-features">
+            <li>Up to 8GB Extended RAM for smooth multitasking</li><li>Side-mounted biometric fingerprint security</li><li>Prices starting from ₦108,000 only</li>
+          </ul>
+          <div class="promo-image-placeholder">
+            <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/H/A/118566_1789549980.jpg" alt="Campus & Pocket Super Savers" loading="lazy">
+          </div>
+          <a href="https://www.konga.com/search?search=infinix+hot" target="_blank" class="promo-action">Shop Hot Series</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Featured Products Grid Section -->
+    <section class="shop-all-section section-reset" style="margin-top: 2rem !important;">
       <div class="shop-by-category-header" style="background-color: #ed017f; border-radius: 12px 12px 0 0;">
         <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
           <span>Infinix Smartphones Deals</span>
@@ -333,8 +512,8 @@
       </div>
     </section>
 
-    <!-- Written SEO Footer Section -->
-    <section class="written-seo" style="margin-top: 3rem !important;">
+    <!-- 4. Written SEO Footer Section -->
+    <section class="written-seo" style="margin-top: 3.5rem !important;">
       <h2>Shop Genuine Infinix Smartphones During Konga Yakata 2026</h2>
       <p>Style, rapid charging, and smooth displays at student and everyday pocket-friendly prices. Explore Infinix Note 40, Hot 50, and Smart 8 collections.</p>
       <p>Enjoy guaranteed 100% authentic products sourced directly from manufacturers, flexible payment options with KongaPay, secure nationwide logistics, and 7-day hassle-free returns.</p>

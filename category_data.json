@@ -1,0 +1,878 @@
+{
+  "samsung-phones": {
+    "title": "Samsung Phones - Konga Yakata Deals",
+    "heading": "Samsung Galaxy Smartphones",
+    "badge": "Official Store Deals",
+    "desc": "Discover unbeatable Yakata discounts on genuine Samsung Galaxy S-Series, Z-Fold/Flip, and A-Series devices with official warranty and nationwide delivery.",
+    "hero_gradient": "linear-gradient(135deg, #0c4a6e 0%, #082f49 100%)",
+    "products": [
+      {
+        "name": "Samsung Galaxy S24 Ultra 5G - 12GB RAM - 512GB ROM - Titanium Gray",
+        "sku": "samsung-s24-ultra",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a61,950,000",
+        "old_price": "\u20a62,380,000"
+      },
+      {
+        "name": "Samsung Galaxy S24+ 5G - 12GB RAM - 256GB ROM - Onyx Black",
+        "sku": "samsung-s24-plus",
+        "discount": "-15%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a61,420,000",
+        "old_price": "\u20a61,670,000"
+      },
+      {
+        "name": "Samsung Galaxy A55 5G - 8GB RAM - 256GB ROM - Awesome Iceblue",
+        "sku": "samsung-a55-5g",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a6540,000",
+        "old_price": "\u20a6690,000"
+      },
+      {
+        "name": "Samsung Galaxy A35 5G - 8GB RAM - 128GB ROM - Awesome Navy",
+        "sku": "samsung-a35-5g",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a6410,000",
+        "old_price": "\u20a6515,000"
+      },
+      {
+        "name": "Samsung Galaxy A15 - 6GB RAM - 128GB ROM - Blue Black",
+        "sku": "samsung-a15",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a6215,000",
+        "old_price": "\u20a6262,000"
+      },
+      {
+        "name": "Samsung Galaxy A05s - 4GB RAM - 64GB ROM - Light Green",
+        "sku": "samsung-a05s",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a6145,000",
+        "old_price": "\u20a6193,000"
+      },
+      {
+        "name": "Samsung Galaxy Z Fold 6 5G - 12GB RAM - 512GB ROM - Silver Shadow",
+        "sku": "samsung-zfold6",
+        "discount": "-14%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a62,850,000",
+        "old_price": "\u20a63,300,000"
+      },
+      {
+        "name": "Samsung Galaxy Z Flip 6 5G - 12GB RAM - 256GB ROM - Mint",
+        "sku": "samsung-zflip6",
+        "discount": "-16%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
+        "price": "\u20a61,550,000",
+        "old_price": "\u20a61,850,000"
+      }
+    ]
+  },
+  "iphones": {
+    "title": "iPhones - Konga Yakata Apple Store",
+    "heading": "Apple iPhones & Flagships",
+    "badge": "Original Apple Guaranteed",
+    "desc": "Shop factory-unlocked, brand-new Apple iPhones from iPhone 16 Pro Max down to iPhone 13 with verified warranty and express delivery.",
+    "hero_gradient": "linear-gradient(135deg, #18181b 0%, #09090b 100%)",
+    "products": [
+      {
+        "name": "Apple iPhone 16 Pro Max - 256GB - Desert Titanium (Nano SIM + eSIM)",
+        "sku": "iphone-16-pro-max",
+        "discount": "-12%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a62,350,000",
+        "old_price": "\u20a62,670,000"
+      },
+      {
+        "name": "Apple iPhone 16 Pro - 128GB - Natural Titanium",
+        "sku": "iphone-16-pro",
+        "discount": "-10%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a61,980,000",
+        "old_price": "\u20a62,200,000"
+      },
+      {
+        "name": "Apple iPhone 16 - 128GB - Ultramarine Blue",
+        "sku": "iphone-16-base",
+        "discount": "-15%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a61,480,000",
+        "old_price": "\u20a61,740,000"
+      },
+      {
+        "name": "Apple iPhone 15 Pro Max - 256GB - Blue Titanium",
+        "sku": "iphone-15-pro-max",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a61,850,000",
+        "old_price": "\u20a62,250,000"
+      },
+      {
+        "name": "Apple iPhone 15 - 128GB - Pink",
+        "sku": "iphone-15-base",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a61,180,000",
+        "old_price": "\u20a61,475,000"
+      },
+      {
+        "name": "Apple iPhone 14 - 128GB - Midnight Black",
+        "sku": "iphone-14-base",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a6980,000",
+        "old_price": "\u20a61,250,000"
+      },
+      {
+        "name": "Apple iPhone 13 - 128GB - Starlight White",
+        "sku": "iphone-13-base",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a6795,000",
+        "old_price": "\u20a61,060,000"
+      },
+      {
+        "name": "Apple 20W USB-C Power Adapter + Fast Charging Cable",
+        "sku": "apple-charger-20w",
+        "discount": "-30%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
+        "price": "\u20a628,000",
+        "old_price": "\u20a640,000"
+      }
+    ]
+  },
+  "xiaomi-phones": {
+    "title": "Xiaomi Phones - Konga Yakata Deals",
+    "heading": "Xiaomi & Redmi Smartphones",
+    "badge": "Power & Performance",
+    "desc": "Get flagship camera specs and mammoth battery life at unbeatable prices. Shop Redmi Note 13 series, Xiaomi 14 series, and POCO powerhouses.",
+    "hero_gradient": "linear-gradient(135deg, #c2410c 0%, #7c2d12 100%)",
+    "products": [
+      {
+        "name": "Xiaomi Redmi Note 13 Pro+ 5G - 12GB RAM - 512GB ROM - Midnight Black",
+        "sku": "redmi-note13-pro-plus",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a6620,000",
+        "old_price": "\u20a6775,000"
+      },
+      {
+        "name": "Xiaomi Redmi Note 13 Pro 4G - 8GB RAM - 256GB ROM - Forest Green",
+        "sku": "redmi-note13-pro",
+        "discount": "-23%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a6385,000",
+        "old_price": "\u20a6500,000"
+      },
+      {
+        "name": "Xiaomi Redmi Note 13 4G - 8GB RAM - 128GB ROM - Ice Blue",
+        "sku": "redmi-note13-base",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a6260,000",
+        "old_price": "\u20a6346,000"
+      },
+      {
+        "name": "Xiaomi Redmi 13C - 6GB RAM - 128GB ROM - Clover Green",
+        "sku": "redmi-13c",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a6155,000",
+        "old_price": "\u20a6189,000"
+      },
+      {
+        "name": "Xiaomi Redmi 14C - 8GB RAM - 256GB ROM - Starry Blue",
+        "sku": "redmi-14c",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a6185,000",
+        "old_price": "\u20a6231,000"
+      },
+      {
+        "name": "Xiaomi POCO X6 Pro 5G - 12GB RAM - 512GB ROM - Yellow",
+        "sku": "poco-x6-pro",
+        "discount": "-19%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a6540,000",
+        "old_price": "\u20a6667,000"
+      },
+      {
+        "name": "Xiaomi Redmi A3 - 3GB RAM - 64GB ROM - Olive Green",
+        "sku": "redmi-a3",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a6108,000",
+        "old_price": "\u20a6138,000"
+      },
+      {
+        "name": "Xiaomi 33W Fast Charger with Type-C Cable",
+        "sku": "xiaomi-33w-charger",
+        "discount": "-28%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
+        "price": "\u20a614,500",
+        "old_price": "\u20a620,000"
+      }
+    ]
+  },
+  "infinix-phones": {
+    "title": "Infinix Phones - Konga Yakata Deals",
+    "heading": "Infinix Smartphones",
+    "badge": "Hot Deals Dropping",
+    "desc": "Style, rapid charging, and smooth displays at student and everyday pocket-friendly prices. Explore Infinix Note 40, Hot 50, and Smart 8 collections.",
+    "hero_gradient": "linear-gradient(135deg, #15803d 0%, #14532d 100%)",
+    "products": [
+      {
+        "name": "Infinix Note 40 Pro 5G - 8GB RAM - 256GB ROM - Vintage Green",
+        "sku": "infinix-note40-pro",
+        "discount": "-21%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a6440,000",
+        "old_price": "\u20a6557,000"
+      },
+      {
+        "name": "Infinix Note 40 4G - 8GB RAM - 256GB ROM - Titan Gold",
+        "sku": "infinix-note40-base",
+        "discount": "-24%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a6330,000",
+        "old_price": "\u20a6434,000"
+      },
+      {
+        "name": "Infinix Hot 50 Pro+ 4G - 8GB RAM - 256GB ROM - Titanium Grey",
+        "sku": "infinix-hot50-pro-plus",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a6275,000",
+        "old_price": "\u20a6335,000"
+      },
+      {
+        "name": "Infinix Hot 50i - 4GB RAM - 128GB ROM - Sleek Black",
+        "sku": "infinix-hot50i",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a6145,000",
+        "old_price": "\u20a6181,000"
+      },
+      {
+        "name": "Infinix Smart 8 - 4GB RAM - 64GB ROM - Timber Black",
+        "sku": "infinix-smart8",
+        "discount": "-26%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a6108,000",
+        "old_price": "\u20a6146,000"
+      },
+      {
+        "name": "Infinix GT 20 Pro Gaming Phone - 12GB RAM - 256GB ROM - Mecha Blue",
+        "sku": "infinix-gt20-pro",
+        "discount": "-17%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a6560,000",
+        "old_price": "\u20a6675,000"
+      },
+      {
+        "name": "Infinix Zero 30 5G - 12GB RAM - 256GB ROM - Rome Green",
+        "sku": "infinix-zero30",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a6490,000",
+        "old_price": "\u20a6628,000"
+      },
+      {
+        "name": "Infinix MagCharge Wireless Pad 15W",
+        "sku": "infinix-magcharge",
+        "discount": "-30%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "\u20a618,500",
+        "old_price": "\u20a626,500"
+      }
+    ]
+  },
+  "laptops": {
+    "title": "Laptops - Konga Yakata Computing",
+    "heading": "Laptops & Workstations",
+    "badge": "Productivity & Gaming",
+    "desc": "Power your career, study, or gaming with genuine HP, ASUS, Apple MacBook, Lenovo, Dell, and Zinox laptops backed by genuine manufacture warranty.",
+    "hero_gradient": "linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)",
+    "products": [
+      {
+        "name": "HP 240R G10 Notebook PC Intel Core 5 120U 16GB RAM 512GB SSD 14.0\"",
+        "sku": "hp-240r-g10",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a6690,000",
+        "old_price": "\u20a6920,000"
+      },
+      {
+        "name": "HP Pavilion 15 Intel Core i7 13th Gen 16GB RAM 1TB SSD Touchscreen Backlit",
+        "sku": "hp-pavilion-15",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a61,150,000",
+        "old_price": "\u20a61,438,000"
+      },
+      {
+        "name": "ASUS Vivobook 15 Intel Core i5 12GB RAM 512GB SSD Windows 11 Home",
+        "sku": "asus-vivobook-15",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a6620,000",
+        "old_price": "\u20a6795,000"
+      },
+      {
+        "name": "Apple MacBook Air 13.6\" M3 Chip 8-Core CPU 16GB RAM 512GB SSD - Midnight",
+        "sku": "macbook-air-m3",
+        "discount": "-15%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a61,850,000",
+        "old_price": "\u20a62,176,000"
+      },
+      {
+        "name": "Lenovo IdeaPad 1 AMD Ryzen 5 8GB RAM 512GB SSD 15.6\" Cloud Grey",
+        "sku": "lenovo-ideapad-1",
+        "discount": "-24%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a6495,000",
+        "old_price": "\u20a6650,000"
+      },
+      {
+        "name": "Dell Inspiron 3520 Intel Core i3 12th Gen 8GB RAM 256GB SSD Windows 11",
+        "sku": "dell-inspiron-3520",
+        "discount": "-26%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a6420,000",
+        "old_price": "\u20a6568,000"
+      },
+      {
+        "name": "ASUS TUF Gaming A15 AMD Ryzen 7 16GB RAM 512GB SSD RTX 4060 144Hz",
+        "sku": "asus-tuf-a15",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a61,720,000",
+        "old_price": "\u20a62,100,000"
+      },
+      {
+        "name": "Zinox Smart Pro Laptop Intel Core i5 8GB RAM 512GB SSD 14\" Slim",
+        "sku": "zinox-smart-pro",
+        "discount": "-30%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
+        "price": "\u20a6380,000",
+        "old_price": "\u20a6543,000"
+      }
+    ]
+  },
+  "consoles": {
+    "title": "Gaming Consoles - Konga Yakata Gaming Store",
+    "heading": "PlayStation, Xbox & Nintendo Consoles",
+    "badge": "Next-Gen Gaming",
+    "desc": "Level up your entertainment with original PlayStation 5 Slim, Xbox Series X/S, Nintendo Switch OLED, extra controllers, and blockbuster games at Yakata prices.",
+    "hero_gradient": "linear-gradient(135deg, #312e81 0%, #1e1b4b 100%)",
+    "products": [
+      {
+        "name": "Sony PlayStation 5 Slim Console (Disc Edition) 1TB SSD + 1 DualSense",
+        "sku": "ps5-slim-disc",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a6850,000",
+        "old_price": "\u20a61,036,000"
+      },
+      {
+        "name": "Sony PlayStation 5 Slim Digital Edition 1TB SSD",
+        "sku": "ps5-slim-digital",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a6740,000",
+        "old_price": "\u20a6925,000"
+      },
+      {
+        "name": "PlayStation 5 DualSense Wireless Controller - Midnight Black",
+        "sku": "ps5-dualsense-black",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a695,000",
+        "old_price": "\u20a6122,000"
+      },
+      {
+        "name": "Microsoft Xbox Series X 1TB Console - Carbon Black",
+        "sku": "xbox-series-x",
+        "discount": "-15%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a6890,000",
+        "old_price": "\u20a61,047,000"
+      },
+      {
+        "name": "Microsoft Xbox Series S 512GB All-Digital Console",
+        "sku": "xbox-series-s",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a6475,000",
+        "old_price": "\u20a6633,000"
+      },
+      {
+        "name": "Nintendo Switch OLED Model with Neon Blue & Neon Red Joy-Con",
+        "sku": "nintendo-switch-oled",
+        "discount": "-19%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a6490,000",
+        "old_price": "\u20a6605,000"
+      },
+      {
+        "name": "Sony PS5 EA Sports FC 25 Standard Edition PS5 Game Disc",
+        "sku": "ea-fc25-ps5",
+        "discount": "-28%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a685,000",
+        "old_price": "\u20a6118,000"
+      },
+      {
+        "name": "Sony PS5 Pulse 3D Wireless Headset - Black",
+        "sku": "ps5-pulse-headset",
+        "discount": "-24%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
+        "price": "\u20a6145,000",
+        "old_price": "\u20a6190,000"
+      }
+    ]
+  },
+  "washers": {
+    "title": "Washing Machines - Konga Yakata Home Appliances",
+    "heading": "Automatic Washers & Dryers",
+    "badge": "Clean Laundry, Zero Stress",
+    "desc": "Upgrade laundry days with smart inverter front-load, top-load, and twin-tub washing machines from LG, Samsung, Haier Thermocool, and Hisense.",
+    "hero_gradient": "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
+    "products": [
+      {
+        "name": "LG 8kg Front Loader AI DD Smart Inverter Washing Machine - Silver",
+        "sku": "lg-8kg-front-loader",
+        "discount": "-24%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a6680,000",
+        "old_price": "\u20a6895,000"
+      },
+      {
+        "name": "Samsung 9kg EcoBubble Front Loading Washing Machine with Steam Wash",
+        "sku": "samsung-9kg-ecobubble",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a6795,000",
+        "old_price": "\u20a6994,000"
+      },
+      {
+        "name": "Haier Thermocool 10kg Top Load Semi-Automatic Twin Tub Washing Machine",
+        "sku": "haier-10kg-twin-tub",
+        "discount": "-26%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a6290,000",
+        "old_price": "\u20a6392,000"
+      },
+      {
+        "name": "Hisense 7kg Top Load Fully Automatic Smart Washing Machine",
+        "sku": "hisense-7kg-top-load",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a6345,000",
+        "old_price": "\u20a6442,000"
+      },
+      {
+        "name": "LG 12kg Washer & 8kg Dryer Combo AI DD TurboWash 360",
+        "sku": "lg-12kg-washer-dryer",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a61,420,000",
+        "old_price": "\u20a61,732,000"
+      },
+      {
+        "name": "Scanfrost 8kg Twin Tub Semi-Automatic Washer with Spin Dryer",
+        "sku": "scanfrost-8kg-twin-tub",
+        "discount": "-28%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a6215,000",
+        "old_price": "\u20a6298,000"
+      },
+      {
+        "name": "Samsung 13kg Top Loader Wobble Technology Inverter Washer",
+        "sku": "samsung-13kg-top-loader",
+        "discount": "-21%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a6640,000",
+        "old_price": "\u20a6810,000"
+      },
+      {
+        "name": "Heavy Duty Waterproof Washing Machine Protective Cover",
+        "sku": "washer-protective-cover",
+        "discount": "-35%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
+        "price": "\u20a612,500",
+        "old_price": "\u20a619,200"
+      }
+    ]
+  },
+  "acs": {
+    "title": "Air Conditioners - Konga Yakata Home Appliances",
+    "heading": "Air Conditioners & Climate Control",
+    "badge": "Cool Comfort Delivered",
+    "desc": "Beat the heat with ultra-energy-saving Inverter Split ACs, Gen-compatible units, and Floor Standing air conditioners from LG, Carrier, Panasonic, and Hisense.",
+    "hero_gradient": "linear-gradient(135deg, #0e7490 0%, #155e75 100%)",
+    "products": [
+      {
+        "name": "LG 1.5HP Dual Inverter Split Air Conditioner with Gen Mode",
+        "sku": "lg-15hp-dual-inverter",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a6520,000",
+        "old_price": "\u20a6667,000"
+      },
+      {
+        "name": "Carrier 1.5HP Inverter Split Air Conditioner - Fast Cooling White",
+        "sku": "carrier-15hp-inverter",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a6465,000",
+        "old_price": "\u20a6581,000"
+      },
+      {
+        "name": "LG 2.0HP Dual Inverter Split AC with Mosquito Away & Active Energy Control",
+        "sku": "lg-20hp-dual-inverter",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a6720,000",
+        "old_price": "\u20a6878,000"
+      },
+      {
+        "name": "Haier Thermocool 1.0HP Low Voltage Starter Split AC - White",
+        "sku": "haier-10hp-split-ac",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a6345,000",
+        "old_price": "\u20a6460,000"
+      },
+      {
+        "name": "Hisense 1.5HP Copper Inverter Split Air Conditioner with Remote Control",
+        "sku": "hisense-15hp-inverter",
+        "discount": "-23%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a6395,000",
+        "old_price": "\u20a6513,000"
+      },
+      {
+        "name": "Panasonic 2.0HP Floor Standing Commercial Package Air Conditioner",
+        "sku": "panasonic-20hp-floor",
+        "discount": "-16%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a61,650,000",
+        "old_price": "\u20a61,964,000"
+      },
+      {
+        "name": "Carrier 2.0HP Floor Standing Tower AC R410A Eco Gas",
+        "sku": "carrier-20hp-floor",
+        "discount": "-19%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a61,480,000",
+        "old_price": "\u20a61,827,000"
+      },
+      {
+        "name": "Heavy Duty Pure Copper AC Installation Pipe Kit (3 Metres)",
+        "sku": "ac-copper-pipe-kit",
+        "discount": "-30%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
+        "price": "\u20a624,000",
+        "old_price": "\u20a634,300"
+      }
+    ]
+  },
+  "fridges": {
+    "title": "Refrigerators & Freezers - Konga Yakata Kitchen Deals",
+    "heading": "Refrigerators & Freezers",
+    "badge": "Cool Zone Deals",
+    "desc": "Keep your food fresh and drinks ice-cold with double door, side-by-side, single door, and deep chest freezers from Samsung, LG, Haier Thermocool, and Hisense.",
+    "hero_gradient": "linear-gradient(135deg, #1e3a8a 0%, #172554 100%)",
+    "products": [
+      {
+        "name": "Samsung 500L French Door Smart Inverter Refrigerator - Silver Matte",
+        "sku": "samsung-500l-french-door",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a61,850,000",
+        "old_price": "\u20a62,372,000"
+      },
+      {
+        "name": "LG 260L Double Door Smart Inverter No Frost Fridge with Multi Air Flow",
+        "sku": "lg-260l-double-door",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a6580,000",
+        "old_price": "\u20a6725,000"
+      },
+      {
+        "name": "Haier Thermocool 200L Deep Chest Freezer with 100 Hours Frost Retention",
+        "sku": "haier-200l-chest-freezer",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a6390,000",
+        "old_price": "\u20a6520,000"
+      },
+      {
+        "name": "Hisense 120L Single Door Compact Bedside Refrigerator with Freezer Compartment",
+        "sku": "hisense-120l-single-door",
+        "discount": "-24%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a6195,000",
+        "old_price": "\u20a6256,500"
+      },
+      {
+        "name": "Samsung 310L Bottom Freezer Inverter Refrigerator with All Around Cooling",
+        "sku": "samsung-310l-bottom-freezer",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a6890,000",
+        "old_price": "\u20a61,085,000"
+      },
+      {
+        "name": "Haier Thermocool 300L Double Door Turbo Chilling Refrigerator",
+        "sku": "haier-300l-turbo",
+        "discount": "-21%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a6640,000",
+        "old_price": "\u20a6810,000"
+      },
+      {
+        "name": "Scanfrost 150L Inverter Chest Freezer - Energy Saving White",
+        "sku": "scanfrost-150l-freezer",
+        "discount": "-26%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a6295,000",
+        "old_price": "\u20a6398,000"
+      },
+      {
+        "name": "Automatic Refrigerator Voltage Surge Protector & Delay Guard",
+        "sku": "fridge-surge-guard",
+        "discount": "-35%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
+        "price": "\u20a615,000",
+        "old_price": "\u20a623,000"
+      }
+    ]
+  },
+  "sexual-wellness": {
+    "title": "Sexual Wellness - Konga Yakata Health Deals",
+    "heading": "Sexual Wellness & Intimate Care",
+    "badge": "100% Discrete Packaging",
+    "desc": "Shop genuine condoms, long-lasting lubricants, wellness supplements, and personal care essentials delivered in 100% discreet, plain packaging.",
+    "hero_gradient": "linear-gradient(135deg, #831843 0%, #500724 100%)",
+    "products": [
+      {
+        "name": "Durex Extra Safe Thick Lubricated Condoms (Pack of 12)",
+        "sku": "durex-extra-safe-12",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a68,500",
+        "old_price": "\u20a611,300"
+      },
+      {
+        "name": "Durex Play Feel Smooth Water-Based Pleasure Gel Lubricant 50ml",
+        "sku": "durex-play-feel-50ml",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a67,200",
+        "old_price": "\u20a69,000"
+      },
+      {
+        "name": "Durex Fetherlite Ultra Thin Sensual Condoms (Pack of 12)",
+        "sku": "durex-fetherlite-12",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a69,500",
+        "old_price": "\u20a612,200"
+      },
+      {
+        "name": "Durex Play Warming 2-in-1 Massage & Lubricant Gel 200ml",
+        "sku": "durex-play-massage-200ml",
+        "discount": "-28%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a614,800",
+        "old_price": "\u20a620,500"
+      },
+      {
+        "name": "Fiesta Dotted & Ribbed Premium Condoms (Pack of 3 x 4 Boxes)",
+        "sku": "fiesta-dotted-condoms",
+        "discount": "-30%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a66,500",
+        "old_price": "\u20a69,300"
+      },
+      {
+        "name": "Gold Circle Studded Sensitive Condoms Mega Value Pack (Pack of 24)",
+        "sku": "gold-circle-mega-24",
+        "discount": "-35%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a65,800",
+        "old_price": "\u20a68,900"
+      },
+      {
+        "name": "KY Jelly Sterile Personal Water Soluble Lubricant Jelly 82g",
+        "sku": "ky-jelly-82g",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a66,000",
+        "old_price": "\u20a67,500"
+      },
+      {
+        "name": "Durex Mutual Climax Delay & Ribbed Condoms (Pack of 12)",
+        "sku": "durex-mutual-climax",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
+        "price": "\u20a611,500",
+        "old_price": "\u20a614,000"
+      }
+    ]
+  },
+  "wigs": {
+    "title": "Wigs & Human Hair - Konga Yakata Beauty Deals",
+    "heading": "Human Hair Wigs & Bundles",
+    "badge": "100% Virgin Hair Deals",
+    "desc": "Discover 100% human hair frontal wigs, bone straight closure wigs, deep wave bundles, and premium synthetic styles for everyday glam at Yakata prices.",
+    "hero_gradient": "linear-gradient(135deg, #701a75 0%, #4a044e 100%)",
+    "products": [
+      {
+        "name": "Bone Straight Double Drawn 13x4 Lace Frontal Human Hair Wig 24 Inch - Natural Black",
+        "sku": "bone-straight-24-inch",
+        "discount": "-30%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a6185,000",
+        "old_price": "\u20a6264,000"
+      },
+      {
+        "name": "Peruvian Deep Wave 4x4 Lace Closure Human Hair Wig 18 Inch",
+        "sku": "deep-wave-18-inch",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a695,000",
+        "old_price": "\u20a6126,500"
+      },
+      {
+        "name": "Short Pixie Cut 100% Human Hair Glueless Bob Wig - Jet Black",
+        "sku": "pixie-bob-wig",
+        "discount": "-28%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a648,000",
+        "old_price": "\u20a666,700"
+      },
+      {
+        "name": "Water Wave 13x6 HD Transparent Lace Frontal Wig 22 Inch",
+        "sku": "water-wave-22-inch",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a6145,000",
+        "old_price": "\u20a6186,000"
+      },
+      {
+        "name": "Blonde Highlight Ombre Piano Color 5x5 Closure Wig 16 Inch",
+        "sku": "piano-highlight-wig",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a6110,000",
+        "old_price": "\u20a6137,500"
+      },
+      {
+        "name": "Kinky Curly Virgin Human Hair Bundles with Free Closure (3 Bundles 20\")",
+        "sku": "kinky-curly-bundles",
+        "discount": "-24%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a6125,000",
+        "old_price": "\u20a6164,500"
+      },
+      {
+        "name": "Professional Lace Tint Spray + Waterproof Lace Glue Adhesive Kit",
+        "sku": "lace-tint-glue-kit",
+        "discount": "-35%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a612,000",
+        "old_price": "\u20a618,500"
+      },
+      {
+        "name": "Ceramic Hot Comb & Wax Stick Edge Control Styling Set",
+        "sku": "hot-comb-wax-set",
+        "discount": "-32%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
+        "price": "\u20a616,500",
+        "old_price": "\u20a624,200"
+      }
+    ]
+  },
+  "makeup": {
+    "title": "Makeup & Cosmetics - Konga Yakata Beauty Deals",
+    "heading": "Makeup & Cosmetics Store",
+    "badge": "Beauty Faves Up to 40% Off",
+    "desc": "Discover long-lasting foundations, setting powders, eyeshadow palettes, lip glosses, and brush sets from Maybelline, Fenty Beauty, Mary Kay, and Classic Makeup.",
+    "hero_gradient": "linear-gradient(135deg, #831843 0%, #3f0713 100%)",
+    "products": [
+      {
+        "name": "Mary Kay Timewise Matte 3D Foundation 30ml - Bronze Shades",
+        "sku": "mary-kay-foundation",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a624,500",
+        "old_price": "\u20a632,600"
+      },
+      {
+        "name": "Maybelline New York Fit Me Matte + Poreless Liquid Foundation 30ml",
+        "sku": "maybelline-fit-me",
+        "discount": "-28%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a616,800",
+        "old_price": "\u20a623,300"
+      },
+      {
+        "name": "Fenty Beauty Pro Filt'r Soft Matte Longwear Foundation 32ml",
+        "sku": "fenty-soft-matte",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a662,000",
+        "old_price": "\u20a675,600"
+      },
+      {
+        "name": "Laura Mercier Translucent Loose Setting Powder 29g with Velour Puff",
+        "sku": "laura-mercier-powder",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a648,000",
+        "old_price": "\u20a660,000"
+      },
+      {
+        "name": "Milani Make It Last 3-in-1 Setting Spray Charcoal Matte Finish 60ml",
+        "sku": "milani-setting-spray",
+        "discount": "-30%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a612,500",
+        "old_price": "\u20a617,800"
+      },
+      {
+        "name": "Classic Makeup Matifying Liquid Foundation - All African Skin Tones",
+        "sku": "classic-makeup-foundation",
+        "discount": "-35%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a67,500",
+        "old_price": "\u20a611,500"
+      },
+      {
+        "name": "Professional 18-Piece Makeup Brush Set with Travel Cosmetic Leather Case",
+        "sku": "brush-set-18pc",
+        "discount": "-40%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a618,000",
+        "old_price": "\u20a630,000"
+      },
+      {
+        "name": "Huda Beauty Nude Eyeshadow Palette 18 Highly Pigmented Shimmer Shades",
+        "sku": "huda-nude-palette",
+        "discount": "-22%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
+        "price": "\u20a635,000",
+        "old_price": "\u20a644,800"
+      }
+    ]
+  }
+}

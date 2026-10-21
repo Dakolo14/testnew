@@ -45,17 +45,17 @@ PAGE_CONFIG = {
             {"name": "Fast Chargers", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg", "query": "xiaomi+charger"}
         ]
     },
-    "infinix-phones": {
-        "title": "Infinix Phones",
+    "other-phones": {
+        "title": "Other Phones",
         "subcategories": [
-            {"name": "Note 40 Pro 5G", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+note+40+pro"},
-            {"name": "Note 40 4G", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+note+40"},
-            {"name": "Hot 50 Pro+", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+hot+50"},
-            {"name": "Hot 50i", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+hot+50i"},
-            {"name": "Smart 8", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+smart+8"},
-            {"name": "GT 20 Pro", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+gt+20+pro"},
-            {"name": "Zero Series", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+zero"},
-            {"name": "MagCharge Kits", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "infinix+magcharge"}
+            {"name": "Tecno Phones", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "tecno+phones"},
+            {"name": "itel Phones", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "itel+phones"},
+            {"name": "Google Pixel", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "google+pixel"},
+            {"name": "Vivo Phones", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "vivo+phones"},
+            {"name": "Oppo Phones", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "oppo+phones"},
+            {"name": "Realme Phones", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "realme+phones"},
+            {"name": "Nokia Phones", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "nokia+phones"},
+            {"name": "Feature Phones", "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg", "query": "button+phones"}
         ]
     },
     "laptops": {

@@ -11,64 +11,64 @@
         "sku": "samsung-s24-ultra",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a61,950,000",
-        "old_price": "\u20a62,380,000"
+        "price": "₦1,950,000",
+        "old_price": "₦2,380,000"
       },
       {
         "name": "Samsung Galaxy S24+ 5G - 12GB RAM - 256GB ROM - Onyx Black",
         "sku": "samsung-s24-plus",
         "discount": "-15%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a61,420,000",
-        "old_price": "\u20a61,670,000"
+        "price": "₦1,420,000",
+        "old_price": "₦1,670,000"
       },
       {
         "name": "Samsung Galaxy A55 5G - 8GB RAM - 256GB ROM - Awesome Iceblue",
         "sku": "samsung-a55-5g",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a6540,000",
-        "old_price": "\u20a6690,000"
+        "price": "₦540,000",
+        "old_price": "₦690,000"
       },
       {
         "name": "Samsung Galaxy A35 5G - 8GB RAM - 128GB ROM - Awesome Navy",
         "sku": "samsung-a35-5g",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a6410,000",
-        "old_price": "\u20a6515,000"
+        "price": "₦410,000",
+        "old_price": "₦515,000"
       },
       {
         "name": "Samsung Galaxy A15 - 6GB RAM - 128GB ROM - Blue Black",
         "sku": "samsung-a15",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a6215,000",
-        "old_price": "\u20a6262,000"
+        "price": "₦215,000",
+        "old_price": "₦262,000"
       },
       {
         "name": "Samsung Galaxy A05s - 4GB RAM - 64GB ROM - Light Green",
         "sku": "samsung-a05s",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a6145,000",
-        "old_price": "\u20a6193,000"
+        "price": "₦145,000",
+        "old_price": "₦193,000"
       },
       {
         "name": "Samsung Galaxy Z Fold 6 5G - 12GB RAM - 512GB ROM - Silver Shadow",
         "sku": "samsung-zfold6",
         "discount": "-14%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a62,850,000",
-        "old_price": "\u20a63,300,000"
+        "price": "₦2,850,000",
+        "old_price": "₦3,300,000"
       },
       {
         "name": "Samsung Galaxy Z Flip 6 5G - 12GB RAM - 256GB ROM - Mint",
         "sku": "samsung-zflip6",
         "discount": "-16%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/186576_1785291116.jpg",
-        "price": "\u20a61,550,000",
-        "old_price": "\u20a61,850,000"
+        "price": "₦1,550,000",
+        "old_price": "₦1,850,000"
       }
     ]
   },
@@ -84,64 +84,64 @@
         "sku": "iphone-16-pro-max",
         "discount": "-12%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a62,350,000",
-        "old_price": "\u20a62,670,000"
+        "price": "₦2,350,000",
+        "old_price": "₦2,670,000"
       },
       {
         "name": "Apple iPhone 16 Pro - 128GB - Natural Titanium",
         "sku": "iphone-16-pro",
         "discount": "-10%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a61,980,000",
-        "old_price": "\u20a62,200,000"
+        "price": "₦1,980,000",
+        "old_price": "₦2,200,000"
       },
       {
         "name": "Apple iPhone 16 - 128GB - Ultramarine Blue",
         "sku": "iphone-16-base",
         "discount": "-15%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a61,480,000",
-        "old_price": "\u20a61,740,000"
+        "price": "₦1,480,000",
+        "old_price": "₦1,740,000"
       },
       {
         "name": "Apple iPhone 15 Pro Max - 256GB - Blue Titanium",
         "sku": "iphone-15-pro-max",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a61,850,000",
-        "old_price": "\u20a62,250,000"
+        "price": "₦1,850,000",
+        "old_price": "₦2,250,000"
       },
       {
         "name": "Apple iPhone 15 - 128GB - Pink",
         "sku": "iphone-15-base",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a61,180,000",
-        "old_price": "\u20a61,475,000"
+        "price": "₦1,180,000",
+        "old_price": "₦1,475,000"
       },
       {
         "name": "Apple iPhone 14 - 128GB - Midnight Black",
         "sku": "iphone-14-base",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a6980,000",
-        "old_price": "\u20a61,250,000"
+        "price": "₦980,000",
+        "old_price": "₦1,250,000"
       },
       {
         "name": "Apple iPhone 13 - 128GB - Starlight White",
         "sku": "iphone-13-base",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a6795,000",
-        "old_price": "\u20a61,060,000"
+        "price": "₦795,000",
+        "old_price": "₦1,060,000"
       },
       {
         "name": "Apple 20W USB-C Power Adapter + Fast Charging Cable",
         "sku": "apple-charger-20w",
         "discount": "-30%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/T/161515_1790884755.jpg",
-        "price": "\u20a628,000",
-        "old_price": "\u20a640,000"
+        "price": "₦28,000",
+        "old_price": "₦40,000"
       }
     ]
   },
@@ -157,137 +157,137 @@
         "sku": "redmi-note13-pro-plus",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a6620,000",
-        "old_price": "\u20a6775,000"
+        "price": "₦620,000",
+        "old_price": "₦775,000"
       },
       {
         "name": "Xiaomi Redmi Note 13 Pro 4G - 8GB RAM - 256GB ROM - Forest Green",
         "sku": "redmi-note13-pro",
         "discount": "-23%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a6385,000",
-        "old_price": "\u20a6500,000"
+        "price": "₦385,000",
+        "old_price": "₦500,000"
       },
       {
         "name": "Xiaomi Redmi Note 13 4G - 8GB RAM - 128GB ROM - Ice Blue",
         "sku": "redmi-note13-base",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a6260,000",
-        "old_price": "\u20a6346,000"
+        "price": "₦260,000",
+        "old_price": "₦346,000"
       },
       {
         "name": "Xiaomi Redmi 13C - 6GB RAM - 128GB ROM - Clover Green",
         "sku": "redmi-13c",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a6155,000",
-        "old_price": "\u20a6189,000"
+        "price": "₦155,000",
+        "old_price": "₦189,000"
       },
       {
         "name": "Xiaomi Redmi 14C - 8GB RAM - 256GB ROM - Starry Blue",
         "sku": "redmi-14c",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a6185,000",
-        "old_price": "\u20a6231,000"
+        "price": "₦185,000",
+        "old_price": "₦231,000"
       },
       {
         "name": "Xiaomi POCO X6 Pro 5G - 12GB RAM - 512GB ROM - Yellow",
         "sku": "poco-x6-pro",
         "discount": "-19%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a6540,000",
-        "old_price": "\u20a6667,000"
+        "price": "₦540,000",
+        "old_price": "₦667,000"
       },
       {
         "name": "Xiaomi Redmi A3 - 3GB RAM - 64GB ROM - Olive Green",
         "sku": "redmi-a3",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a6108,000",
-        "old_price": "\u20a6138,000"
+        "price": "₦108,000",
+        "old_price": "₦138,000"
       },
       {
         "name": "Xiaomi 33W Fast Charger with Type-C Cable",
         "sku": "xiaomi-33w-charger",
         "discount": "-28%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/M/118566_1784697360.jpg",
-        "price": "\u20a614,500",
-        "old_price": "\u20a620,000"
+        "price": "₦14,500",
+        "old_price": "₦20,000"
       }
     ]
   },
-  "infinix-phones": {
-    "title": "Infinix Phones - Konga Yakata Deals",
-    "heading": "Infinix Smartphones",
+  "other-phones": {
+    "title": "Other Phones - Konga Yakata Deals",
+    "heading": "Other Phones",
     "badge": "Hot Deals Dropping",
-    "desc": "Style, rapid charging, and smooth displays at student and everyday pocket-friendly prices. Explore Infinix Note 40, Hot 50, and Smart 8 collections.",
-    "hero_gradient": "linear-gradient(135deg, #15803d 0%, #14532d 100%)",
+    "desc": "Discover top smartphones from Tecno, itel, Google Pixel, Vivo, Oppo, Realme, Nokia, and durable feature phones at massive Yakata discounts.",
+    "hero_gradient": "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
     "products": [
       {
-        "name": "Infinix Note 40 Pro 5G - 8GB RAM - 256GB ROM - Vintage Green",
-        "sku": "infinix-note40-pro",
-        "discount": "-21%",
+        "name": "Tecno Camon 30 Pro 5G - 12GB RAM - 512GB ROM - Iceland White",
+        "sku": "tecno-camon30-pro",
+        "discount": "-19%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a6440,000",
-        "old_price": "\u20a6557,000"
+        "price": "₦495,000",
+        "old_price": "₦610,000"
       },
       {
-        "name": "Infinix Note 40 4G - 8GB RAM - 256GB ROM - Titan Gold",
-        "sku": "infinix-note40-base",
-        "discount": "-24%",
-        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a6330,000",
-        "old_price": "\u20a6434,000"
-      },
-      {
-        "name": "Infinix Hot 50 Pro+ 4G - 8GB RAM - 256GB ROM - Titanium Grey",
-        "sku": "infinix-hot50-pro-plus",
-        "discount": "-18%",
-        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a6275,000",
-        "old_price": "\u20a6335,000"
-      },
-      {
-        "name": "Infinix Hot 50i - 4GB RAM - 128GB ROM - Sleek Black",
-        "sku": "infinix-hot50i",
-        "discount": "-20%",
-        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a6145,000",
-        "old_price": "\u20a6181,000"
-      },
-      {
-        "name": "Infinix Smart 8 - 4GB RAM - 64GB ROM - Timber Black",
-        "sku": "infinix-smart8",
-        "discount": "-26%",
-        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a6108,000",
-        "old_price": "\u20a6146,000"
-      },
-      {
-        "name": "Infinix GT 20 Pro Gaming Phone - 12GB RAM - 256GB ROM - Mecha Blue",
-        "sku": "infinix-gt20-pro",
-        "discount": "-17%",
-        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a6560,000",
-        "old_price": "\u20a6675,000"
-      },
-      {
-        "name": "Infinix Zero 30 5G - 12GB RAM - 256GB ROM - Rome Green",
-        "sku": "infinix-zero30",
+        "name": "Tecno Spark 20 Pro+ - 8GB RAM - 256GB ROM - Lunar Frost",
+        "sku": "tecno-spark20-pro",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a6490,000",
-        "old_price": "\u20a6628,000"
+        "price": "₦258,000",
+        "old_price": "₦330,000"
       },
       {
-        "name": "Infinix MagCharge Wireless Pad 15W",
-        "sku": "infinix-magcharge",
+        "name": "Google Pixel 8 Pro - 12GB RAM - 128GB ROM - Obsidian Black",
+        "sku": "google-pixel-8-pro",
+        "discount": "-15%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "₦920,000",
+        "old_price": "₦1,080,000"
+      },
+      {
+        "name": "itel S24 4G - 8GB RAM - 128GB ROM - Starry Black",
+        "sku": "itel-s24-128gb",
+        "discount": "-25%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "₦132,000",
+        "old_price": "₦175,000"
+      },
+      {
+        "name": "Vivo V30 5G - 12GB RAM - 256GB ROM - Peacock Green",
+        "sku": "vivo-v30-5g",
+        "discount": "-18%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "₦560,000",
+        "old_price": "₦680,000"
+      },
+      {
+        "name": "Oppo Reno 11F 5G - 8GB RAM - 256GB ROM - Ocean Blue",
+        "sku": "oppo-reno11f-5g",
+        "discount": "-20%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "₦420,000",
+        "old_price": "₦525,000"
+      },
+      {
+        "name": "Realme C67 - 8GB RAM - 128GB ROM - Sunny Oasis",
+        "sku": "realme-c67",
+        "discount": "-21%",
+        "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
+        "price": "₦210,000",
+        "old_price": "₦265,000"
+      },
+      {
+        "name": "Nokia 105 Dual SIM Durable Feature Phone - Black",
+        "sku": "nokia-105-dual-sim",
         "discount": "-30%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/A/118566_1789549980.jpg",
-        "price": "\u20a618,500",
-        "old_price": "\u20a626,500"
+        "price": "₦22,500",
+        "old_price": "₦32,000"
       }
     ]
   },
@@ -303,64 +303,64 @@
         "sku": "hp-240r-g10",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a6690,000",
-        "old_price": "\u20a6920,000"
+        "price": "₦690,000",
+        "old_price": "₦920,000"
       },
       {
         "name": "HP Pavilion 15 Intel Core i7 13th Gen 16GB RAM 1TB SSD Touchscreen Backlit",
         "sku": "hp-pavilion-15",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a61,150,000",
-        "old_price": "\u20a61,438,000"
+        "price": "₦1,150,000",
+        "old_price": "₦1,438,000"
       },
       {
         "name": "ASUS Vivobook 15 Intel Core i5 12GB RAM 512GB SSD Windows 11 Home",
         "sku": "asus-vivobook-15",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a6620,000",
-        "old_price": "\u20a6795,000"
+        "price": "₦620,000",
+        "old_price": "₦795,000"
       },
       {
         "name": "Apple MacBook Air 13.6\" M3 Chip 8-Core CPU 16GB RAM 512GB SSD - Midnight",
         "sku": "macbook-air-m3",
         "discount": "-15%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a61,850,000",
-        "old_price": "\u20a62,176,000"
+        "price": "₦1,850,000",
+        "old_price": "₦2,176,000"
       },
       {
         "name": "Lenovo IdeaPad 1 AMD Ryzen 5 8GB RAM 512GB SSD 15.6\" Cloud Grey",
         "sku": "lenovo-ideapad-1",
         "discount": "-24%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a6495,000",
-        "old_price": "\u20a6650,000"
+        "price": "₦495,000",
+        "old_price": "₦650,000"
       },
       {
         "name": "Dell Inspiron 3520 Intel Core i3 12th Gen 8GB RAM 256GB SSD Windows 11",
         "sku": "dell-inspiron-3520",
         "discount": "-26%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a6420,000",
-        "old_price": "\u20a6568,000"
+        "price": "₦420,000",
+        "old_price": "₦568,000"
       },
       {
         "name": "ASUS TUF Gaming A15 AMD Ryzen 7 16GB RAM 512GB SSD RTX 4060 144Hz",
         "sku": "asus-tuf-a15",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a61,720,000",
-        "old_price": "\u20a62,100,000"
+        "price": "₦1,720,000",
+        "old_price": "₦2,100,000"
       },
       {
         "name": "Zinox Smart Pro Laptop Intel Core i5 8GB RAM 512GB SSD 14\" Slim",
         "sku": "zinox-smart-pro",
         "discount": "-30%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png",
-        "price": "\u20a6380,000",
-        "old_price": "\u20a6543,000"
+        "price": "₦380,000",
+        "old_price": "₦543,000"
       }
     ]
   },
@@ -376,64 +376,64 @@
         "sku": "ps5-slim-disc",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a6850,000",
-        "old_price": "\u20a61,036,000"
+        "price": "₦850,000",
+        "old_price": "₦1,036,000"
       },
       {
         "name": "Sony PlayStation 5 Slim Digital Edition 1TB SSD",
         "sku": "ps5-slim-digital",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a6740,000",
-        "old_price": "\u20a6925,000"
+        "price": "₦740,000",
+        "old_price": "₦925,000"
       },
       {
         "name": "PlayStation 5 DualSense Wireless Controller - Midnight Black",
         "sku": "ps5-dualsense-black",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a695,000",
-        "old_price": "\u20a6122,000"
+        "price": "₦95,000",
+        "old_price": "₦122,000"
       },
       {
         "name": "Microsoft Xbox Series X 1TB Console - Carbon Black",
         "sku": "xbox-series-x",
         "discount": "-15%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a6890,000",
-        "old_price": "\u20a61,047,000"
+        "price": "₦890,000",
+        "old_price": "₦1,047,000"
       },
       {
         "name": "Microsoft Xbox Series S 512GB All-Digital Console",
         "sku": "xbox-series-s",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a6475,000",
-        "old_price": "\u20a6633,000"
+        "price": "₦475,000",
+        "old_price": "₦633,000"
       },
       {
         "name": "Nintendo Switch OLED Model with Neon Blue & Neon Red Joy-Con",
         "sku": "nintendo-switch-oled",
         "discount": "-19%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a6490,000",
-        "old_price": "\u20a6605,000"
+        "price": "₦490,000",
+        "old_price": "₦605,000"
       },
       {
         "name": "Sony PS5 EA Sports FC 25 Standard Edition PS5 Game Disc",
         "sku": "ea-fc25-ps5",
         "discount": "-28%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a685,000",
-        "old_price": "\u20a6118,000"
+        "price": "₦85,000",
+        "old_price": "₦118,000"
       },
       {
         "name": "Sony PS5 Pulse 3D Wireless Headset - Black",
         "sku": "ps5-pulse-headset",
         "discount": "-24%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/B/63606_1770638150.jpg",
-        "price": "\u20a6145,000",
-        "old_price": "\u20a6190,000"
+        "price": "₦145,000",
+        "old_price": "₦190,000"
       }
     ]
   },
@@ -449,64 +449,64 @@
         "sku": "lg-8kg-front-loader",
         "discount": "-24%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a6680,000",
-        "old_price": "\u20a6895,000"
+        "price": "₦680,000",
+        "old_price": "₦895,000"
       },
       {
         "name": "Samsung 9kg EcoBubble Front Loading Washing Machine with Steam Wash",
         "sku": "samsung-9kg-ecobubble",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a6795,000",
-        "old_price": "\u20a6994,000"
+        "price": "₦795,000",
+        "old_price": "₦994,000"
       },
       {
         "name": "Haier Thermocool 10kg Top Load Semi-Automatic Twin Tub Washing Machine",
         "sku": "haier-10kg-twin-tub",
         "discount": "-26%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a6290,000",
-        "old_price": "\u20a6392,000"
+        "price": "₦290,000",
+        "old_price": "₦392,000"
       },
       {
         "name": "Hisense 7kg Top Load Fully Automatic Smart Washing Machine",
         "sku": "hisense-7kg-top-load",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a6345,000",
-        "old_price": "\u20a6442,000"
+        "price": "₦345,000",
+        "old_price": "₦442,000"
       },
       {
         "name": "LG 12kg Washer & 8kg Dryer Combo AI DD TurboWash 360",
         "sku": "lg-12kg-washer-dryer",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a61,420,000",
-        "old_price": "\u20a61,732,000"
+        "price": "₦1,420,000",
+        "old_price": "₦1,732,000"
       },
       {
         "name": "Scanfrost 8kg Twin Tub Semi-Automatic Washer with Spin Dryer",
         "sku": "scanfrost-8kg-twin-tub",
         "discount": "-28%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a6215,000",
-        "old_price": "\u20a6298,000"
+        "price": "₦215,000",
+        "old_price": "₦298,000"
       },
       {
         "name": "Samsung 13kg Top Loader Wobble Technology Inverter Washer",
         "sku": "samsung-13kg-top-loader",
         "discount": "-21%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a6640,000",
-        "old_price": "\u20a6810,000"
+        "price": "₦640,000",
+        "old_price": "₦810,000"
       },
       {
         "name": "Heavy Duty Waterproof Washing Machine Protective Cover",
         "sku": "washer-protective-cover",
         "discount": "-35%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/O/231472_1777545584.jpg",
-        "price": "\u20a612,500",
-        "old_price": "\u20a619,200"
+        "price": "₦12,500",
+        "old_price": "₦19,200"
       }
     ]
   },
@@ -522,64 +522,64 @@
         "sku": "lg-15hp-dual-inverter",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a6520,000",
-        "old_price": "\u20a6667,000"
+        "price": "₦520,000",
+        "old_price": "₦667,000"
       },
       {
         "name": "Carrier 1.5HP Inverter Split Air Conditioner - Fast Cooling White",
         "sku": "carrier-15hp-inverter",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a6465,000",
-        "old_price": "\u20a6581,000"
+        "price": "₦465,000",
+        "old_price": "₦581,000"
       },
       {
         "name": "LG 2.0HP Dual Inverter Split AC with Mosquito Away & Active Energy Control",
         "sku": "lg-20hp-dual-inverter",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a6720,000",
-        "old_price": "\u20a6878,000"
+        "price": "₦720,000",
+        "old_price": "₦878,000"
       },
       {
         "name": "Haier Thermocool 1.0HP Low Voltage Starter Split AC - White",
         "sku": "haier-10hp-split-ac",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a6345,000",
-        "old_price": "\u20a6460,000"
+        "price": "₦345,000",
+        "old_price": "₦460,000"
       },
       {
         "name": "Hisense 1.5HP Copper Inverter Split Air Conditioner with Remote Control",
         "sku": "hisense-15hp-inverter",
         "discount": "-23%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a6395,000",
-        "old_price": "\u20a6513,000"
+        "price": "₦395,000",
+        "old_price": "₦513,000"
       },
       {
         "name": "Panasonic 2.0HP Floor Standing Commercial Package Air Conditioner",
         "sku": "panasonic-20hp-floor",
         "discount": "-16%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a61,650,000",
-        "old_price": "\u20a61,964,000"
+        "price": "₦1,650,000",
+        "old_price": "₦1,964,000"
       },
       {
         "name": "Carrier 2.0HP Floor Standing Tower AC R410A Eco Gas",
         "sku": "carrier-20hp-floor",
         "discount": "-19%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a61,480,000",
-        "old_price": "\u20a61,827,000"
+        "price": "₦1,480,000",
+        "old_price": "₦1,827,000"
       },
       {
         "name": "Heavy Duty Pure Copper AC Installation Pipe Kit (3 Metres)",
         "sku": "ac-copper-pipe-kit",
         "discount": "-30%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/B/229301_1743619260.jpg",
-        "price": "\u20a624,000",
-        "old_price": "\u20a634,300"
+        "price": "₦24,000",
+        "old_price": "₦34,300"
       }
     ]
   },
@@ -595,64 +595,64 @@
         "sku": "samsung-500l-french-door",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a61,850,000",
-        "old_price": "\u20a62,372,000"
+        "price": "₦1,850,000",
+        "old_price": "₦2,372,000"
       },
       {
         "name": "LG 260L Double Door Smart Inverter No Frost Fridge with Multi Air Flow",
         "sku": "lg-260l-double-door",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a6580,000",
-        "old_price": "\u20a6725,000"
+        "price": "₦580,000",
+        "old_price": "₦725,000"
       },
       {
         "name": "Haier Thermocool 200L Deep Chest Freezer with 100 Hours Frost Retention",
         "sku": "haier-200l-chest-freezer",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a6390,000",
-        "old_price": "\u20a6520,000"
+        "price": "₦390,000",
+        "old_price": "₦520,000"
       },
       {
         "name": "Hisense 120L Single Door Compact Bedside Refrigerator with Freezer Compartment",
         "sku": "hisense-120l-single-door",
         "discount": "-24%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a6195,000",
-        "old_price": "\u20a6256,500"
+        "price": "₦195,000",
+        "old_price": "₦256,500"
       },
       {
         "name": "Samsung 310L Bottom Freezer Inverter Refrigerator with All Around Cooling",
         "sku": "samsung-310l-bottom-freezer",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a6890,000",
-        "old_price": "\u20a61,085,000"
+        "price": "₦890,000",
+        "old_price": "₦1,085,000"
       },
       {
         "name": "Haier Thermocool 300L Double Door Turbo Chilling Refrigerator",
         "sku": "haier-300l-turbo",
         "discount": "-21%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a6640,000",
-        "old_price": "\u20a6810,000"
+        "price": "₦640,000",
+        "old_price": "₦810,000"
       },
       {
         "name": "Scanfrost 150L Inverter Chest Freezer - Energy Saving White",
         "sku": "scanfrost-150l-freezer",
         "discount": "-26%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a6295,000",
-        "old_price": "\u20a6398,000"
+        "price": "₦295,000",
+        "old_price": "₦398,000"
       },
       {
         "name": "Automatic Refrigerator Voltage Surge Protector & Delay Guard",
         "sku": "fridge-surge-guard",
         "discount": "-35%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/G/229301_1750257650.jpg",
-        "price": "\u20a615,000",
-        "old_price": "\u20a623,000"
+        "price": "₦15,000",
+        "old_price": "₦23,000"
       }
     ]
   },
@@ -668,64 +668,64 @@
         "sku": "durex-extra-safe-12",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a68,500",
-        "old_price": "\u20a611,300"
+        "price": "₦8,500",
+        "old_price": "₦11,300"
       },
       {
         "name": "Durex Play Feel Smooth Water-Based Pleasure Gel Lubricant 50ml",
         "sku": "durex-play-feel-50ml",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a67,200",
-        "old_price": "\u20a69,000"
+        "price": "₦7,200",
+        "old_price": "₦9,000"
       },
       {
         "name": "Durex Fetherlite Ultra Thin Sensual Condoms (Pack of 12)",
         "sku": "durex-fetherlite-12",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a69,500",
-        "old_price": "\u20a612,200"
+        "price": "₦9,500",
+        "old_price": "₦12,200"
       },
       {
         "name": "Durex Play Warming 2-in-1 Massage & Lubricant Gel 200ml",
         "sku": "durex-play-massage-200ml",
         "discount": "-28%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a614,800",
-        "old_price": "\u20a620,500"
+        "price": "₦14,800",
+        "old_price": "₦20,500"
       },
       {
         "name": "Fiesta Dotted & Ribbed Premium Condoms (Pack of 3 x 4 Boxes)",
         "sku": "fiesta-dotted-condoms",
         "discount": "-30%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a66,500",
-        "old_price": "\u20a69,300"
+        "price": "₦6,500",
+        "old_price": "₦9,300"
       },
       {
         "name": "Gold Circle Studded Sensitive Condoms Mega Value Pack (Pack of 24)",
         "sku": "gold-circle-mega-24",
         "discount": "-35%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a65,800",
-        "old_price": "\u20a68,900"
+        "price": "₦5,800",
+        "old_price": "₦8,900"
       },
       {
         "name": "KY Jelly Sterile Personal Water Soluble Lubricant Jelly 82g",
         "sku": "ky-jelly-82g",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a66,000",
-        "old_price": "\u20a67,500"
+        "price": "₦6,000",
+        "old_price": "₦7,500"
       },
       {
         "name": "Durex Mutual Climax Delay & Ribbed Condoms (Pack of 12)",
         "sku": "durex-mutual-climax",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_240,c_limit/media/customcmsmenu/item/2ndcatsexualawareness.png",
-        "price": "\u20a611,500",
-        "old_price": "\u20a614,000"
+        "price": "₦11,500",
+        "old_price": "₦14,000"
       }
     ]
   },
@@ -741,64 +741,64 @@
         "sku": "bone-straight-24-inch",
         "discount": "-30%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a6185,000",
-        "old_price": "\u20a6264,000"
+        "price": "₦185,000",
+        "old_price": "₦264,000"
       },
       {
         "name": "Peruvian Deep Wave 4x4 Lace Closure Human Hair Wig 18 Inch",
         "sku": "deep-wave-18-inch",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a695,000",
-        "old_price": "\u20a6126,500"
+        "price": "₦95,000",
+        "old_price": "₦126,500"
       },
       {
         "name": "Short Pixie Cut 100% Human Hair Glueless Bob Wig - Jet Black",
         "sku": "pixie-bob-wig",
         "discount": "-28%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a648,000",
-        "old_price": "\u20a666,700"
+        "price": "₦48,000",
+        "old_price": "₦66,700"
       },
       {
         "name": "Water Wave 13x6 HD Transparent Lace Frontal Wig 22 Inch",
         "sku": "water-wave-22-inch",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a6145,000",
-        "old_price": "\u20a6186,000"
+        "price": "₦145,000",
+        "old_price": "₦186,000"
       },
       {
         "name": "Blonde Highlight Ombre Piano Color 5x5 Closure Wig 16 Inch",
         "sku": "piano-highlight-wig",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a6110,000",
-        "old_price": "\u20a6137,500"
+        "price": "₦110,000",
+        "old_price": "₦137,500"
       },
       {
         "name": "Kinky Curly Virgin Human Hair Bundles with Free Closure (3 Bundles 20\")",
         "sku": "kinky-curly-bundles",
         "discount": "-24%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a6125,000",
-        "old_price": "\u20a6164,500"
+        "price": "₦125,000",
+        "old_price": "₦164,500"
       },
       {
         "name": "Professional Lace Tint Spray + Waterproof Lace Glue Adhesive Kit",
         "sku": "lace-tint-glue-kit",
         "discount": "-35%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a612,000",
-        "old_price": "\u20a618,500"
+        "price": "₦12,000",
+        "old_price": "₦18,500"
       },
       {
         "name": "Ceramic Hot Comb & Wax Stick Edge Control Styling Set",
         "sku": "hot-comb-wax-set",
         "discount": "-32%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/V/N/240104_1742889486.jpg",
-        "price": "\u20a616,500",
-        "old_price": "\u20a624,200"
+        "price": "₦16,500",
+        "old_price": "₦24,200"
       }
     ]
   },
@@ -814,64 +814,64 @@
         "sku": "mary-kay-foundation",
         "discount": "-25%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a624,500",
-        "old_price": "\u20a632,600"
+        "price": "₦24,500",
+        "old_price": "₦32,600"
       },
       {
         "name": "Maybelline New York Fit Me Matte + Poreless Liquid Foundation 30ml",
         "sku": "maybelline-fit-me",
         "discount": "-28%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a616,800",
-        "old_price": "\u20a623,300"
+        "price": "₦16,800",
+        "old_price": "₦23,300"
       },
       {
         "name": "Fenty Beauty Pro Filt'r Soft Matte Longwear Foundation 32ml",
         "sku": "fenty-soft-matte",
         "discount": "-18%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a662,000",
-        "old_price": "\u20a675,600"
+        "price": "₦62,000",
+        "old_price": "₦75,600"
       },
       {
         "name": "Laura Mercier Translucent Loose Setting Powder 29g with Velour Puff",
         "sku": "laura-mercier-powder",
         "discount": "-20%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a648,000",
-        "old_price": "\u20a660,000"
+        "price": "₦48,000",
+        "old_price": "₦60,000"
       },
       {
         "name": "Milani Make It Last 3-in-1 Setting Spray Charcoal Matte Finish 60ml",
         "sku": "milani-setting-spray",
         "discount": "-30%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a612,500",
-        "old_price": "\u20a617,800"
+        "price": "₦12,500",
+        "old_price": "₦17,800"
       },
       {
         "name": "Classic Makeup Matifying Liquid Foundation - All African Skin Tones",
         "sku": "classic-makeup-foundation",
         "discount": "-35%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a67,500",
-        "old_price": "\u20a611,500"
+        "price": "₦7,500",
+        "old_price": "₦11,500"
       },
       {
         "name": "Professional 18-Piece Makeup Brush Set with Travel Cosmetic Leather Case",
         "sku": "brush-set-18pc",
         "discount": "-40%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a618,000",
-        "old_price": "\u20a630,000"
+        "price": "₦18,000",
+        "old_price": "₦30,000"
       },
       {
         "name": "Huda Beauty Nude Eyeshadow Palette 18 Highly Pigmented Shimmer Shades",
         "sku": "huda-nude-palette",
         "discount": "-22%",
         "img": "https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_1080,c_limit/media/catalog/product/G/Z/98247_1546250142.jpg",
-        "price": "\u20a635,000",
-        "old_price": "\u20a644,800"
+        "price": "₦35,000",
+        "old_price": "₦44,800"
       }
     ]
   }

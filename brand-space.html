@@ -12,14 +12,13 @@
     <title>Brand Space – Konga Yakata 2026 | Official Partner Stores</title>
     <meta
       name="description"
-      content="Explore the official Brand Space at Konga Yakata 2026. Shop authentic products directly from premier brand stores including Samsung, ASUS, Anker, LG, Starlink, CeraVe, and more."
+      content="Explore the official Brand Space at Konga Yakata 2026. Shop authentic products directly from premier brand stores including Samsung, Midea, LG, ASUS, Anker, Zinox, Vitali, Elepaq, Guinness, and more."
     />
     <style>
       :root {
         --konga-pink: #ed017f;
         --konga-pink-hover: #c40068;
         --konga-dark-card: #111111;
-        --konga-dark-surface: #0a0a0a;
         --konga-border: #222222;
         --konga-text-muted: #888888;
       }
@@ -205,298 +204,246 @@
         display: block;
       }
 
-      /* Section Headers */
-      .section-heading-strip {
-        background-color: #ed017f;
+      /* Centered Red Header (identical to Yakata page) */
+      .centered-red-header {
+        background: #ed017f;
         color: #ffffff;
-        padding: 0.75rem 1.25rem;
+        padding: 1rem 1.5rem;
         border-radius: 12px 12px 0 0;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin-bottom: 1.5rem;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        width: 100%;
       }
 
-      .section-heading-strip h2 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.25rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        margin: 0;
+      /* Official Partners Grid (pure image cards, identical to Yakata page) */
+      .partners-section {
+        margin: 1rem auto 3rem auto;
       }
 
-      .section-heading-strip .tagline {
-        font-size: 0.85rem;
-        font-weight: 400;
-        opacity: 0.9;
+      .partners-container {
+        background-color: #000;
+        padding: 2rem 0;
       }
 
-      /* Brands Directory Grid */
-      .brands-directory-section {
-        padding: 1.5rem 0 3rem;
-      }
-
-      .brands-grid {
+      .partners-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-        gap: 1.25rem;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
       }
 
-      .brand-dir-card {
-        background: #0d0d0d;
-        border: 1px solid #222;
-        border-radius: 12px;
-        padding: 1rem;
+      .partner-card {
+        background-color: #111;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        aspect-ratio: 4 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #888;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .partner-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .partner-card:hover {
+        border-color: rgba(237, 1, 127, 0.5);
+        box-shadow: 0 6px 20px rgba(237, 1, 127, 0.15);
+        transform: translateY(-3px);
+      }
+
+      .partner-card:hover img {
+        transform: scale(1.04);
+      }
+
+      .partner-card-placeholder {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
+        background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+        padding: 1rem;
+        gap: 6px;
       }
 
-      .brand-dir-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at center, rgba(237, 1, 127, 0.15) 0%, transparent 70%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .brand-dir-card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(237, 1, 127, 0.6);
-        box-shadow: 0 8px 24px rgba(237, 1, 127, 0.2);
-      }
-
-      .brand-dir-card:hover::before {
-        opacity: 1;
-      }
-
-      .brand-dir-card img {
-        height: 60px;
-        width: 140px;
-        object-fit: contain;
-        position: relative;
-        z-index: 2;
-        transition: transform 0.3s ease;
-      }
-
-      .brand-dir-card:hover img {
-        transform: scale(1.05);
-      }
-
-      .brand-dir-card .brand-name {
-        margin-top: 0.75rem;
+      .partner-card-placeholder .placeholder-title {
         font-family: 'Poppins', sans-serif;
-        font-size: 0.9rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0.5px;
+      }
+
+      .partner-card-placeholder .placeholder-badge {
+        font-size: 0.7rem;
         font-weight: 600;
-        color: #fff;
-        position: relative;
-        z-index: 2;
-      }
-
-      .brand-dir-card .view-pill {
-        margin-top: 0.35rem;
-        font-size: 0.75rem;
         color: var(--konga-pink);
-        font-weight: 500;
-        position: relative;
-        z-index: 2;
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
 
-      /* Brand Showcase Section */
-      .brand-showcase-block {
-        padding: 2.5rem 0;
+      /* Brand Product Showcase Header (Bar with logo, title, subtext & prominent button) */
+      .brand-showcase-section {
+        padding: 2.5rem 0 1.5rem;
         border-top: 1px solid #1a1a1a;
       }
 
-      .brand-showcase-header {
+      .brand-header-bar {
+        background: #0a0a0a;
+        border: 1px solid #222;
+        border-radius: 12px;
+        padding: 1.25rem 1.75rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 1.5rem;
-        flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.5rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .brand-info-left {
+      .brand-header-bar:hover {
+        border-color: rgba(237, 1, 127, 0.4);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      }
+
+      .brand-header-left {
         display: flex;
         align-items: center;
         gap: 1.25rem;
+        min-width: 0;
       }
 
-      .brand-avatar {
-        width: 72px;
-        height: 72px;
-        background: #111;
+      .brand-header-avatar {
+        width: 68px;
+        height: 68px;
+        background: #141414;
         border: 1px solid #2a2a2a;
-        border-radius: 12px;
-        padding: 8px;
+        border-radius: 10px;
+        padding: 6px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
       }
 
-      .brand-avatar img {
+      .brand-header-avatar img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
       }
 
-      .brand-meta h3 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #fff;
-        letter-spacing: -0.5px;
+      .brand-header-text {
+        min-width: 0;
       }
 
-      .brand-meta p {
+      .brand-header-text h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.3px;
+        margin: 0 0 2px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .package-badge {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 2px 7px;
+        border-radius: 4px;
+      }
+
+      .package-gold {
+        background: rgba(254, 189, 105, 0.15);
+        color: #febd69;
+        border: 1px solid rgba(254, 189, 105, 0.35);
+      }
+
+      .package-silver {
+        background: rgba(192, 192, 192, 0.15);
+        color: #d1d5db;
+        border: 1px solid rgba(192, 192, 192, 0.3);
+      }
+
+      .package-brandday {
+        background: rgba(237, 1, 127, 0.15);
+        color: #ff66b2;
+        border: 1px solid rgba(237, 1, 127, 0.35);
+      }
+
+      .brand-header-text p {
         font-size: 0.85rem;
         color: var(--konga-text-muted);
-        margin-top: 2px;
+        line-height: 1.4;
+        margin: 0;
       }
 
-      .brand-store-btn {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid #333;
-        color: #fff;
-        padding: 0.55rem 1.25rem;
+      /* Prominent Clickable Action Button */
+      .brand-header-cta {
+        flex-shrink: 0;
+        background: #ed017f;
+        color: #ffffff;
+        padding: 0.75rem 1.5rem;
         border-radius: 6px;
-        font-size: 0.85rem;
-        font-weight: 500;
+        font-size: 0.9rem;
+        font-weight: 600;
         display: inline-flex;
         align-items: center;
         gap: 8px;
+        box-shadow: 0 4px 14px rgba(237, 1, 127, 0.3);
+        border: 1px solid #ed017f;
+        cursor: pointer;
         transition: all 0.25s ease;
+        white-space: nowrap;
       }
 
-      .brand-store-btn:hover {
-        background: var(--konga-pink);
-        border-color: var(--konga-pink);
-        color: #fff;
+      .brand-header-cta:hover {
+        background: #c40068;
+        border-color: #c40068;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(237, 1, 127, 0.5);
       }
 
-      /* Products Grid for each brand */
-      .brand-products-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.25rem;
+      .brand-header-cta svg {
+        transition: transform 0.2s ease;
       }
 
-      .brand-product-card {
-        background: #0d0d0d;
-        border: 1px solid #1f1f1f;
-        border-radius: 10px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      .brand-header-cta:hover svg {
+        transform: translateX(3px);
       }
 
-      .brand-product-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(237, 1, 127, 0.4);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
-      }
-
-      .product-img-wrapper {
-        position: relative;
-        aspect-ratio: 1 / 1;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 16px;
-        overflow: hidden;
-      }
-
-      .product-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        transition: transform 0.3s ease;
-      }
-
-      .brand-product-card:hover .product-img-wrapper img {
-        transform: scale(1.05);
-      }
-
-      .product-discount-pill {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        background-color: #029063;
-        color: #fff;
-        font-size: 0.75rem;
-        font-weight: 700;
-        padding: 3px 8px;
-        border-radius: 4px;
-        z-index: 2;
-      }
-
-      .product-info-wrapper {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-
-      .product-title {
-        font-size: 0.875rem;
-        font-weight: 400;
-        color: #eee;
-        line-height: 1.4;
-        margin-bottom: 0.5rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      .product-price-box {
-        display: flex;
-        align-items: baseline;
-        gap: 8px;
-        margin-bottom: 0.75rem;
-      }
-
-      .price-now {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #fff;
-        font-family: 'Poppins', sans-serif;
-      }
-
-      .price-was {
-        font-size: 0.8rem;
-        color: #666;
-        text-decoration: line-through;
-      }
-
-      .product-buy-btn {
-        margin-top: auto;
-        background: #181818;
-        border: 1px solid #333;
-        color: #fff;
-        padding: 0.55rem;
-        border-radius: 6px;
-        text-align: center;
-        font-size: 0.85rem;
-        font-weight: 600;
-        transition: all 0.2s ease;
-      }
-
-      .brand-product-card:hover .product-buy-btn {
-        background: var(--konga-pink);
-        border-color: var(--konga-pink);
+      /* Products Container Slot (Empty for user to populate) */
+      .brand-products-placeholder-slot {
+        margin-top: 1.25rem;
+        /* Ready for user to drop product cards / grid */
       }
 
       /* Footer */
@@ -507,6 +454,7 @@
         text-align: center;
         font-size: 0.85rem;
         color: #666;
+        margin-top: 4rem;
       }
 
       .footer-links {
@@ -526,10 +474,11 @@
         color: var(--konga-pink);
       }
 
-      /* Responsiveness */
+      /* Responsive rules */
       @media (max-width: 1024px) {
-        .brand-products-grid {
-          grid-template-columns: repeat(3, 1fr);
+        .partners-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1.25rem;
         }
       }
 
@@ -564,19 +513,28 @@
           justify-content: center;
         }
 
-        .brands-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .partners-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
         }
 
-        .brand-products-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 0.75rem;
+        .brand-header-bar {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+          padding: 1.25rem;
+        }
+
+        .brand-header-cta {
+          width: 100%;
+          justify-content: center;
         }
       }
 
       @media (max-width: 480px) {
-        .brand-products-grid {
-          grid-template-columns: 1fr;
+        .partners-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.75rem;
         }
       }
     </style>
@@ -596,7 +554,7 @@
         <div class="nav-wrapper">
           <ul class="nav-items">
             <li><a href="https://www.konga.com/content/yakata2026">Yakata Home</a></li>
-            <li><a href="#brand-directory">Partner Brands</a></li>
+            <li><a href="#official-partners">Official Partners</a></li>
             <li><a href="https://www.konga.com/search?q=Yakata" target="_blank" rel="noopener noreferrer">All Deals</a></li>
           </ul>
           <a href="https://www.konga.com/content/yakata2026" class="cta-button">
@@ -632,596 +590,441 @@
         </div>
       </section>
 
-      <!-- Brand Directory Grid -->
-      <section class="brands-directory-section" id="brand-directory">
+      <!-- Official Partners Grid (Pure Image Cards like Yakata page) -->
+      <section class="partners-section" id="official-partners">
         <div class="container">
-          <div class="section-heading-strip">
-            <h2>Official Brand Partners</h2>
-            <span class="tagline">100% Genuine Products Guaranteed</span>
+          <div class="centered-red-header">
+            <span>Official Partners</span>
           </div>
+          <div class="partners-container">
+            <div class="partners-grid">
 
-          <div class="brands-grid">
-            
-            <!-- Samsung -->
-            <a href="#brand-samsung" class="brand-dir-card">
-              <img src="SamsungYakata.png" alt="Samsung Official Store">
-              <div class="brand-name">Samsung</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 1. Samsung -->
+              <a href="#brand-samsung" class="partner-card">
+                <img src="SamsungYakata.png" alt="Samsung">
+              </a>
 
-            <!-- ASUS -->
-            <a href="#brand-asus" class="brand-dir-card">
-              <img src="ASUSYakata.png" alt="ASUS Official Store">
-              <div class="brand-name">ASUS</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 2. Midea -->
+              <a href="#brand-midea" class="partner-card">
+                <div class="partner-card-placeholder">
+                  <span class="placeholder-title">MIDEA</span>
+                  <span class="placeholder-badge">Gold Partner</span>
+                </div>
+              </a>
 
-            <!-- LG -->
-            <a href="#brand-lg" class="brand-dir-card">
-              <img src="LGYakata.png" alt="LG Official Store">
-              <div class="brand-name">LG</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 3. LG -->
+              <a href="#brand-lg" class="partner-card">
+                <img src="LGYakata.png" alt="LG">
+              </a>
 
-            <!-- Starlink -->
-            <a href="#brand-starlink" class="brand-dir-card">
-              <img src="StarlinkYakata.png" alt="Starlink Official Store">
-              <div class="brand-name">Starlink</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 4. ASUS -->
+              <a href="#brand-asus" class="partner-card">
+                <img src="ASUSYakata.png" alt="ASUS">
+              </a>
 
-            <!-- CeraVe -->
-            <a href="#brand-cerave" class="brand-dir-card">
-              <img src="CeraveYakata.png" alt="CeraVe Official Store">
-              <div class="brand-name">CeraVe</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 5. Anker -->
+              <a href="#brand-anker" class="partner-card">
+                <img src="AnkerYakata.png" alt="Anker">
+              </a>
 
-            <!-- La Roche-Posay -->
-            <a href="#brand-lrp" class="brand-dir-card">
-              <img src="LRPYakata.png" alt="La Roche-Posay Official Store">
-              <div class="brand-name">La Roche-Posay</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 6. Zinox -->
+              <a href="#brand-zinox" class="partner-card">
+                <img src="ZinoxYakata.png" alt="Zinox">
+              </a>
 
-            <!-- Anker -->
-            <a href="#brand-anker" class="brand-dir-card">
-              <img src="AnkerYakata.png" alt="Anker Official Store">
-              <div class="brand-name">Anker</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 7. Vitali -->
+              <a href="#brand-vitali" class="partner-card">
+                <div class="partner-card-placeholder">
+                  <span class="placeholder-title">VITALI</span>
+                  <span class="placeholder-badge">Gold Partner</span>
+                </div>
+              </a>
 
-            <!-- Carrier -->
-            <a href="#brand-carrier" class="brand-dir-card">
-              <img src="CarrierYakata.png" alt="Carrier Official Store">
-              <div class="brand-name">Carrier</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 8. Elepaq -->
+              <a href="#brand-elepaq" class="partner-card">
+                <div class="partner-card-placeholder">
+                  <span class="placeholder-title">ELEPAQ</span>
+                  <span class="placeholder-badge">Brand Day</span>
+                </div>
+              </a>
 
-            <!-- Mikano Motors -->
-            <a href="#brand-mikano" class="brand-dir-card">
-              <img src="MikanoYakata.png" alt="Mikano Motors Official Store">
-              <div class="brand-name">Mikano Motors</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 9. Guinness -->
+              <a href="#brand-guinness" class="partner-card">
+                <img src="GuinnessYakata.png" alt="Guinness">
+              </a>
 
-            <!-- Guinness -->
-            <a href="#brand-guinness" class="brand-dir-card">
-              <img src="GuinnessYakata.png" alt="Guinness Official Store">
-              <div class="brand-name">Guinness</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 10. Kenwood -->
+              <a href="#brand-kenwood" class="partner-card">
+                <div class="partner-card-placeholder">
+                  <span class="placeholder-title">KENWOOD</span>
+                  <span class="placeholder-badge">Silver Partner</span>
+                </div>
+              </a>
 
-            <!-- Zinox -->
-            <a href="#brand-zinox" class="brand-dir-card">
-              <img src="ZinoxYakata.png" alt="Zinox Official Store">
-              <div class="brand-name">Zinox</div>
-              <span class="view-pill">Explore Store &darr;</span>
-            </a>
+              <!-- 11. MamaHome -->
+              <a href="#brand-mamahome" class="partner-card">
+                <div class="partner-card-placeholder">
+                  <span class="placeholder-title">MAMAHOME</span>
+                  <span class="placeholder-badge">Silver Partner</span>
+                </div>
+              </a>
 
+              <!-- 12. Carrier & Mel -->
+              <a href="#brand-carrier" class="partner-card">
+                <img src="CarrierYakata.png" alt="Carrier & Mel">
+              </a>
+
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Brand Showcases: Brand Header + Products Underneath -->
+      <!-- Brand Product Calling Sections (Brand Header Bar Alone, Ready for Products) -->
 
-      <!-- 1. Samsung Showcase -->
-      <section class="brand-showcase-block" id="brand-samsung">
+      <!-- 1. Samsung -->
+      <section class="brand-showcase-section" id="brand-samsung">
         <div class="container">
-          <div class="brand-showcase-header">
-            <div class="brand-info-left">
-              <div class="brand-avatar">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
                 <img src="SamsungYakata.png" alt="Samsung">
               </div>
-              <div class="brand-meta">
-                <h3>Samsung Official Store</h3>
-                <p>Leading Smart TVs, Bespoke Refrigerators, Galaxy Phones & Air Conditioning</p>
+              <div class="brand-header-text">
+                <h3>
+                  Samsung Official Store
+                  <span class="package-badge package-gold">Gold Partner</span>
+                </h3>
+                <p>Electronics • Tue Peak • Nov 3 &amp; Nov 17 Takeovers</p>
               </div>
             </div>
-            <a href="https://www.konga.com/content/samsungsis" target="_blank" rel="noopener noreferrer" class="brand-store-btn">
-              Visit Full Samsung Store
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            <a href="https://www.konga.com/content/samsungsis" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Samsung Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
           </div>
-
-          <div class="brand-products-grid">
-            <a href="https://www.konga.com/product/samsung-samsung-rf48a4000b4-twin-cooling-plus-o-multi-door-refrigerator-468l-6803730" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-1%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/H/118566_1747148808.png" alt="Samsung RF48A4000B4 Refrigerator" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Samsung RF48A4000B4 Twin Cooling Plus™ Multi Door Refrigerator 468L</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;1,635,000</span>
-                  <span class="price-was">&#8358;1,655,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/product/samsung-75-u8000f-crystal-uhd-4k-smart-tv-2025-7037241" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-26%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/A/231472_1787306581.jpg" alt="Samsung 75 Smart TV" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Samsung 75" U8000F Crystal UHD 4K Smart TV - 2025</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;1,471,400</span>
-                  <span class="price-was">&#8358;2,000,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/product/samsung-samsung-1hp-9-000-btu-hr-air-conditioner-wall-mount-fast-cooling-6745469" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-27%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/D/118566_1747215024.jpg" alt="Samsung 1HP AC" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Samsung 1HP (9,000 BTU/hr) Fast Cooling Air Conditioner</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;398,825</span>
-                  <span class="price-was">&#8358;550,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/product/samsung-samsung-75-inch-mini-led-m70h-4k-vision-ai-smart-tv-7020608" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-9%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/X/231472_1784889412.jpg" alt="Samsung 75 Mini LED" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Samsung 75 Inch Mini LED M70H 4K Vision AI Smart TV</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;1,544,960</span>
-                  <span class="price-was">&#8358;1,700,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Samsung products here -->
           </div>
         </div>
       </section>
 
-      <!-- 2. ASUS Showcase -->
-      <section class="brand-showcase-block" id="brand-asus">
+      <!-- 2. Midea -->
+      <section class="brand-showcase-section" id="brand-midea">
         <div class="container">
-          <div class="brand-showcase-header">
-            <div class="brand-info-left">
-              <div class="brand-avatar">
-                <img src="ASUSYakata.png" alt="ASUS">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <span style="font-weight: 800; font-size: 0.95rem; color: #fff;">MIDEA</span>
               </div>
-              <div class="brand-meta">
-                <h3>ASUS Official Store</h3>
-                <p>ZenBook, VivoBook, ROG Gaming & Premium High-Performance Laptops</p>
+              <div class="brand-header-text">
+                <h3>
+                  Midea Official Store
+                  <span class="package-badge package-gold">Gold Partner</span>
+                </h3>
+                <p>Home Appliances • Thu Peak • Nov 5 &amp; Nov 19 Takeovers</p>
               </div>
             </div>
-            <a href="https://www.konga.com/content/asus-store" target="_blank" rel="noopener noreferrer" class="brand-store-btn">
-              Visit Full ASUS Store
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            <a href="https://www.konga.com/search?q=Midea" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Midea Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
           </div>
-
-          <div class="brand-products-grid">
-            <a href="https://www.konga.com/product/asus-zenbook-14-touchscreen-ultra9-285h-32gbram-1tbssd-14-win11-silver-ux3405ca-6982687" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-26%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/Y/56319_1786712399.jpg" alt="Asus Zenbook 14 Touchscreen" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Asus Zenbook 14 TouchScreen Ultra 9 32GB RAM 1TB SSD Win 11</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;2,380,740</span>
-                  <span class="price-was">&#8358;3,213,999</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/product/asus-vivobook-14-x1404va-laptop-intel-core-3-100u-8gb-ddr5-ram-512gb-ssd-14-fhd-7037242" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-15%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/E/231472_1787228371.jpg" alt="Asus Vivobook 14" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Asus Vivobook 14 X1404VA Intel Core 3 8GB RAM 512GB SSD FHD</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;551,825</span>
-                  <span class="price-was">&#8358;650,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/content/asus-store" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Hot Deal</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/Y/56319_1786712399.jpg" alt="ASUS Zenbook OLED" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">ASUS ZenBook OLED 13th Gen Intel Core Ultra Slim Laptop</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;1,850,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/content/asus-store" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Popular</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/E/231472_1787228371.jpg" alt="ASUS ROG Gaming" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">ASUS TUF Gaming A15 AMD Ryzen 7 16GB RTX Graphics</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;1,690,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Midea products here -->
           </div>
         </div>
       </section>
 
-      <!-- 3. Starlink Showcase -->
-      <section class="brand-showcase-block" id="brand-starlink">
+      <!-- 3. LG -->
+      <section class="brand-showcase-section" id="brand-lg">
         <div class="container">
-          <div class="brand-showcase-header">
-            <div class="brand-info-left">
-              <div class="brand-avatar">
-                <img src="StarlinkYakata.png" alt="Starlink">
-              </div>
-              <div class="brand-meta">
-                <h3>Starlink Official Store</h3>
-                <p>High-Speed, Low-Latency Satellite Internet Everywhere Across Nigeria</p>
-              </div>
-            </div>
-            <a href="https://www.konga.com/search?q=Yakata2026Starlink" target="_blank" rel="noopener noreferrer" class="brand-store-btn">
-              Explore All Starlink Kits
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-              </svg>
-            </a>
-          </div>
-
-          <div class="brand-products-grid">
-            <a href="https://www.konga.com/product/starlink-starlink-v4-7014687" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-3%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/B/230034_1777037383.jpg" alt="Starlink V4 Standard Kit" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Starlink V4 Standard Kit High-Speed Satellite Internet</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;565,000</span>
-                  <span class="price-was">&#8358;585,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/search?q=Yakata2026Starlink" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Genuine</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/J/230034_1777037397.jpg" alt="Starlink Router & Mesh" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Starlink Gen 3 Wi-Fi Mesh Router Extension</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;240,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/search?q=Yakata2026Starlink" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Accessory</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/B/230034_1777037383.jpg" alt="Starlink Ethernet Adapter" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Starlink High-Speed Ethernet Adapter Connector</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;85,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/search?q=Yakata2026Starlink" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Mount Kit</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/B/230034_1777037383.jpg" alt="Starlink Pivot Mount" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Starlink Heavy-Duty Roof Pivot Mounting Bracket</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;110,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. LG Showcase -->
-      <section class="brand-showcase-block" id="brand-lg">
-        <div class="container">
-          <div class="brand-showcase-header">
-            <div class="brand-info-left">
-              <div class="brand-avatar">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
                 <img src="LGYakata.png" alt="LG">
               </div>
-              <div class="brand-meta">
-                <h3>LG Electronics Official Store</h3>
-                <p>OLED TVs, Smart Inverter Washing Machines & Dual Inverter ACs</p>
+              <div class="brand-header-text">
+                <h3>
+                  LG Official Store
+                  <span class="package-badge package-gold">Gold Partner</span>
+                </h3>
+                <p>Home &amp; TV • Thu Peak • Nov 12 &amp; Nov 26 Takeovers</p>
               </div>
             </div>
-            <a href="https://www.konga.com/content/lgstore" target="_blank" rel="noopener noreferrer" class="brand-store-btn">
-              Visit Full LG Store
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            <a href="https://www.konga.com/content/lgstore" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All LG Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
           </div>
-
-          <div class="brand-products-grid">
-            <a href="https://www.konga.com/content/lgstore" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-22%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/I/140630_1725641773.jpg" alt="LG 9kg Washer" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">LG 9Kg Front Load Washing Machine + Steam Inverter</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;429,000</span>
-                  <span class="price-was">&#8358;550,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/content/lgstore" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">OLED AI</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/E/L/118566_1785232593.jpg" alt="LG OLED TV" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">LG 55 Inch 4K UHD Smart AI ThinQ TV (2026 Model)</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;845,000</span>
-                  <span class="price-was">&#8358;980,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/content/lgstore" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Inverter</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/D/118566_1747215024.jpg" alt="LG Dual Inverter AC" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">LG Dual Inverter 1.5HP Energy Saving Air Conditioner</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;520,000</span>
-                  <span class="price-was">&#8358;610,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/content/lgstore" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Sound</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/J/118566_1788443010.jpg" alt="LG Soundbar" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">LG XBOOM Powerful Bass Wireless Home Audio System</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;315,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add LG products here -->
           </div>
         </div>
       </section>
 
-      <!-- 5. CeraVe & La Roche-Posay Showcase -->
-      <section class="brand-showcase-block" id="brand-cerave">
+      <!-- 4. ASUS -->
+      <section class="brand-showcase-section" id="brand-asus">
         <div class="container">
-          <div class="brand-showcase-header">
-            <div class="brand-info-left">
-              <div class="brand-avatar">
-                <img src="CeraveYakata.png" alt="CeraVe">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <img src="ASUSYakata.png" alt="ASUS">
               </div>
-              <div class="brand-meta">
-                <h3>CeraVe &amp; La Roche-Posay Dermatological Beauty</h3>
-                <p>Authentic Dermatologist-Recommended Skincare, Cleansers & Hydration</p>
+              <div class="brand-header-text">
+                <h3>
+                  ASUS Official Store
+                  <span class="package-badge package-gold">Gold Partner</span>
+                </h3>
+                <p>Tech Cyber • Mon Peak • Nov 9 &amp; Nov 23 Takeovers</p>
               </div>
             </div>
-            <div style="display: flex; gap: 8px;">
-              <a href="https://www.konga.com/content/cerave" target="_blank" rel="noopener noreferrer" class="brand-store-btn">
-                Shop CeraVe
-              </a>
-              <a href="https://www.konga.com/content/la-roche-posay" target="_blank" rel="noopener noreferrer" class="brand-store-btn">
-                Shop La Roche-Posay
-              </a>
-            </div>
+            <a href="https://www.konga.com/content/asus-store" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All ASUS Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
-
-          <div class="brand-products-grid">
-            <a href="https://www.konga.com/product/la-roche-posay-effaclar-foam-cleanser-200ml-6253427" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-17%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/R/_1766134804.jpg" alt="La Roche-Posay Effaclar" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">LA ROCHE-POSAY Effaclar Purifying Foam Cleanser 200ml</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;16,700</span>
-                  <span class="price-was">&#8358;20,192</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/product/cerave-hydrating-cream-to-foam-cleanser-for-normal-to-dry-skin-236ml-6385806" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">-13%</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/K/_1763455342.jpg" alt="CeraVe Hydrating Cleanser" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">CeraVe Hydrating Cream To Foam Cleanser (Normal to Dry) 236ml</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;14,629</span>
-                  <span class="price-was">&#8358;16,884</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/content/cerave" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Ceramides</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/K/_1763455342.jpg" alt="CeraVe Moisturising Cream" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">CeraVe Moisturising Cream with 3 Essential Ceramides 454g</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;22,500</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
-
-            <a href="https://www.konga.com/content/la-roche-posay" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">SPF 50+</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/R/_1766134804.jpg" alt="La Roche-Posay Anthelios" loading="lazy">
-              </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">La Roche-Posay Anthelios UVMune 400 Invisible Fluid SPF50+</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;19,800</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
-              </div>
-            </a>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add ASUS products here -->
           </div>
         </div>
       </section>
 
-      <!-- 6. Anker, Carrier, Mikano & Guinness Showcase -->
-      <section class="brand-showcase-block" id="brand-anker">
+      <!-- 5. Anker -->
+      <section class="brand-showcase-section" id="brand-anker">
         <div class="container">
-          <div class="brand-showcase-header">
-            <div class="brand-info-left">
-              <div class="brand-avatar">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
                 <img src="AnkerYakata.png" alt="Anker">
               </div>
-              <div class="brand-meta">
-                <h3>Anker, Carrier, Mikano &amp; Guinness</h3>
-                <p>Power Stations, Fast Chargers, Air Conditioners, Industrial Power & Authentic Beverages</p>
+              <div class="brand-header-text">
+                <h3>
+                  Anker Official Store
+                  <span class="package-badge package-gold">Gold Partner</span>
+                </h3>
+                <p>Tech • Mon Cyber &amp; Pre-Yakata • Nov 16 &amp; Nov 25</p>
               </div>
             </div>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-              <a href="https://www.konga.com/content/anker" target="_blank" rel="noopener noreferrer" class="brand-store-btn">Anker</a>
-              <a href="https://www.konga.com/merchant/121541" target="_blank" rel="noopener noreferrer" class="brand-store-btn">Carrier</a>
-              <a href="https://www.konga.com/content/mikano-motors" target="_blank" rel="noopener noreferrer" class="brand-store-btn">Mikano</a>
-              <a href="https://www.konga.com/merchant/251132" target="_blank" rel="noopener noreferrer" class="brand-store-btn">Guinness</a>
-            </div>
+            <a href="https://www.konga.com/content/anker" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Anker Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Anker products here -->
+          </div>
+        </div>
+      </section>
 
-          <div class="brand-products-grid">
-            <a href="https://www.konga.com/content/anker" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">PowerIQ</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/C/118566_1773740091.jpg" alt="Anker Power Bank" loading="lazy">
+      <!-- 6. Zinox -->
+      <section class="brand-showcase-section" id="brand-zinox">
+        <div class="container">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <img src="ZinoxYakata.png" alt="Zinox">
               </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Anker PowerCore 20,000mAh Ultra-Fast USB-C Power Bank</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;58,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
+              <div class="brand-header-text">
+                <h3>
+                  Zinox Official Store
+                  <span class="package-badge package-gold">Gold Partner</span>
+                </h3>
+                <p>Tech • Wed &amp; Tue Computing • Nov 4 &amp; Nov 24 Takeovers</p>
               </div>
+            </div>
+            <a href="https://www.konga.com/search?q=Zinox" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Zinox Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
             </a>
+          </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Zinox products here -->
+          </div>
+        </div>
+      </section>
 
-            <a href="https://www.konga.com/merchant/121541" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Carrier AC</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/W/118566_1788273396.jpg" alt="Carrier Air Conditioner" loading="lazy">
+      <!-- 7. Vitali -->
+      <section class="brand-showcase-section" id="brand-vitali">
+        <div class="container">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <span style="font-weight: 800; font-size: 0.95rem; color: #fff;">VITALI</span>
               </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Carrier 1.5HP High Energy Efficiency Split Air Conditioner</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;485,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
+              <div class="brand-header-text">
+                <h3>
+                  Vitali Official Store
+                  <span class="package-badge package-gold">Gold Partner</span>
+                </h3>
+                <p>Food &amp; Groceries • Tue &amp; Sat Peak • Nov 10 &amp; Nov 14 Takeovers</p>
               </div>
+            </div>
+            <a href="https://www.konga.com/search?q=Vitali" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Vitali Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
             </a>
+          </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Vitali products here -->
+          </div>
+        </div>
+      </section>
 
-            <a href="https://www.konga.com/product/heroee-2kwh-portable-power-supply-power-station-for-home-backup-and-outdoor-7029089" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">Backup</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/J/249486_1786089556.jpg" alt="Power Station" loading="lazy">
+      <!-- 8. Elepaq -->
+      <section class="brand-showcase-section" id="brand-elepaq">
+        <div class="container">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <span style="font-weight: 800; font-size: 0.95rem; color: #fff;">ELEPAQ</span>
               </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Heroee 2kWh Portable Power Station for Home Backup & Solar</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;580,000</span>
-                  <span class="price-was">&#8358;590,000</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
+              <div class="brand-header-text">
+                <h3>
+                  Elepaq Official Store
+                  <span class="package-badge package-brandday">Brand Day</span>
+                </h3>
+                <p>Power Takeover • Offered Freebies • Wednesday Nov 11</p>
               </div>
+            </div>
+            <a href="https://www.konga.com/search?q=Elepaq" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Elepaq Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
             </a>
+          </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Elepaq products here -->
+          </div>
+        </div>
+      </section>
 
-            <a href="https://www.konga.com/merchant/251132" target="_blank" rel="noopener noreferrer" class="brand-product-card">
-              <div class="product-img-wrapper">
-                <span class="product-discount-pill">18+ Drinks</span>
-                <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/A/213116_1770980993.jpg" alt="Guinness Official Store" loading="lazy">
+      <!-- 9. Guinness -->
+      <section class="brand-showcase-section" id="brand-guinness">
+        <div class="container">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <img src="GuinnessYakata.png" alt="Guinness">
               </div>
-              <div class="product-info-wrapper">
-                <h4 class="product-title">Guinness Extra Smooth & Foreign Extra Stout Official Packs</h4>
-                <div class="product-price-box">
-                  <span class="price-now">&#8358;18,500</span>
-                </div>
-                <div class="product-buy-btn">View Deal</div>
+              <div class="brand-header-text">
+                <h3>
+                  Guinness Official Store
+                  <span class="package-badge package-brandday">Brand Day</span>
+                </h3>
+                <p>Beverage Special Takeover • Wednesday Nov 18</p>
               </div>
+            </div>
+            <a href="https://www.konga.com/merchant/251132" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Guinness Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
             </a>
+          </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Guinness products here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. Kenwood -->
+      <section class="brand-showcase-section" id="brand-kenwood">
+        <div class="container">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <span style="font-weight: 800; font-size: 0.9rem; color: #fff;">KENWOOD</span>
+              </div>
+              <div class="brand-header-text">
+                <h3>
+                  Kenwood Official Store
+                  <span class="package-badge package-silver">Silver Partner</span>
+                </h3>
+                <p>Kitchen &amp; Small Appliances • Catalog Promotions</p>
+              </div>
+            </div>
+            <a href="https://www.konga.com/search?q=Kenwood" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Kenwood Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Kenwood products here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. MamaHome -->
+      <section class="brand-showcase-section" id="brand-mamahome">
+        <div class="container">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <span style="font-weight: 800; font-size: 0.85rem; color: #fff;">MAMAHOME</span>
+              </div>
+              <div class="brand-header-text">
+                <h3>
+                  MamaHome Official Store
+                  <span class="package-badge package-silver">Silver Partner</span>
+                </h3>
+                <p>Home &amp; Kitchen Essentials • Catalog Promotions</p>
+              </div>
+            </div>
+            <a href="https://www.konga.com/search?q=MamaHome" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All MamaHome Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add MamaHome products here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. Carrier & Mel -->
+      <section class="brand-showcase-section" id="brand-carrier">
+        <div class="container">
+          <div class="brand-header-bar">
+            <div class="brand-header-left">
+              <div class="brand-header-avatar">
+                <img src="CarrierYakata.png" alt="Carrier & Mel">
+              </div>
+              <div class="brand-header-text">
+                <h3>
+                  Carrier &amp; Mel Official Store
+                  <span class="package-badge package-silver">Silver Partner</span>
+                </h3>
+                <p>Air Conditioners &amp; Cooling Solutions • 4 Registered SKUs</p>
+              </div>
+            </div>
+            <a href="https://www.konga.com/merchant/121541" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
+              Explore All Carrier Store
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+          <div class="brand-products-placeholder-slot">
+            <!-- Add Carrier & Mel products here -->
           </div>
         </div>
       </section>
@@ -1233,7 +1036,7 @@
       <div class="container">
         <div class="footer-links">
           <a href="https://www.konga.com/content/yakata2026">Yakata Home</a>
-          <a href="#brand-directory">Partner Brands</a>
+          <a href="#official-partners">Official Partners</a>
           <a href="https://www.konga.com/search?q=Yakata" target="_blank" rel="noopener noreferrer">All Yakata Deals</a>
           <a href="https://www.konga.com/content/terms-and-conditions" target="_blank" rel="noopener noreferrer">General Terms</a>
           <a href="https://www.konga.com/content/return-policy" target="_blank" rel="noopener noreferrer">Return Policy</a>

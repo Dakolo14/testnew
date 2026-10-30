@@ -2994,7 +2994,7 @@
       /* ========================================================
          PRE-LAUNCH PREVIEW MODE: GRAYSCALE & UNCLICKABLE
          ======================================================== */
-      main.prelaunch-mode {
+      main.prelaunch-mode > *:not(.video-spotlight-section) {
         filter: grayscale(100%) contrast(92%);
         -webkit-filter: grayscale(100%) contrast(92%);
         transition: filter 0.3s ease;
@@ -3967,12 +3967,8 @@
     <!-- YouTube Video Spotlight Section -->
     <section class="video-spotlight-section section-reset" id="yakata-video-spotlight">
       <div class="video-spotlight-card">
-        <div class="video-spotlight-header">
-          <div class="video-spotlight-title-area">
-            <span class="video-spotlight-badge">Watch</span>
-            <h3 class="video-spotlight-heading">Yakata 2026 Spotlight</h3>
-          </div>
-          <p class="video-spotlight-sub">Catch the official campaign highlights, live shopping drops &amp; offers</p>
+        <div class="video-spotlight-header" style="justify-content: flex-start; margin-bottom: 0.85rem;">
+          <p class="video-spotlight-sub" style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); margin: 0; font-weight: 500; letter-spacing: 0.2px;">Catch the official campaign highlights, live shopping drops &amp; offers</p>
         </div>
         <div class="video-embed-wrapper">
           <!-- REPLACE 'YOUTUBE_VIDEO_ID' WITH YOUR ACTUAL YOUTUBE VIDEO ID / EMBED URL -->

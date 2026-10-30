@@ -3032,6 +3032,52 @@
         pointer-events: auto !important;
         cursor: pointer !important;
       }
+
+      /* ========================================================
+         PRE-LAUNCH PRICE TEASER (BLURRED / LOCKED PRICES)
+         ======================================================== */
+      main.prelaunch-mode .deal-price-row,
+      main.prelaunch-mode .dotd-price-row,
+      main.prelaunch-mode .best-prices-pricing-row,
+      main.prelaunch-mode .shop-all-pricing-row,
+      main.prelaunch-mode .booze-pricing-row,
+      main.prelaunch-mode .deal-current-price,
+      main.prelaunch-mode .deal-old-price,
+      main.prelaunch-mode .best-prices-cur-price,
+      main.prelaunch-mode .best-prices-old-price,
+      main.prelaunch-mode .shop-all-cur-price,
+      main.prelaunch-mode .shop-all-old-price,
+      main.prelaunch-mode .booze-cur-price,
+      main.prelaunch-mode .booze-old-price,
+      main.prelaunch-mode .dotd-current-price,
+      main.prelaunch-mode .dotd-old-price {
+        filter: blur(6px) !important;
+        -webkit-filter: blur(6px) !important;
+        user-select: none !important;
+        opacity: 0.55 !important;
+        transition: filter 0.3s ease;
+      }
+
+      /* Blur discount pills so exact % is kept secret */
+      main.prelaunch-mode .deal-discount-badge,
+      main.prelaunch-mode .dotd-discount,
+      main.prelaunch-mode .best-prices-discount-pill,
+      main.prelaunch-mode .shop-all-discount-pill,
+      main.prelaunch-mode .booze-discount-pill {
+        filter: blur(4px) !important;
+        -webkit-filter: blur(4px) !important;
+        user-select: none !important;
+        opacity: 0.7 !important;
+      }
+
+      /* Style Add-to-cart buttons as 'Price Revealed At Launch' */
+      main.prelaunch-mode .best-prices-cart-btn,
+      main.prelaunch-mode .shop-all-cart-btn,
+      main.prelaunch-mode .booze-cart-btn {
+        background: #2a2a2a !important;
+        color: #888 !important;
+        border: 1px solid #333 !important;
+      }
     </style>
   </head>
   <body>

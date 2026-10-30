@@ -3071,6 +3071,18 @@
         opacity: 0.65 !important;
       }
 
+      /* Blur product images in those specific deal sections */
+      main.prelaunch-mode .deal-card-image-area img,
+      main.prelaunch-mode .dotd-image-area img,
+      main.prelaunch-mode .best-prices-img-wrap img,
+      main.prelaunch-mode .shop-all-img-wrap img,
+      main.prelaunch-mode .booze-img-wrap img {
+        filter: blur(7px) !important;
+        -webkit-filter: blur(7px) !important;
+        opacity: 0.75 !important;
+        transition: filter 0.3s ease;
+      }
+
       /* Blur discount pills so exact % is kept secret */
       main.prelaunch-mode .deal-discount-badge,
       main.prelaunch-mode .dotd-discount,

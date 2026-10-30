@@ -3106,6 +3106,109 @@
         color: #888 !important;
         border: 1px solid #333 !important;
       }
+
+      /* Allow video player controls to remain interactive */
+      main.prelaunch-mode .video-spotlight-section iframe {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+      }
+
+      /* ========================================================
+         YAKATA VIDEO SPOTLIGHT SECTION
+         ======================================================== */
+      .video-spotlight-section {
+        padding: 2rem 0;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+      .video-spotlight-card {
+        background: linear-gradient(135deg, rgba(26, 26, 26, 0.95), rgba(18, 18, 18, 0.98));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+      }
+      .video-spotlight-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .video-spotlight-title-area {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+      .video-spotlight-badge {
+        background: #ed017f;
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 9999px;
+        text-transform: uppercase;
+        letter-spacing: 0.75px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .video-spotlight-badge::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #fff;
+        animation: pulseDot 1.5s infinite;
+      }
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.8); }
+      }
+      .video-spotlight-heading {
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: -0.2px;
+      }
+      .video-spotlight-sub {
+        color: #888;
+        font-size: 0.875rem;
+        margin: 0;
+      }
+      .video-embed-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        border-radius: 12px;
+        overflow: hidden;
+        background: #000;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      }
+      .video-embed-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      @media (max-width: 768px) {
+        .video-spotlight-section {
+          padding: 1.25rem 1rem;
+        }
+        .video-spotlight-card {
+          padding: 1rem;
+        }
+        .video-spotlight-heading {
+          font-size: 1.1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -3857,6 +3960,30 @@
             </a>
 
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- YouTube Video Spotlight Section -->
+    <section class="video-spotlight-section section-reset" id="yakata-video-spotlight">
+      <div class="video-spotlight-card">
+        <div class="video-spotlight-header">
+          <div class="video-spotlight-title-area">
+            <span class="video-spotlight-badge">Watch</span>
+            <h3 class="video-spotlight-heading">Yakata 2026 Spotlight</h3>
+          </div>
+          <p class="video-spotlight-sub">Catch the official campaign highlights, live shopping drops &amp; offers</p>
+        </div>
+        <div class="video-embed-wrapper">
+          <!-- REPLACE 'YOUTUBE_VIDEO_ID' WITH YOUR ACTUAL YOUTUBE VIDEO ID / EMBED URL -->
+          <iframe
+            id="yakataYouTubeFrame"
+            src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+            title="Konga Yakata 2026 Video Spotlight"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
         </div>
       </div>
     </section>

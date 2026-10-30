@@ -294,14 +294,6 @@
         font-size: 1.05rem;
         font-weight: 700;
         color: #ffffff;
-        letter-spacing: 0.5px;
-      }
-
-      .partner-card-placeholder .placeholder-badge {
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: var(--konga-pink);
-        text-transform: uppercase;
         letter-spacing: 1px;
       }
 
@@ -338,20 +330,21 @@
       .brand-header-avatar {
         width: 68px;
         height: 68px;
-        background: #141414;
+        background: #000000;
         border: 1px solid #2a2a2a;
         border-radius: 10px;
-        padding: 6px;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
+        overflow: hidden;
       }
 
       .brand-header-avatar img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       .brand-header-text {
@@ -364,45 +357,17 @@
         font-weight: 700;
         color: #ffffff;
         letter-spacing: -0.3px;
-        margin: 0 0 2px 0;
+        margin: 0;
         display: flex;
         align-items: center;
         gap: 8px;
-        flex-wrap: wrap;
-      }
-
-      .package-badge {
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        padding: 2px 7px;
-        border-radius: 4px;
-      }
-
-      .package-gold {
-        background: rgba(254, 189, 105, 0.15);
-        color: #febd69;
-        border: 1px solid rgba(254, 189, 105, 0.35);
-      }
-
-      .package-silver {
-        background: rgba(192, 192, 192, 0.15);
-        color: #d1d5db;
-        border: 1px solid rgba(192, 192, 192, 0.3);
-      }
-
-      .package-brandday {
-        background: rgba(237, 1, 127, 0.15);
-        color: #ff66b2;
-        border: 1px solid rgba(237, 1, 127, 0.35);
       }
 
       .brand-header-text p {
         font-size: 0.85rem;
         color: var(--konga-text-muted);
         line-height: 1.4;
-        margin: 0;
+        margin: 2px 0 0 0;
       }
 
       /* Prominent Clickable Action Button */
@@ -608,7 +573,6 @@
               <a href="#brand-midea" class="partner-card">
                 <div class="partner-card-placeholder">
                   <span class="placeholder-title">MIDEA</span>
-                  <span class="placeholder-badge">Gold Partner</span>
                 </div>
               </a>
 
@@ -636,7 +600,6 @@
               <a href="#brand-vitali" class="partner-card">
                 <div class="partner-card-placeholder">
                   <span class="placeholder-title">VITALI</span>
-                  <span class="placeholder-badge">Gold Partner</span>
                 </div>
               </a>
 
@@ -644,7 +607,6 @@
               <a href="#brand-elepaq" class="partner-card">
                 <div class="partner-card-placeholder">
                   <span class="placeholder-title">ELEPAQ</span>
-                  <span class="placeholder-badge">Brand Day</span>
                 </div>
               </a>
 
@@ -657,7 +619,6 @@
               <a href="#brand-kenwood" class="partner-card">
                 <div class="partner-card-placeholder">
                   <span class="placeholder-title">KENWOOD</span>
-                  <span class="placeholder-badge">Silver Partner</span>
                 </div>
               </a>
 
@@ -665,7 +626,6 @@
               <a href="#brand-mamahome" class="partner-card">
                 <div class="partner-card-placeholder">
                   <span class="placeholder-title">MAMAHOME</span>
-                  <span class="placeholder-badge">Silver Partner</span>
                 </div>
               </a>
 
@@ -690,11 +650,8 @@
                 <img src="SamsungYakata.png" alt="Samsung">
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Samsung Official Store
-                  <span class="package-badge package-gold">Gold Partner</span>
-                </h3>
-                <p>Electronics • Tue Peak • Nov 3 &amp; Nov 17 Takeovers</p>
+                <h3>Samsung Official Store</h3>
+                <p>Explore genuine Samsung electronics, smartphones, TVs &amp; appliances</p>
               </div>
             </div>
             <a href="https://www.konga.com/content/samsungsis" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -719,11 +676,8 @@
                 <span style="font-weight: 800; font-size: 0.95rem; color: #fff;">MIDEA</span>
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Midea Official Store
-                  <span class="package-badge package-gold">Gold Partner</span>
-                </h3>
-                <p>Home Appliances • Thu Peak • Nov 5 &amp; Nov 19 Takeovers</p>
+                <h3>Midea Official Store</h3>
+                <p>Smart home appliances, cooling systems, air conditioners &amp; kitchen essentials</p>
               </div>
             </div>
             <a href="https://www.konga.com/search?q=Midea" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -748,11 +702,8 @@
                 <img src="LGYakata.png" alt="LG">
               </div>
               <div class="brand-header-text">
-                <h3>
-                  LG Official Store
-                  <span class="package-badge package-gold">Gold Partner</span>
-                </h3>
-                <p>Home &amp; TV • Thu Peak • Nov 12 &amp; Nov 26 Takeovers</p>
+                <h3>LG Official Store</h3>
+                <p>Cutting-edge OLED &amp; UHD TVs, home entertainment &amp; living appliances</p>
               </div>
             </div>
             <a href="https://www.konga.com/content/lgstore" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -777,11 +728,8 @@
                 <img src="ASUSYakata.png" alt="ASUS">
               </div>
               <div class="brand-header-text">
-                <h3>
-                  ASUS Official Store
-                  <span class="package-badge package-gold">Gold Partner</span>
-                </h3>
-                <p>Tech Cyber • Mon Peak • Nov 9 &amp; Nov 23 Takeovers</p>
+                <h3>ASUS Official Store</h3>
+                <p>High-performance gaming laptops, ZenBooks, monitors &amp; computing gear</p>
               </div>
             </div>
             <a href="https://www.konga.com/content/asus-store" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -806,11 +754,8 @@
                 <img src="AnkerYakata.png" alt="Anker">
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Anker Official Store
-                  <span class="package-badge package-gold">Gold Partner</span>
-                </h3>
-                <p>Tech • Mon Cyber &amp; Pre-Yakata • Nov 16 &amp; Nov 25</p>
+                <h3>Anker Official Store</h3>
+                <p>Fast-charging power banks, audio gear, cables &amp; mobile accessories</p>
               </div>
             </div>
             <a href="https://www.konga.com/content/anker" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -835,11 +780,8 @@
                 <img src="ZinoxYakata.png" alt="Zinox">
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Zinox Official Store
-                  <span class="package-badge package-gold">Gold Partner</span>
-                </h3>
-                <p>Tech • Wed &amp; Tue Computing • Nov 4 &amp; Nov 24 Takeovers</p>
+                <h3>Zinox Official Store</h3>
+                <p>Smart computing tech, laptops, desktops, power backup &amp; accessories</p>
               </div>
             </div>
             <a href="https://www.konga.com/search?q=Zinox" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -864,11 +806,8 @@
                 <span style="font-weight: 800; font-size: 0.95rem; color: #fff;">VITALI</span>
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Vitali Official Store
-                  <span class="package-badge package-gold">Gold Partner</span>
-                </h3>
-                <p>Food &amp; Groceries • Tue &amp; Sat Peak • Nov 10 &amp; Nov 14 Takeovers</p>
+                <h3>Vitali Official Store</h3>
+                <p>Everyday premium groceries, pantry essentials &amp; food provisions</p>
               </div>
             </div>
             <a href="https://www.konga.com/search?q=Vitali" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -893,11 +832,8 @@
                 <span style="font-weight: 800; font-size: 0.95rem; color: #fff;">ELEPAQ</span>
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Elepaq Official Store
-                  <span class="package-badge package-brandday">Brand Day</span>
-                </h3>
-                <p>Power Takeover • Offered Freebies • Wednesday Nov 11</p>
+                <h3>Elepaq Official Store</h3>
+                <p>Heavy-duty power generators, alternators &amp; reliable energy solutions</p>
               </div>
             </div>
             <a href="https://www.konga.com/search?q=Elepaq" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -922,11 +858,8 @@
                 <img src="GuinnessYakata.png" alt="Guinness">
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Guinness Official Store
-                  <span class="package-badge package-brandday">Brand Day</span>
-                </h3>
-                <p>Beverage Special Takeover • Wednesday Nov 18</p>
+                <h3>Guinness Official Store</h3>
+                <p>Iconic stout, malt beverages &amp; authentic spirits directly from the brand</p>
               </div>
             </div>
             <a href="https://www.konga.com/merchant/251132" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -951,11 +884,8 @@
                 <span style="font-weight: 800; font-size: 0.9rem; color: #fff;">KENWOOD</span>
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Kenwood Official Store
-                  <span class="package-badge package-silver">Silver Partner</span>
-                </h3>
-                <p>Kitchen &amp; Small Appliances • Catalog Promotions</p>
+                <h3>Kenwood Official Store</h3>
+                <p>Kitchen food processors, stand mixers, blenders &amp; culinary appliances</p>
               </div>
             </div>
             <a href="https://www.konga.com/search?q=Kenwood" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -980,11 +910,8 @@
                 <span style="font-weight: 800; font-size: 0.85rem; color: #fff;">MAMAHOME</span>
               </div>
               <div class="brand-header-text">
-                <h3>
-                  MamaHome Official Store
-                  <span class="package-badge package-silver">Silver Partner</span>
-                </h3>
-                <p>Home &amp; Kitchen Essentials • Catalog Promotions</p>
+                <h3>MamaHome Official Store</h3>
+                <p>Cookware sets, kitchenware, home decor &amp; everyday living essentials</p>
               </div>
             </div>
             <a href="https://www.konga.com/search?q=MamaHome" target="_blank" rel="noopener noreferrer" class="brand-header-cta">
@@ -1009,11 +936,8 @@
                 <img src="CarrierYakata.png" alt="Carrier & Mel">
               </div>
               <div class="brand-header-text">
-                <h3>
-                  Carrier &amp; Mel Official Store
-                  <span class="package-badge package-silver">Silver Partner</span>
-                </h3>
-                <p>Air Conditioners &amp; Cooling Solutions • 4 Registered SKUs</p>
+                <h3>Carrier &amp; Mel Official Store</h3>
+                <p>Commercial &amp; residential air conditioning, cooling systems &amp; airflow</p>
               </div>
             </div>
             <a href="https://www.konga.com/merchant/121541" target="_blank" rel="noopener noreferrer" class="brand-header-cta">

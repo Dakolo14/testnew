@@ -2990,6 +2990,48 @@
           grid-template-columns: repeat(2, 1fr) !important;
         }
       }
+
+      /* ========================================================
+         PRE-LAUNCH PREVIEW MODE: GRAYSCALE & UNCLICKABLE
+         ======================================================== */
+      main.prelaunch-mode {
+        filter: grayscale(100%) contrast(92%);
+        -webkit-filter: grayscale(100%) contrast(92%);
+        transition: filter 0.3s ease;
+      }
+
+      /* Disable all clicks, cursor pointers, and hover transformations */
+      main.prelaunch-mode a,
+      main.prelaunch-mode button,
+      main.prelaunch-mode .banner-slide,
+      main.prelaunch-mode .shop-category-item,
+      main.prelaunch-mode .deal-card,
+      main.prelaunch-mode .best-prices-product-card,
+      main.prelaunch-mode .shop-all-product-card,
+      main.prelaunch-mode .our-deals-card,
+      main.prelaunch-mode .kitchen-card,
+      main.prelaunch-mode .booze-card,
+      main.prelaunch-mode .brand-banner-card,
+      main.prelaunch-mode .partner-card,
+      main.prelaunch-mode .hub-chip,
+      main.prelaunch-mode .hub-footer a,
+      main.prelaunch-mode .flash-more {
+        pointer-events: none !important;
+        cursor: default !important;
+      }
+
+      /* Prevent scale on hover during pre-launch */
+      main.prelaunch-mode *:hover {
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      /* Keep carousel navigation indicators operable if users browse through slides */
+      main.prelaunch-mode .banner-pagination label,
+      main.prelaunch-mode .banner-arrow {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+      }
     </style>
   </head>
   <body>
@@ -3012,7 +3054,7 @@
       </nav>
     </header>
 
-    
+    <main class="prelaunch-mode">
     <section class="large-banner-section section-reset">
       <div class="container">
         <div class="banner-carousel-wrapper" style="flex-direction: column; align-items: center;">
@@ -5452,6 +5494,7 @@
         Yakata 2026.
       </p>
     </section>
+    </main>
 
     
     <script>

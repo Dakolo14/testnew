@@ -3034,7 +3034,7 @@
       }
 
       /* ========================================================
-         PRE-LAUNCH PRICE TEASER (BLURRED / LOCKED PRICES)
+         PRE-LAUNCH PRICE TEASER (BLURRED / LOCKED PRICES & TITLES)
          ======================================================== */
       main.prelaunch-mode .deal-price-row,
       main.prelaunch-mode .dotd-price-row,
@@ -3056,6 +3056,19 @@
         user-select: none !important;
         opacity: 0.55 !important;
         transition: filter 0.3s ease;
+      }
+
+      /* Blur product titles so users cannot read the exact model and search it */
+      main.prelaunch-mode .deal-product-name,
+      main.prelaunch-mode .dotd-title,
+      main.prelaunch-mode .best-prices-card-title,
+      main.prelaunch-mode .shop-all-card-title,
+      main.prelaunch-mode .booze-card-title {
+        filter: blur(6px) !important;
+        -webkit-filter: blur(6px) !important;
+        user-select: none !important;
+        pointer-events: none !important;
+        opacity: 0.65 !important;
       }
 
       /* Blur discount pills so exact % is kept secret */

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>BlackOut Hour - Konga Yakata 2026 Deals</title>
+    <meta
+      name="description"
+      content="Konga Yakata BlackOut Hour — Surprise 60-minute flash drop windows with massive price crashes exclusively on the Konga App. Read the official Terms & Conditions."
+    />
+    <style>
+      :root {
+        --konga-pink: #ed017f;
+        --konga-pink-hover: #c40068;
+        --konga-dark-card: #111111;
+        --konga-border: #222222;
+        --konga-text-muted: #888888;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #000000;
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        overflow-x: hidden;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        border-bottom: 1px solid #222;
+      }
+
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        gap: 1.5rem;
+      }
+
+      .navbar-logo {
+        height: 42px;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-logo img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: #ddd;
+        font-size: 0.95rem;
+        font-weight: 400;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--konga-pink);
+      }
+
+      .nav-back-btn {
+        background-color: var(--konga-pink);
+        color: #fff;
+        padding: 0.55rem 1.25rem;
+        border-radius: 6px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: background-color 0.2s ease;
+      }
+
+      .nav-back-btn:hover {
+        background-color: var(--konga-pink-hover);
+        color: #fff;
+      }
+
+      /* Breadcrumbs */
+      .breadcrumb-bar {
+        padding: 1.25rem 0 0.5rem;
+      }
+
+      .breadcrumb-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.85rem;
+        color: #777;
+      }
+
+      .breadcrumb-nav a {
+        color: #aaa;
+        transition: color 0.2s;
+      }
+
+      .breadcrumb-nav a:hover {
+        color: var(--konga-pink);
+      }
+
+      .breadcrumb-nav span.active {
+        color: #fff;
+      }
+
+      /* Page Header Hero */
+      .blackout-hero {
+        padding: 1rem 0 2rem;
+      }
+
+      .blackout-main-banner {
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid #222;
+        background: #0a0a0a;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      }
+
+      .blackout-main-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Alert / Countdown Pulse Bar */
+      .blackout-alert-strip {
+        margin-top: 1.5rem;
+        background: linear-gradient(135deg, rgba(237, 1, 127, 0.15) 0%, rgba(20, 20, 20, 0.95) 100%);
+        border: 1px solid rgba(237, 1, 127, 0.35);
+        border-radius: 12px;
+        padding: 1.25rem 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .alert-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .alert-pulse-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ff1744;
+        box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7);
+        animation: pulse 1.8s infinite;
+      }
+
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7); }
+        70% { box-shadow: 0 0 0 10px rgba(255, 23, 68, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 23, 68, 0); }
+      }
+
+      .alert-text h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      .alert-text p {
+        font-size: 0.85rem;
+        color: #bbb;
+      }
+
+      .app-download-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #ed017f 0%, #b80062 100%);
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(237, 1, 127, 0.35);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .app-download-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(237, 1, 127, 0.5);
+        color: #fff;
+      }
+
+      /* Campaign 2x1 Banners Section */
+      .campaign-banners-section {
+        padding: 1.5rem 0 2.5rem;
+      }
+
+      .campaign-banners-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .campaign-banners-title span.tag {
+        background: #ed017f;
+        color: #fff;
+        font-size: 0.7rem;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .campaign-grid-2x1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .campaign-card {
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--konga-border);
+        background: var(--konga-dark-card);
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        position: relative;
+        display: block;
+      }
+
+      .campaign-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(237, 1, 127, 0.5);
+        box-shadow: 0 10px 25px rgba(237, 1, 127, 0.2);
+      }
+
+      .campaign-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Placeholder banner styled cleanly until provided */
+      .campaign-card.yakata-live-placeholder {
+        aspect-ratio: 16 / 9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #180018 0%, #0d000d 100%);
+        border: 1.5px dashed rgba(237, 1, 127, 0.5);
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .campaign-card.yakata-live-placeholder .live-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #ed017f;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      .campaign-card.yakata-live-placeholder h4 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #fff;
+      }
+
+      .campaign-card.yakata-live-placeholder p {
+        font-size: 0.9rem;
+        color: #aaa;
+        max-width: 420px;
+        margin-bottom: 1.25rem;
+      }
+
+      .campaign-card.yakata-live-placeholder .live-btn {
+        background: #ffffff;
+        color: #000;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.25rem;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: background 0.2s ease;
+      }
+
+      .campaign-card.yakata-live-placeholder:hover .live-btn {
+        background: #ed017f;
+        color: #fff;
+      }
+
+      /* Terms & Conditions */
+      .tc-section {
+        padding: 2.5rem 0 4rem;
+      }
+
+      .tc-card {
+        background: var(--konga-dark-card);
+        border: 1px solid var(--konga-border);
+        border-radius: 16px;
+        padding: 2.5rem;
+      }
+
+      .tc-header {
+        border-bottom: 1px solid #222;
+        padding-bottom: 1.25rem;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .tc-header h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+      }
+
+      .tc-header p {
+        font-size: 0.875rem;
+        color: var(--konga-text-muted);
+        margin-top: 4px;
+      }
+
+      .tc-version-badge {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid #333;
+        color: #aaa;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-weight: 500;
+      }
+
+      .tc-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.75rem;
+      }
+
+      .tc-item {
+        background: #080808;
+        border: 1px solid #1a1a1a;
+        border-radius: 10px;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+
+      .tc-num {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: rgba(237, 1, 127, 0.15);
+        color: #ff66b2;
+        border: 1px solid rgba(237, 1, 127, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+
+      .tc-text h4 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 0.35rem;
+      }
+
+      .tc-text p {
+        font-size: 0.85rem;
+        color: #999;
+        line-height: 1.55;
+      }
+
+      .tc-text strong {
+        color: #fff;
+        font-weight: 500;
+      }
+
+      /* Legal Disclaimer Note */
+      .tc-disclaimer {
+        margin-top: 2rem;
+        padding: 1.25rem 1.5rem;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.03);
+        border-left: 3px solid #ed017f;
+        font-size: 0.8125rem;
+        color: #777;
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      .page-footer {
+        background: #050505;
+        border-top: 1px solid #1a1a1a;
+        padding: 2.5rem 0;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #666;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: #888;
+        transition: color 0.2s;
+      }
+
+      .footer-links a:hover {
+        color: var(--konga-pink);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 900px) {
+        .campaign-grid-2x1 {
+          grid-template-columns: 1fr;
+        }
+        .tc-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .tc-card {
+          padding: 1.5rem;
+        }
+        .blackout-alert-strip {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .app-download-cta {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <header class="navbar">
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <a href="index.html">
+            <img
+              src="https://www-konga-com-res.cloudinary.com/image/upload/v1789420343/landingPages/2026%20Marketing/Yakata11/logo.png"
+              alt="Konga Yakata Logo"
+            />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Yakata Home</a></li>
+          <li><a href="https://www.konga.com/search?q=Yakata" target="_blank" rel="noopener noreferrer">All Deals</a></li>
+          <li><a href="https://www.instagram.com/shopkonga/?hl=en" target="_blank" rel="noopener noreferrer">Yakata Live</a></li>
+        </ul>
+        <a href="index.html" class="nav-back-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+          Back to Yakata
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Breadcrumb Bar -->
+      <div class="container">
+        <div class="breadcrumb-bar">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>&rsaquo;</span>
+            <a href="index.html">Yakata 2026</a>
+            <span>&rsaquo;</span>
+            <span class="active">BlackOut Hour</span>
+          </nav>
+        </div>
+      </div>
+
+      <!-- BlackOut Hour Hero Section -->
+      <section class="blackout-hero">
+        <div class="container">
+          <div class="blackout-main-banner">
+            <img src="Backout Hour .jpg" alt="Konga Yakata 2026 BlackOut Hour Banner" />
+          </div>
+
+          <!-- App Exclusive Notification Strip -->
+          <div class="blackout-alert-strip">
+            <div class="alert-left">
+              <span class="alert-pulse-dot"></span>
+              <div class="alert-text">
+                <h3>App-Exclusive Flash Drop Notification</h3>
+                <p>BlackOut Hour deals only unlock for 60 minutes. Orders and checkouts are strictly verified on the Konga App.</p>
+              </div>
+            </div>
+            <a href="https://www.konga.com" target="_blank" rel="noopener noreferrer" class="app-download-cta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+                <path d="M12 18h.01"/>
+              </svg>
+              Download / Open Konga App
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2x1 Banners Section: Yakata Live & Shop on Konga App to Win a Car -->
+      <section class="campaign-banners-section">
+        <div class="container">
+          <h3 class="campaign-banners-title">
+            <span>Special Yakata Activations</span>
+            <span class="tag">App & Live</span>
+          </h3>
+          <div class="campaign-grid-2x1">
+            
+            <!-- Banner 1: Yakata Live (2 by 1 placeholder / Instagram link) -->
+            <a href="https://www.instagram.com/shopkonga/?hl=en" target="_blank" rel="noopener noreferrer" class="campaign-card yakata-live-placeholder">
+              <span class="live-badge">
+                <span style="width: 8px; height: 8px; border-radius: 50%; background: #fff; display: inline-block;"></span>
+                Live Shopping Experience
+              </span>
+              <h4>Yakata Live Drops</h4>
+              <p>Catch interactive live deals, voucher drops, music, and comedy broadcasts directly on Konga's official Instagram.</p>
+              <span class="live-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                </svg>
+                Watch on Instagram Live
+              </span>
+            </a>
+
+            <!-- Banner 2: Shop on Konga App to Win a Car Banner -->
+            <a href="https://www.konga.com" target="_blank" rel="noopener noreferrer" class="campaign-card">
+              <img
+                src="https://www-konga-com-res.cloudinary.com/image/upload/v1793186354/landingPages/2026%20Marketing/Email%20Templates/shopwin.jpg"
+                alt="Shop on Konga App to Win a Car - Yakata 2026"
+                loading="lazy"
+              />
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Terms and Conditions Section -->
+      <section class="tc-section">
+        <div class="container">
+          <div class="tc-card">
+            <div class="tc-header">
+              <div>
+                <h2>Terms &amp; Conditions &mdash; BlackOut Hour</h2>
+                <p>Please read these operational terms carefully before participating in the Yakata 2026 BlackOut Hour.</p>
+              </div>
+              <span class="tc-version-badge">Konga Yakata 2026 Official Rules</span>
+            </div>
+
+            <div class="tc-grid">
+              
+              <!-- Term 1: App Only Orders -->
+              <div class="tc-item">
+                <div class="tc-num">01</div>
+                <div class="tc-text">
+                  <h4>App-Exclusive Participation</h4>
+                  <p>All BlackOut Hour orders <strong>must be initiated, placed, and successfully completed strictly via the official Konga Mobile App</strong> (Android / iOS). Web-only carts will not be eligible for BlackOut promotional discounts or bundle allocations.</p>
+                </div>
+              </div>
+
+              <!-- Term 2: Time Window -->
+              <div class="tc-item">
+                <div class="tc-num">02</div>
+                <div class="tc-text">
+                  <h4>60-Minute Limited Drop Window</h4>
+                  <p>Each BlackOut Hour lasts for <strong>exactly sixty (60) minutes</strong> from the advertised trigger time or live countdown activation. Any orders finalized after the 60-minute window closes revert automatically to standard prices.</p>
+                </div>
+              </div>
+
+              <!-- Term 3: Stock Allocation -->
+              <div class="tc-item">
+                <div class="tc-num">03</div>
+                <div class="tc-text">
+                  <h4>First-Come, First-Served &amp; Limited Quantities</h4>
+                  <p>Promotional items are available in <strong>strictly limited quantities while stocks last</strong>. Adding an item to your cart does not reserve the stock; availability is confirmed only upon confirmed payment receipt.</p>
+                </div>
+              </div>
+
+              <!-- Term 4: Order Limits -->
+              <div class="tc-item">
+                <div class="tc-num">04</div>
+                <div class="tc-text">
+                  <h4>Maximum Unit Limits per Customer</h4>
+                  <p>To ensure fair distribution among shoppers, a <strong>maximum limit of one (1) unit per promotional SKU</strong> applies per customer, delivery address, phone number, and IP address. Duplicate and automated bulk orders are subject to immediate cancellation.</p>
+                </div>
+              </div>
+
+              <!-- Term 5: Instant Payment -->
+              <div class="tc-item">
+                <div class="tc-num">05</div>
+                <div class="tc-text">
+                  <h4>Immediate Online Payment Requirement</h4>
+                  <p>To qualify for BlackOut Hour pricing, payment must be completed instantly using approved online channels (KongaPay, Debit Card, or verified transfer). <strong>Payment on Delivery (POD) is not applicable</strong> to BlackOut Hour deals.</p>
+                </div>
+              </div>
+
+              <!-- Term 6: Anti-Fraud & Reservation of Rights -->
+              <div class="tc-item">
+                <div class="tc-num">06</div>
+                <div class="tc-text">
+                  <h4>Fraud Prevention &amp; Cancellation Rights</h4>
+                  <p>Konga reserves the unilateral right to cancel any transaction suspected of botting, unauthorized multi-accounting, payment manipulation, system errors, or abuse of discount codes without prior liability.</p>
+                </div>
+              </div>
+
+              <!-- Term 7: Modification of Terms -->
+              <div class="tc-item">
+                <div class="tc-num">07</div>
+                <div class="tc-text">
+                  <h4>Modification &amp; Early Termination</h4>
+                  <p>Konga Online Shopping Limited reserves the right to suspend, terminate, adjust discount rates, or update promotional schedules without prior notice in the event of technical disruption, fraud, or force majeure.</p>
+                </div>
+              </div>
+
+              <!-- Term 8: Returns & Warranties -->
+              <div class="tc-item">
+                <div class="tc-num">08</div>
+                <div class="tc-text">
+                  <h4>Standard Return &amp; Warranty Policy</h4>
+                  <p>Authentic products purchased during BlackOut Hour carry genuine manufacturer warranties and Konga's standard 7-day return policy for verified manufacturer defects, subject to Konga’s core customer guidelines.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Legalese Note -->
+            <div class="tc-disclaimer">
+              <strong>Legal Note:</strong> BlackOut Hour is an exclusive flash-sale promotional mechanic organized by Konga Online Shopping Limited for the Konga Yakata (Black Friday) 2026 campaign. Participation constitutes unconditional acceptance of the campaign rules herein and Konga's overarching Platform Terms of Use.
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="index.html">Yakata Home</a>
+          <a href="https://www.konga.com/search?q=Yakata" target="_blank" rel="noopener noreferrer">All Yakata Deals</a>
+          <a href="https://www.konga.com/content/terms-and-conditions" target="_blank" rel="noopener noreferrer">General Terms</a>
+          <a href="https://www.konga.com/help/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <a href="https://www.instagram.com/shopkonga/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <p>&copy; 2026 Konga Online Shopping Limited. All rights reserved. Konga Yakata is Nigeria's Biggest Black Friday Sale.</p>
+      </div>
+    </footer>
+  </body>
+</html>

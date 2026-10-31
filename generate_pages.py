@@ -168,7 +168,7 @@ def generate_subcat_circles_html(subcats):
     items_html = ""
     for s in subcats:
         items_html += f"""
-          <a href="https://www.konga.com/search?search={s['query']}" target="_blank" class="subcat-circle-item">
+          <a href="https://www.konga.com/search?search={s['query']}" class="subcat-circle-item">
             <div class="subcat-circle-img-wrap">
               <img src="{s['img']}" alt="{s['name']}" loading="lazy">
             </div>

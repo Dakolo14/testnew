@@ -1830,8 +1830,8 @@
       .bento-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 250px;
         gap: 1.5rem;
+        align-items: stretch;
       }
       .bento-item {
         background-color: #0b0b0f;
@@ -1858,6 +1858,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: left center;
         display: block;
         border-radius: 20px;
         transition: transform 0.4s ease;
@@ -1872,9 +1873,20 @@
       .bento-large {
         grid-column: span 2;
         grid-row: span 2;
+        width: 100%;
+        height: 100%;
+      }
+      .bento-large img {
+        object-position: center bottom;
       }
       .bento-wide {
         grid-column: span 2;
+        aspect-ratio: 1980 / 750;
+        width: 100%;
+        height: auto;
+      }
+      .bento-wide img {
+        object-position: left center;
       }
       .bento-tall {
         grid-row: span 2;
@@ -1883,6 +1895,9 @@
         aspect-ratio: 1600 / 1250;
         width: 100%;
         height: auto;
+      }
+      .bento-standard img {
+        object-position: left center;
       }
 
       @media (max-width: 850px) {
@@ -2805,9 +2820,9 @@
       .kitchen-showcase {
         display: grid;
         grid-template-columns: 1fr 1.5fr 1.5fr;
-        grid-template-rows: 180px 180px;
         gap: 16px;
         width: 100%;
+        align-items: stretch;
       }
       .kitchen-card {
         background-color: #1a1a1a;
@@ -2830,15 +2845,26 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: left center;
         display: block;
         transition: transform 0.4s ease;
       }
       .kitchen-card:hover img {
         transform: scale(1.03);
       }
-      .k-feature {
+      .kitchen-card.k-standard {
+        aspect-ratio: 2000 / 720;
+        width: 100%;
+        height: auto;
+      }
+      .kitchen-card.k-feature {
         grid-row: span 2;
+        width: 100%;
+        height: 100%;
         background: linear-gradient(135deg, #111, #222);
+      }
+      .kitchen-card.k-feature img {
+        object-position: center center;
       }
       .k-wide {
         grid-column: span 2;
@@ -4664,7 +4690,7 @@
           <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1793360962/landingPages/2026%20Marketing/Yakata2026/coolzone.gif" alt="Refrigerators & Freezers - Cool Zone">
         </a>
         <a href="https://www.konga.com/search?q=Yakata2026Microwave" class="kitchen-card k-standard">
-          <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1793360983/landingPages/2026%20Marketing/Yakata2026/Microwaves.gif" alt="Microwaves">
+          <img src="https://www-konga-com-res.cloudinary.com/image/upload/landingPages/2026%20Marketing/Yakata2026/Microwaves_New.gif" alt="Microwaves">
         </a>
         <a href="https://www.konga.com/search?q=Yakata2026Cookers%26Oven" class="kitchen-card k-standard">
           <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1793360961/landingPages/2026%20Marketing/Yakata2026/Cookers_Oven.gif" alt="Cookers & Ovens">

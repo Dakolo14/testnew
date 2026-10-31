@@ -402,7 +402,7 @@ def generate_html(key, cat):
       <nav class="navbar-container">
         <div class="navbar-logo">
           <a href="index.html">
-            <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1789420343/landingPages/2026%20Marketing/Yakata11/logo.png" alt="Konga Logo" />
+            <img src="https://www-konga-com-res.cloudinary.com/image/upload/v1793375458/landingPages/2026%20Marketing/Yakata2026/logo.png" alt="Konga Logo" />
           </a>
         </div>
         <div class="nav-wrapper">

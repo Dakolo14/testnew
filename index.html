@@ -1780,7 +1780,8 @@
         transform: scale(1.05);
       }
 
-      /* --- Best Prices Header Section --- */
+      /* --- Best Prices Section --- */
+      .best-prices-section,
       .best-prices-header-section {
         width: 100%;
         max-width: 1400px;
@@ -1882,24 +1883,60 @@
       @media (max-width: 850px) {
         .our-deals-grid {
           grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
         }
         .bento-grid {
           grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: auto;
+          gap: 1rem;
+        }
+        .bento-large {
+          grid-column: span 2;
+          aspect-ratio: 16 / 10;
+          height: auto;
+        }
+        .bento-wide {
+          grid-column: span 2;
+          aspect-ratio: 1980 / 750;
+          height: auto;
+        }
+        .bento-item:not(.bento-large):not(.bento-wide) {
+          grid-column: span 1;
+          aspect-ratio: 1600 / 1250;
+          height: auto;
         }
       }
       @media (max-width: 600px) {
         .our-deals-grid {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.75rem;
+        }
+        .our-deals-card {
+          aspect-ratio: 3 / 4;
+          height: auto;
         }
         .bento-grid {
-          grid-template-columns: 1fr;
-        }
-        .bento-large, .bento-wide, .bento-tall {
-          grid-column: span 1;
-          grid-row: span 1;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: auto;
+          gap: 0.75rem;
         }
         .bento-large {
+          grid-column: span 2;
+          grid-row: span 1;
           aspect-ratio: 16 / 10;
+          height: auto;
+        }
+        .bento-wide {
+          grid-column: span 2;
+          grid-row: span 1;
+          aspect-ratio: 1980 / 750;
+          height: auto;
+        }
+        .bento-item:not(.bento-large):not(.bento-wide) {
+          grid-column: span 1;
+          grid-row: span 1;
+          aspect-ratio: 1600 / 1250;
+          height: auto;
         }
       }
 
@@ -2845,6 +2882,8 @@
         .featured-hubs-section,
         .flash-deals-section,
         .our-deals-section,
+        .best-prices-section,
+        .booze-section,
         .category-collections-section,
         .our-partners-section,
         .twin-banners-section {
@@ -2854,13 +2893,13 @@
           padding-right: 0.5rem !important;
         }
 
-        /* Fix gap between Best Prices Header and Bento Grid */
-        .best-prices-header-section {
-          margin-top: 2rem !important;
-          margin-bottom: 0 !important;
-          padding-left: 0.5rem !important;
-          padding-right: 0.5rem !important;
+        .best-prices-slider-wrapper {
+          padding: 0.5rem 0.5rem 1.25rem 0.5rem !important;
         }
+        .best-prices-track {
+          padding: 0.75rem 0.25rem !important;
+        }
+
         .bento-grid-section {
           margin-top: 2rem !important;
           margin-bottom: 1rem !important;
@@ -2930,7 +2969,8 @@
           aspect-ratio: 16 / 9 !important;
         }
         .our-deals-card {
-          aspect-ratio: 1 / 1 !important;
+          aspect-ratio: 3 / 4 !important;
+          height: auto !important;
         }
         .dotd-image-area {
           aspect-ratio: 1 / 1 !important;
@@ -2944,8 +2984,33 @@
           grid-template-columns: 1fr 1fr !important;
           gap: 1rem !important;
         }
-        .our-deals-grid,
-        .bento-grid,
+        .our-deals-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          gap: 0.75rem !important;
+        }
+        .bento-grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+          grid-auto-rows: auto !important;
+          gap: 0.75rem !important;
+        }
+        .bento-large {
+          grid-column: span 2 !important;
+          grid-row: span 1 !important;
+          aspect-ratio: 16 / 10 !important;
+          height: auto !important;
+        }
+        .bento-wide {
+          grid-column: span 2 !important;
+          grid-row: span 1 !important;
+          aspect-ratio: 1980 / 750 !important;
+          height: auto !important;
+        }
+        .bento-item:not(.bento-large):not(.bento-wide) {
+          grid-column: span 1 !important;
+          grid-row: span 1 !important;
+          aspect-ratio: 1600 / 1250 !important;
+          height: auto !important;
+        }
         .collections-grid {
           gap: 1rem !important;
         }
@@ -3405,7 +3470,7 @@
           <img id="dotdMainImg" src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_800,c_limit/media/catalog/product/G/J/118566_1784888900.png" alt="HP ProOne 240 G10 AIO DESKTOP PC" style="width: 100%; height: 100%; object-fit: contain; background: #ffffff !important;">
         </a>
         <div class="dotd-details">
-          <div class="dotd-subtitle">DEAL OF THE DAY &#183; RESETS AT 12PM</div>
+          <div class="dotd-subtitle">DEAL OF THE DAY &#183; RESETS AT 12AM</div>
           <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
             <span style="background: linear-gradient(90deg, #fde047, #eab308); color: #000; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 9999px; text-transform: uppercase;">Official Store</span>
             <span style="background: rgba(255,255,255,0.12); color: #ccc; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 9999px;">HP Brand Store</span>
@@ -4085,7 +4150,8 @@
     </section>
 
     
-    <section class="best-prices-header-section section-reset">
+    <!-- Best Prices Section -->
+    <section class="best-prices-section section-reset">
       <div class="shop-by-category-header" style="background-color: #ed017f; border-radius: 12px 12px 0 0;">
         <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
           <span>Best Prices</span>
@@ -4099,11 +4165,7 @@
           </a>
         </div>
       </div>
-    </section>
 
-    
-    <!-- Best Prices Slider Section -->
-    <div style="width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
       <div class="best-prices-slider-wrapper">
         <button class="best-prices-nav-btn prev" aria-label="Scroll left" data-scroll-track="bestPricesTrack" data-scroll-dir="-280">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -4492,7 +4554,7 @@
 
         </div>
       </div>
-    </div>
+    </section>
 
     
 

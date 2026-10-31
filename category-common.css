@@ -788,14 +788,10 @@
       .hub-title {
         font-size: 1rem;
         font-weight: 700;
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.85rem;
         line-height: 1.3;
         color: #111;
       }
-
-      
-      
-      
 
       /* Bottom Section: Chips/Tag Cloud */
       .hub-chips-hero {
@@ -804,7 +800,7 @@
         background-color: #f4f4f4;
         border: none;
         border-radius: 8px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.85rem;
         overflow: hidden;
         display: block;
       }
@@ -820,20 +816,26 @@
         transform: scale(1.02);
       }
       .hub-chips-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.45rem 0.5rem;
+        margin-bottom: 1rem;
       }
       .hub-chip {
-        padding: 0.35rem 0.75rem;
+        padding: 0.35rem 0.5rem;
         background-color: #f0f0f0;
         border-radius: 16px;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         font-weight: 500;
         color: #333;
         text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         transition: background-color 0.2s, color 0.2s;
       }
       .hub-chip:hover {
@@ -899,8 +901,9 @@
 
       .hub-footer {
         border-top: 1px solid #eee;
-        padding-top: 1rem;
+        padding-top: 0.85rem;
         text-align: center;
+        margin-top: auto;
       }
 
       .hub-footer a {

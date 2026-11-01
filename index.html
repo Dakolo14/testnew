@@ -2677,9 +2677,14 @@
         display: flex;
         flex-direction: column;
         text-decoration: none;
+        color: inherit;
         position: relative;
         border: 1px solid #f0f0f0;
         transition: transform 0.25s ease, box-shadow 0.25s ease;
+        cursor: pointer;
+      }
+      .shop-all-product-card:visited {
+        color: inherit;
       }
       .shop-all-product-card:hover {
         transform: translateY(-4px);
@@ -2762,11 +2767,35 @@
         text-decoration: line-through;
         margin-top: 1px;
       }
+      .shop-all-deal-progress {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+      .shop-all-progress-bar {
+        flex: 1;
+        height: 5px;
+        background: #e5e7eb;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .shop-all-progress-fill {
+        height: 100%;
+        background: #029063;
+        border-radius: 999px;
+      }
+      .shop-all-sold-text {
+        font-size: 10px;
+        color: #6b7280;
+        font-weight: 500;
+        white-space: nowrap;
+      }
       .shop-all-cart-btn {
         margin-top: auto;
         width: 100%;
         background-color: #ed017f;
-        color: #ffffff;
+        color: #ffffff !important;
         border: none;
         padding: 7px 8px;
         font-size: 11px;
@@ -2777,8 +2806,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
+        box-sizing: border-box;
       }
-      .shop-all-cart-btn:hover {
+      .shop-all-cart-btn:hover,
+      .shop-all-product-card:hover .shop-all-cart-btn {
         background-color: #c7016b;
       }
 
@@ -5654,379 +5686,1704 @@
       <div class="shop-all-container">
         <div class="shop-all-grid">
 
-          <!-- Product 1: Samsung 115'' Class Neo Qled TV - Qn90f -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-20%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/U/K/231472_1779798572.jpg" alt="Samsung 115'' Class Neo Qled TV - Qn90f">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Samsung 115'' Class Neo Qled TV - Qn90f">Samsung 115'' Class Neo Qled TV - Qn90f</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;16,000,000</div>
-                  <div class="shop-all-old-price">&#8358;20,000,000</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 2: Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-28%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/J/N/231472_1750755789.jpg" alt="Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b">Bosch Built-in Microwave Oven No Grill - 800W - 20L -bfl524ms0b</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;466,800</div>
-                  <div class="shop-all-old-price">&#8358;645,000</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 3: HP 240R G10 Notebook PC Intel Core 5 120U -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-25%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/N/_1785245883.png" alt="HP 240R G10 Notebook PC &#8211; Intel Core 5 120U, 14&quot; FHD, 8GB RAM, 512GB SSD &#8211; C80YRAT">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="HP 240R G10 Notebook PC &#8211; Intel Core 5 120U, 14&quot; FHD, 8GB RAM, 512GB SSD &#8211; C80YRAT">HP 240R G10 Notebook PC &#8211; Intel Core 5 120U, 14" FHD, 8GB RAM, 512GB SSD &#8211; C80YRAT</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;759,000</div>
-                  <div class="shop-all-old-price">&#8358;1,012,815</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 4: HP ProOne 240 G10 AIO DESKTOP PC -->
-          <div class="shop-all-product-card">
+          <!-- Product 1: HP ProOne 240 G10 AIO DESKTOP PC, 24" FULL HD, CORE&#8482; i3-N300, 8GB RAM, 512GB SSD 9M9M9AT -->
+          <a href="https://www.konga.com/product/hp-hp-proone-240-g10-aio-desktop-pc-24-full-hd-core-o-i3-n300-8gb-ram-512gb-ssd-9m9m9at-6964614" class="shop-all-product-card" title="HP ProOne 240 G10 AIO DESKTOP PC, 24&quot; FULL HD, CORE&#8482; i3-N300, 8GB RAM, 512GB SSD 9M9M9AT">
             <div class="shop-all-card-top-badges">
               <span class="shop-all-discount-pill">-32%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/J/118566_1784888900.png" alt="HP ProOne 240 G10 AIO DESKTOP PC, 24&quot; FULL HD, CORE i3-N300, 8GB RAM, 512GB SSD">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/J/118566_1784888900.png" alt="HP ProOne 240 G10 AIO DESKTOP PC, 24&quot; FULL HD, CORE&#8482; i3-N300, 8GB RAM, 512GB SSD 9M9M9AT" loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="HP ProOne 240 G10 AIO DESKTOP PC, 24&quot; FULL HD, CORE i3-N300, 8GB RAM, 512GB SSD">HP ProOne 240 G10 AIO DESKTOP PC, 24" FULL HD, CORE i3-N300, 8GB RAM, 512GB SSD</p>
+              <p class="shop-all-card-title" title="HP ProOne 240 G10 AIO DESKTOP PC, 24&quot; FULL HD, CORE&#8482; i3-N300, 8GB RAM, 512GB SSD 9M9M9AT">HP ProOne 240 G10 AIO DESKTOP PC, 24" FULL HD, CORE&#8482; i3-N300, 8GB RAM, 512GB SSD 9M9M9AT</p>
               <div class="shop-all-pricing-row">
+                <div>
                   <div class="shop-all-cur-price">&#8358;819,717</div>
                   <div class="shop-all-old-price">&#8358;1,200,000</div>
-                
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 5: Xiaomi Redmi Note 15 Pro P 5g -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-2%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/Y/118566_1768920113.jpg" alt="Xiaomi Redmi Note 15 Pro P 5g- 6.83&quot; 12gb Ram - 512gb Rom - 6500mah-black">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Xiaomi Redmi Note 15 Pro P 5g- 6.83&quot; 12gb Ram - 512gb Rom - 6500mah-black">Xiaomi Redmi Note 15 Pro P 5g- 6.83" 12gb Ram - 512gb Rom - 6500mah-black</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;712,000</div>
-                  <div class="shop-all-old-price">&#8358;727,700</div>
-                
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 27%;"></div>
+                </div>
+                <span class="shop-all-sold-text">27% sold</span>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Product 6: HP 240R G10 Notebook PC Intel Core 7-150U -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-16%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/_1784902533.png" alt="HP 240R G10 Notebook PC &#8211; Intel Core 7-150U, 14&quot; FHD, 8GB RAM, 512GB SSD">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="HP 240R G10 Notebook PC &#8211; Intel Core 7-150U, 14&quot; FHD, 8GB RAM, 512GB SSD">HP 240R G10 Notebook PC &#8211; Intel Core 7-150U, 14" FHD, 8GB RAM, 512GB SSD</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;859,999</div>
-                  <div class="shop-all-old-price">&#8358;1,027,114</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 7: Hisense 2hp Split Air Conditioner -->
-          <div class="shop-all-product-card">
+          <!-- Product 2: Hisense 2hp Split Air Conditioner - Copper Condenser. -->
+          <a href="https://www.konga.com/product/hisense-hisense-2hp-split-air-conditioner-copper-condenser-7043972" class="shop-all-product-card" title="Hisense 2hp Split Air Conditioner - Copper Condenser.">
             <div class="shop-all-card-top-badges">
               <span class="shop-all-discount-pill">-20%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/W/118566_1788273396.jpg" alt="Hisense 2hp Split Air Conditioner - Copper Condenser">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/W/118566_1788273396.jpg" alt="Hisense 2hp Split Air Conditioner - Copper Condenser." loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Hisense 2hp Split Air Conditioner - Copper Condenser">Hisense 2hp Split Air Conditioner - Copper Condenser</p>
+              <p class="shop-all-card-title" title="Hisense 2hp Split Air Conditioner - Copper Condenser.">Hisense 2hp Split Air Conditioner - Copper Condenser.</p>
               <div class="shop-all-pricing-row">
+                <div>
                   <div class="shop-all-cur-price">&#8358;477,700</div>
                   <div class="shop-all-old-price">&#8358;600,000</div>
-                
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 8: Asus Zenbook 14 TouchScreen Ultra9 285H -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-26%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/Y/56319_1786712399.jpg" alt="Asus Zenbook-14-TouchScreen-Ultra9-285H-32GBRAM-1TBSSD-14'-WIN11-Silver">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Asus Zenbook-14-TouchScreen-Ultra9-285H-32GBRAM-1TBSSD-14'-WIN11-Silver">Asus Zenbook-14-TouchScreen-Ultra9-285H-32GBRAM-1TBSSD-14'-WIN11-Silver</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;2,380,740</div>
-                  <div class="shop-all-old-price">&#8358;3,213,999</div>
-                
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 94%;"></div>
+                </div>
+                <span class="shop-all-sold-text">94% sold</span>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Product 9: Samsung Galaxy S26 Ultra 5g -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-6%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/X/118566_1774944999.jpg" alt="Samsung Galaxy S26 Ultra 5g - 6.9&quot; - 256gb Rom - 12gb Ram - Violet">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Samsung Galaxy S26 Ultra 5g - 6.9&quot; - 256gb Rom - 12gb Ram - Violet">Samsung Galaxy S26 Ultra 5g - 6.9" - 256gb Rom - 12gb Ram - Violet</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;1,595,700</div>
-                  <div class="shop-all-old-price">&#8358;1,689,000</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 10: Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-1%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/H/118566_1747148808.png" alt="Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L">Samsung RF48A4000B4 Twin Cooling Plus Multi Door Refrigerator 468L</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;1,635,000</div>
-                  <div class="shop-all-old-price">&#8358;1,655,000</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 11: Samsung 65" Mini Led M70h 4k Samsung Vision Ai Smart Tv -->
-          <div class="shop-all-product-card">
+          <!-- Product 3: Midea Mk-17s30a2 Electric Kettle &#8211;1.7l &#8211; Stainless Steel Jug -->
+          <a href="https://www.konga.com/product/midea-midea-mk-17s30a2-electric-kettle-oe1-7l-oe-stainless-steel-jug-6988372" class="shop-all-product-card" title="Midea Mk-17s30a2 Electric Kettle &#8211;1.7l &#8211; Stainless Steel Jug">
             <div class="shop-all-card-top-badges">
               <span class="shop-all-discount-pill">-39%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/E/L/118566_1785232593.jpg" alt="Samsung 65&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026)">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/D/U/118566_1780057904.png" alt="Midea Mk-17s30a2 Electric Kettle &#8211;1.7l &#8211; Stainless Steel Jug" loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Samsung 65&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026)">Samsung 65" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026)</p>
+              <p class="shop-all-card-title" title="Midea Mk-17s30a2 Electric Kettle &#8211;1.7l &#8211; Stainless Steel Jug">Midea Mk-17s30a2 Electric Kettle &#8211;1.7l &#8211; Stainless Steel Jug</p>
               <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;850,999</div>
-                  <div class="shop-all-old-price">&#8358;1,385,832</div>
-                
+                <div>
+                  <div class="shop-all-cur-price">&#8358;24,000</div>
+                  <div class="shop-all-old-price">&#8358;39,500</div>
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 12: JBL Partybox Ultimate Speaker -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/J/118566_1788443010.jpg" alt="JBL Partybox Ultimate - Multi Purpose Party Speaker">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="JBL Partybox Ultimate - Multi Purpose Party Speaker">JBL Partybox Ultimate - Multi Purpose Party Speaker</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;2,950,000</div>
-                
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Product 13: Aeon 1hp Split Ac Asa091j3 Inverter -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-30%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/O/X/118566_1761055372.jpg" alt="Aeon 1hp Split Ac Asa091j3 Inverter With Kit">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Aeon 1hp Split Ac Asa091j3 Inverter With Kit">Aeon 1hp Split Ac Asa091j3 Inverter With Kit</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;365,500</div>
-                  <div class="shop-all-old-price">&#8358;525,000</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 14: Haier Thermocool Large Chest Freezer -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/W/118566_1544086101.jpg" alt="Haier Thermocool Large Chest Freezer Htf-429is R600 Gas">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Haier Thermocool Large Chest Freezer Htf-429is R600 Gas">Haier Thermocool Large Chest Freezer Htf-429is R600 Gas</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;1,959,000</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 15: Apple 2025 Macbook Pro 14-inch Laptop -->
-          <div class="shop-all-product-card">
-            <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-28%</span>
-            </div>
-            <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/H/163129_1770105285.jpg" alt="Apple 2025 Macbook Pro 14-inch Laptop - M5 Chip- 512GB SSD- 16GB RAM">
-            </div>
-            <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Apple 2025 Macbook Pro 14-inch Laptop - M5 Chip- 512GB SSD- 16GB RAM">Apple 2025 Macbook Pro 14-inch Laptop - M5 Chip- 512GB SSD- 16GB RAM</p>
-              <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;2,680,000</div>
-                  <div class="shop-all-old-price">&#8358;3,700,000</div>
-                
-              </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-
-          <!-- Product 16: BOSCON 18inch Rechargeable Fan -->
-          <div class="shop-all-product-card">
+          <!-- Product 4: Midea Blender 2 In1 1.5L MJ-Bl2516a -->
+          <a href="https://www.konga.com/product/midea-midea-blender-2-in1-1-5l-mj-bl2516a-6885052" class="shop-all-product-card" title="Midea Blender 2 In1 1.5L MJ-Bl2516a">
             <div class="shop-all-card-top-badges">
               <span class="shop-all-discount-pill">-26%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/I/86527_1680006892.jpg" alt="BOSCON 18inch Rechargeable Fan - Bos-rf2618r + Remote control">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/N/118566_1762899419.png" alt="Midea Blender 2 In1 1.5L MJ-Bl2516a" loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="BOSCON 18inch Rechargeable Fan - Bos-rf2618r + Remote control">BOSCON 18inch Rechargeable Fan - Bos-rf2618r + Remote control</p>
+              <p class="shop-all-card-title" title="Midea Blender 2 In1 1.5L MJ-Bl2516a">Midea Blender 2 In1 1.5L MJ-Bl2516a</p>
               <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;70,999</div>
-                  <div class="shop-all-old-price">&#8358;96,000</div>
-                
+                <div>
+                  <div class="shop-all-cur-price">&#8358;35,500</div>
+                  <div class="shop-all-old-price">&#8358;48,000</div>
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Product 17: Zyre Steam Iron T-623a -->
-          <div class="shop-all-product-card">
+          <!-- Product 5: Samsung RF48A4000B4 Twin Cooling Plus&#8482; Multi Door Refrigerator 468L -->
+          <a href="https://www.konga.com/product/samsung-samsung-rf48a4000b4-twin-cooling-plus-o-multi-door-refrigerator-468l-6803730" class="shop-all-product-card" title="Samsung RF48A4000B4 Twin Cooling Plus&#8482; Multi Door Refrigerator 468L">
             <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-15%</span>
+              <span class="shop-all-discount-pill">-1%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/C/A/247593_1771603235.jpg" alt="Zyre Steam Iron T-623a">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/H/118566_1747148808.png" alt="Samsung RF48A4000B4 Twin Cooling Plus&#8482; Multi Door Refrigerator 468L" loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Zyre Steam Iron T-623a">Zyre Steam Iron T-623a</p>
+              <p class="shop-all-card-title" title="Samsung RF48A4000B4 Twin Cooling Plus&#8482; Multi Door Refrigerator 468L">Samsung RF48A4000B4 Twin Cooling Plus&#8482; Multi Door Refrigerator 468L</p>
               <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;14,000</div>
-                  <div class="shop-all-old-price">&#8358;16,500</div>
-                
+                <div>
+                  <div class="shop-all-cur-price">&#8358;1,635,000</div>
+                  <div class="shop-all-old-price">&#8358;1,655,000</div>
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 80%;"></div>
+                </div>
+                <span class="shop-all-sold-text">80% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Product 18: Zyre 18inch Rechargeable Fan Zf18r (white) -->
-          <div class="shop-all-product-card">
+          <!-- Product 6: Midea Chest Freezer 249l Silver R600a - Mdrc345fzg43 -->
+          <a href="https://www.konga.com/product/midea-midea-chest-freezer-249l-silver-r600a-mdrc345fzg43-6966346" class="shop-all-product-card" title="Midea Chest Freezer 249l Silver R600a - Mdrc345fzg43">
             <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-9%</span>
+              <span class="shop-all-discount-pill">-11%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/T/247593_1772129616.jpg" alt="Zyre 18inch Rechargeable Fan Zf18r (white)">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/I/118566_1776082154.jpg" alt="Midea Chest Freezer 249l Silver R600a - Mdrc345fzg43" loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
-              <p class="shop-all-card-title" title="Zyre 18inch Rechargeable Fan Zf18r (white)">Zyre 18inch Rechargeable Fan Zf18r (white)</p>
+              <p class="shop-all-card-title" title="Midea Chest Freezer 249l Silver R600a - Mdrc345fzg43">Midea Chest Freezer 249l Silver R600a - Mdrc345fzg43</p>
               <div class="shop-all-pricing-row">
-                  <div class="shop-all-cur-price">&#8358;72,600</div>
-                  <div class="shop-all-old-price">&#8358;79,600</div>
-                
+                <div>
+                  <div class="shop-all-cur-price">&#8358;335,000</div>
+                  <div class="shop-all-old-price">&#8358;377,800</div>
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Product 19: Zyre Juice Extractor 600w Zp-je407 -->
-          <div class="shop-all-product-card">
+          <!-- Product 7: Samsung 65" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua65m70hauxke -->
+          <a href="https://www.konga.com/product/samsung-samsung-65-mini-led-m70h-4k-samsung-vision-ai-smart-tv-2026-ua65m70hauxke-7022755" class="shop-all-product-card" title="Samsung 65&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua65m70hauxke">
             <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-20%</span>
+              <span class="shop-all-discount-pill">-46%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/O/247593_1774529063.jpg" alt="Zyre Juice Extractor 600w Zp-je407">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/E/L/118566_1785232593.jpg" alt="Samsung 65&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua65m70hauxke" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung 65&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua65m70hauxke">Samsung 65" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua65m70hauxke</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;850,999</div>
+                  <div class="shop-all-old-price">&#8358;1,585,832</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 59%;"></div>
+                </div>
+                <span class="shop-all-sold-text">59% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 8: JBL Jbl Partybox Ultimate - Multi Purpose Party Speaker- With Wi-fi & Bluetooth Connectivit -->
+          <a href="https://www.konga.com/product/jbl-jbl-partybox-ultimate-multi-purpose-party-speaker-with-wi-fi-and-bluetooth-connectivit-7045941" class="shop-all-product-card" title="JBL Jbl Partybox Ultimate - Multi Purpose Party Speaker- With Wi-fi & Bluetooth Connectivit">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/J/118566_1788443010.jpg" alt="JBL Jbl Partybox Ultimate - Multi Purpose Party Speaker- With Wi-fi & Bluetooth Connectivit" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="JBL Jbl Partybox Ultimate - Multi Purpose Party Speaker- With Wi-fi & Bluetooth Connectivit">JBL Jbl Partybox Ultimate - Multi Purpose Party Speaker- With Wi-fi & Bluetooth Connectivit</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;2,950,000</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 25%;"></div>
+                </div>
+                <span class="shop-all-sold-text">25% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 9: Zyre Sandwich Maker Toaseter El-16c -->
+          <a href="https://www.konga.com/product/zyre-sandwich-maker-toaseter-el-16c-6940160" class="shop-all-product-card" title="Zyre Sandwich Maker Toaseter El-16c">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-19%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/L/247593_1771608339.jpg" alt="Zyre Sandwich Maker Toaseter El-16c" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre Sandwich Maker Toaseter El-16c">Zyre Sandwich Maker Toaseter El-16c</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;32,300</div>
+                  <div class="shop-all-old-price">&#8358;40,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 10%;"></div>
+                </div>
+                <span class="shop-all-sold-text">10% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 10: Zyre 2in1 Blender Zcb-2500 2.4L -->
+          <a href="https://www.konga.com/product/zyre-2in1-blender-zcb-2500-2-4l-6942565" class="shop-all-product-card" title="Zyre 2in1 Blender Zcb-2500 2.4L">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-14%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/T/247593_1772012658.jpg" alt="Zyre 2in1 Blender Zcb-2500 2.4L" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre 2in1 Blender Zcb-2500 2.4L">Zyre 2in1 Blender Zcb-2500 2.4L</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;48,280</div>
+                  <div class="shop-all-old-price">&#8358;56,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 10%;"></div>
+                </div>
+                <span class="shop-all-sold-text">10% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 11: Zyre Juice Extractor 600w Zp-je407 -->
+          <a href="https://www.konga.com/product/zyre-juice-extractor-600w-zp-je407-6958016" class="shop-all-product-card" title="Zyre Juice Extractor 600w Zp-je407">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-32%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/O/247593_1774529063.jpg" alt="Zyre Juice Extractor 600w Zp-je407" loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
               <p class="shop-all-card-title" title="Zyre Juice Extractor 600w Zp-je407">Zyre Juice Extractor 600w Zp-je407</p>
               <div class="shop-all-pricing-row">
+                <div>
                   <div class="shop-all-cur-price">&#8358;45,200</div>
-                  <div class="shop-all-old-price">&#8358;56,200</div>
-                
+                  <div class="shop-all-old-price">&#8358;66,200</div>
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 40%;"></div>
+                </div>
+                <span class="shop-all-sold-text">40% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-          <!-- Product 20: Zyre 2in1 Blender Zb-650 1.5l -->
-          <div class="shop-all-product-card">
+          <!-- Product 12: Zyre 2in1 Blender Zb-650 1.5l -->
+          <a href="https://www.konga.com/product/zyre-2in1-blender-zb-650-1-5l-6942566" class="shop-all-product-card" title="Zyre 2in1 Blender Zb-650 1.5l">
             <div class="shop-all-card-top-badges">
-              <span class="shop-all-discount-pill">-12%</span>
+              <span class="shop-all-discount-pill">-20%</span>
             </div>
             <div class="shop-all-img-wrap">
-              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/W/Z/247593_1772013748.jpg" alt="Zyre 2in1 Blender Zb-650 1.5l">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/W/Z/247593_1772013748.jpg" alt="Zyre 2in1 Blender Zb-650 1.5l" loading="lazy">
             </div>
             <div class="shop-all-info-wrap">
               <p class="shop-all-card-title" title="Zyre 2in1 Blender Zb-650 1.5l">Zyre 2in1 Blender Zb-650 1.5l</p>
               <div class="shop-all-pricing-row">
+                <div>
                   <div class="shop-all-cur-price">&#8358;28,300</div>
-                  <div class="shop-all-old-price">&#8358;32,300</div>
-                
+                  <div class="shop-all-old-price">&#8358;35,300</div>
+                </div>
               </div>
-              <button class="shop-all-cart-btn" data-test-id="product-card-add-to-cart">Add to Cart</button>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
             </div>
-          </div>
+          </a>
 
-        
+          <!-- Product 13: Zyre 2in1 Blender Zb-450 1.5l -->
+          <a href="https://www.konga.com/product/zyre-2in1-blender-zb-450-1-5l-6942564" class="shop-all-product-card" title="Zyre 2in1 Blender Zb-450 1.5l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-20%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/P/247593_1772013487.jpg" alt="Zyre 2in1 Blender Zb-450 1.5l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre 2in1 Blender Zb-450 1.5l">Zyre 2in1 Blender Zb-450 1.5l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;25,600</div>
+                  <div class="shop-all-old-price">&#8358;32,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 14: Zyre 18inch Rechargeable Fan Zf18r (white) -->
+          <a href="https://www.konga.com/product/zyre-18inch-rechargeable-fan-zf18r-white-6944006" class="shop-all-product-card" title="Zyre 18inch Rechargeable Fan Zf18r (white)">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-9%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/T/247593_1772129616.jpg" alt="Zyre 18inch Rechargeable Fan Zf18r (white)" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre 18inch Rechargeable Fan Zf18r (white)">Zyre 18inch Rechargeable Fan Zf18r (white)</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;72,600</div>
+                  <div class="shop-all-old-price">&#8358;79,600</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 44%;"></div>
+                </div>
+                <span class="shop-all-sold-text">44% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 15: Zyre Sandwish Maker Toaster El-216 -->
+          <a href="https://www.konga.com/product/zyre-sandwish-maker-toaster-el-216-6940161" class="shop-all-product-card" title="Zyre Sandwish Maker Toaster El-216">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-16%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/O/247593_1771605698.jpg" alt="Zyre Sandwish Maker Toaster El-216" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre Sandwish Maker Toaster El-216">Zyre Sandwish Maker Toaster El-216</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;17,400</div>
+                  <div class="shop-all-old-price">&#8358;20,600</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 57%;"></div>
+                </div>
+                <span class="shop-all-sold-text">57% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 16: Zyre Dry Iron 1.2w (t-602) -->
+          <a href="https://www.konga.com/product/zyre-dry-iron-1-2w-t-602-6940163" class="shop-all-product-card" title="Zyre Dry Iron 1.2w (t-602)">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-20%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/U/J/247593_1771602259.jpg" alt="Zyre Dry Iron 1.2w (t-602)" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre Dry Iron 1.2w (t-602)">Zyre Dry Iron 1.2w (t-602)</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;12,000</div>
+                  <div class="shop-all-old-price">&#8358;15,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 15%;"></div>
+                </div>
+                <span class="shop-all-sold-text">15% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 17: Zyre Air Fryer 8.5l Zaf800 -->
+          <a href="https://www.konga.com/product/zyre-air-fryer-8-5l-zaf800-6940169" class="shop-all-product-card" title="Zyre Air Fryer 8.5l Zaf800">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-35%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/I/O/247593_1771610124.jpg" alt="Zyre Air Fryer 8.5l Zaf800" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre Air Fryer 8.5l Zaf800">Zyre Air Fryer 8.5l Zaf800</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;70,200</div>
+                  <div class="shop-all-old-price">&#8358;108,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 18: Zyre Air Fryer 6.5l Zaf700 -->
+          <a href="https://www.konga.com/product/zyre-air-fryer-6-5l-zaf700-6940158" class="shop-all-product-card" title="Zyre Air Fryer 6.5l Zaf700">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-13%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/C/P/247593_1771609474.jpg" alt="Zyre Air Fryer 6.5l Zaf700" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre Air Fryer 6.5l Zaf700">Zyre Air Fryer 6.5l Zaf700</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;46,200</div>
+                  <div class="shop-all-old-price">&#8358;53,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 71%;"></div>
+                </div>
+                <span class="shop-all-sold-text">71% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 19: Zyre Steam Iron T-623a -->
+          <a href="https://www.konga.com/product/zyre-steam-iron-t-623a-6940162" class="shop-all-product-card" title="Zyre Steam Iron T-623a">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-15%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/C/A/247593_1771603235.jpg" alt="Zyre Steam Iron T-623a" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Zyre Steam Iron T-623a">Zyre Steam Iron T-623a</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;14,000</div>
+                  <div class="shop-all-old-price">&#8358;16,500</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 29%;"></div>
+                </div>
+                <span class="shop-all-sold-text">29% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 20: Midea 1.5hp Split Unit Inverter Air Conditioner Msef1b-12crdn8 -->
+          <a href="https://www.konga.com/product/midea-midea-1-5hp-split-unit-inverter-air-conditioner-msef1b-12crdn8-7011515" class="shop-all-product-card" title="Midea 1.5hp Split Unit Inverter Air Conditioner Msef1b-12crdn8">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-12%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/N/C/118566_1776094387.jpg" alt="Midea 1.5hp Split Unit Inverter Air Conditioner Msef1b-12crdn8" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Midea 1.5hp Split Unit Inverter Air Conditioner Msef1b-12crdn8">Midea 1.5hp Split Unit Inverter Air Conditioner Msef1b-12crdn8</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;423,400</div>
+                  <div class="shop-all-old-price">&#8358;483,400</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 18%;"></div>
+                </div>
+                <span class="shop-all-sold-text">18% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 21: Premium Men&#8217;s Cruiser Bike -->
+          <a href="https://www.konga.com/product/premium-men-oas-cruiser-bike-6941820" class="shop-all-product-card" title="Premium Men&#8217;s Cruiser Bike">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/B/118566_1771940411.jpg" alt="Premium Men&#8217;s Cruiser Bike" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Premium Men&#8217;s Cruiser Bike">Premium Men&#8217;s Cruiser Bike</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;650,000</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 22: Midea 2hp Split Unit Inverter Air Conditioner Msef1c--18crdn8 -->
+          <a href="https://www.konga.com/product/midea-midea-2hp-split-unit-inverter-air-conditioner-msef1c-18crdn8-6966774" class="shop-all-product-card" title="Midea 2hp Split Unit Inverter Air Conditioner Msef1c--18crdn8">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-6%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/N/K/118566_1776094367.jpg" alt="Midea 2hp Split Unit Inverter Air Conditioner Msef1c--18crdn8" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Midea 2hp Split Unit Inverter Air Conditioner Msef1c--18crdn8">Midea 2hp Split Unit Inverter Air Conditioner Msef1c--18crdn8</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;640,000</div>
+                  <div class="shop-all-old-price">&#8358;680,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 33%;"></div>
+                </div>
+                <span class="shop-all-sold-text">33% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 23: Samsung 75" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua75m70hauxke -->
+          <a href="https://www.konga.com/product/samsung-samsung-75-mini-led-m70h-4k-samsung-vision-ai-smart-tv-2026-ua75m70hauxke-7022753" class="shop-all-product-card" title="Samsung 75&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua75m70hauxke">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-25%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/L/118566_1785233194.jpg" alt="Samsung 75&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua75m70hauxke" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung 75&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua75m70hauxke">Samsung 75" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua75m70hauxke</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;1,486,999</div>
+                  <div class="shop-all-old-price">&#8358;1,974,888</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 32%;"></div>
+                </div>
+                <span class="shop-all-sold-text">32% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 24: Samsung 55" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua55m70hauxke -->
+          <a href="https://www.konga.com/product/samsung-samsung-55-mini-led-m70h-4k-samsung-vision-ai-smart-tv-2026-ua55m70hauxke-7022754" class="shop-all-product-card" title="Samsung 55&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua55m70hauxke">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-40%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/P/118566_1785231737.jpg" alt="Samsung 55&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua55m70hauxke" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung 55&quot; Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua55m70hauxke">Samsung 55" Mini Led M70h 4k Samsung Vision Ai Smart Tv (2026) Ua55m70hauxke</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;699,999</div>
+                  <div class="shop-all-old-price">&#8358;1,160,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 28%;"></div>
+                </div>
+                <span class="shop-all-sold-text">28% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 25: Sony Playstation 5 Console - Slim -1tb -->
+          <a href="https://www.konga.com/product/sony-playstation-5-console-slim-1tb-6918442" class="shop-all-product-card" title="Sony Playstation 5 Console - Slim -1tb">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-15%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/J/118566_1768566234.jpg" alt="Sony Playstation 5 Console - Slim -1tb" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Sony Playstation 5 Console - Slim -1tb">Sony Playstation 5 Console - Slim -1tb</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;1,190,000</div>
+                  <div class="shop-all-old-price">&#8358;1,400,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 26: Nexus Nx-2076 Force Steam Iron -->
+          <a href="https://www.konga.com/product/nexus-nx-2076-force-steam-iron-6800666" class="shop-all-product-card" title="Nexus Nx-2076 Force Steam Iron">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-26%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/B/_1777278499.jpg" alt="Nexus Nx-2076 Force Steam Iron" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Nexus Nx-2076 Force Steam Iron">Nexus Nx-2076 Force Steam Iron</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;24,500</div>
+                  <div class="shop-all-old-price">&#8358;33,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 60%;"></div>
+                </div>
+                <span class="shop-all-sold-text">60% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 27: Midea 1.5hp Air Conditioner Msaf-12crni-25 -->
+          <a href="https://www.konga.com/product/midea-midea-1-5hp-air-conditioner-msaf-12crni-25-6779511" class="shop-all-product-card" title="Midea 1.5hp Air Conditioner Msaf-12crni-25">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-14%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/G/I/118566_1636990175.jpg" alt="Midea 1.5hp Air Conditioner Msaf-12crni-25" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Midea 1.5hp Air Conditioner Msaf-12crni-25">Midea 1.5hp Air Conditioner Msaf-12crni-25</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;354,000</div>
+                  <div class="shop-all-old-price">&#8358;413,500</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 13%;"></div>
+                </div>
+                <span class="shop-all-sold-text">13% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 28: Samsung Galaxy A37 5g 8gb+256gb Charcoal -->
+          <a href="https://www.konga.com/product/samsung-samsung-galaxy-a37-5g-8gb-256gb-charcoal-6987361" class="shop-all-product-card" title="Samsung Galaxy A37 5g 8gb+256gb Charcoal">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-2%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/W/_1777056119.png" alt="Samsung Galaxy A37 5g 8gb+256gb Charcoal" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung Galaxy A37 5g 8gb+256gb Charcoal">Samsung Galaxy A37 5g 8gb+256gb Charcoal</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;535,000</div>
+                  <div class="shop-all-old-price">&#8358;545,500</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 29: Table Tennis Board - 4 Bats - 12 Balls -->
+          <a href="https://www.konga.com/product/table-tennis-board-4-bats-12-balls-6952614" class="shop-all-product-card" title="Table Tennis Board - 4 Bats - 12 Balls">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/F/P/118566_1773740706.png" alt="Table Tennis Board - 4 Bats - 12 Balls" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Table Tennis Board - 4 Bats - 12 Balls">Table Tennis Board - 4 Bats - 12 Balls</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;1,125,000</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 30: Bosch Professional Grinding Machine - 4.5inch -->
+          <a href="https://www.konga.com/product/bosch-professional-grinding-machine-4-5inch-6952625" class="shop-all-product-card" title="Bosch Professional Grinding Machine - 4.5inch">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/M/118566_1759401922.jpg" alt="Bosch Professional Grinding Machine - 4.5inch" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Bosch Professional Grinding Machine - 4.5inch">Bosch Professional Grinding Machine - 4.5inch</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;125,000</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 31: Telecom Tools Set - 51-pieces -->
+          <a href="https://www.konga.com/product/telecom-tools-set-51-pieces-6953269" class="shop-all-product-card" title="Telecom Tools Set - 51-pieces">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/G/118566_1773826804.jpg" alt="Telecom Tools Set - 51-pieces" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Telecom Tools Set - 51-pieces">Telecom Tools Set - 51-pieces</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;181,818</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 32: Complete Mechanical - Tool Box Set -->
+          <a href="https://www.konga.com/product/complete-mechanical-tool-box-set-6952683" class="shop-all-product-card" title="Complete Mechanical - Tool Box Set">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/R/118566_1773744111.jpg" alt="Complete Mechanical - Tool Box Set" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Complete Mechanical - Tool Box Set">Complete Mechanical - Tool Box Set</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;318,182</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 33: BLUE GATE Ups -3kva -->
+          <a href="https://www.konga.com/product/blue-gate-ups-3kva-6952608" class="shop-all-product-card" title="BLUE GATE Ups -3kva">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/C/118566_1773740091.jpg" alt="BLUE GATE Ups -3kva" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="BLUE GATE Ups -3kva">BLUE GATE Ups -3kva</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;517,045</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 34: Universal Swivel Lever Kitchen Sink Mono Mixer Tap -->
+          <a href="https://www.konga.com/product/universal-swivel-lever-kitchen-sink-mono-mixer-tap-6953963" class="shop-all-product-card" title="Universal Swivel Lever Kitchen Sink Mono Mixer Tap">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/R/K/118566_1773850286.png" alt="Universal Swivel Lever Kitchen Sink Mono Mixer Tap" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Universal Swivel Lever Kitchen Sink Mono Mixer Tap">Universal Swivel Lever Kitchen Sink Mono Mixer Tap</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;54,600</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 35: iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty). -->
+          <a href="https://www.konga.com/product/itec-75-smart-uhd-tv-usb-hdmi-dolby-3840-21600-screen-resolution-one-year-warranty-6936783" class="shop-all-product-card" title="iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-15%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/O/247480_1771322737.jpg" alt="iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty)." loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;1,174,956</div>
+                  <div class="shop-all-old-price">&#8358;1,375,960</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 33%;"></div>
+                </div>
+                <span class="shop-all-sold-text">33% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 36: iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty). -->
+          <a href="https://www.konga.com/product/itec-65-smart-uhd-tv-usb-hdmi-dolby-3840-21600-screen-resolution-one-year-warranty-6936755" class="shop-all-product-card" title="iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-3%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/N/V/247480_1771322066.jpg" alt="iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty)." loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;792,105</div>
+                  <div class="shop-all-old-price">&#8358;820,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 37: iTEC 43'' Smart Led Fhd Tv Usb,hdmi, Dolby, 1920*1080 Screen Resolution -->
+          <a href="https://www.konga.com/product/itec-43-smart-led-fhd-tv-usb-hdmi-dolby-1920-1080-screen-resolution-6936811" class="shop-all-product-card" title="iTEC 43'' Smart Led Fhd Tv Usb,hdmi, Dolby, 1920*1080 Screen Resolution">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-28%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/A/247480_1771323264.jpg" alt="iTEC 43'' Smart Led Fhd Tv Usb,hdmi, Dolby, 1920*1080 Screen Resolution" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 43'' Smart Led Fhd Tv Usb,hdmi, Dolby, 1920*1080 Screen Resolution">iTEC 43'' Smart Led Fhd Tv Usb,hdmi, Dolby, 1920*1080 Screen Resolution</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;289,175</div>
+                  <div class="shop-all-old-price">&#8358;400,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 67%;"></div>
+                </div>
+                <span class="shop-all-sold-text">67% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 38: iTEC 43'' Led Fhd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution -->
+          <a href="https://www.konga.com/product/itec-43-led-fhd-tv-usb-hdmi-dolby-1920-1080-screen-resolution-6936832" class="shop-all-product-card" title="iTEC 43'' Led Fhd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-46%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/M/P/247480_1771323977.jpg" alt="iTEC 43'' Led Fhd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 43'' Led Fhd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution">iTEC 43'' Led Fhd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;209,028</div>
+                  <div class="shop-all-old-price">&#8358;390,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 67%;"></div>
+                </div>
+                <span class="shop-all-sold-text">67% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 39: Samsung Galaxy A57 5g 8gb +128gb Gray -->
+          <a href="https://www.konga.com/product/samsung-samsung-galaxy-a57-5g-8gb-128gb-gray-6987362" class="shop-all-product-card" title="Samsung Galaxy A57 5g 8gb +128gb Gray">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-1%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/W/_1777056119.png" alt="Samsung Galaxy A57 5g 8gb +128gb Gray" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung Galaxy A57 5g 8gb +128gb Gray">Samsung Galaxy A57 5g 8gb +128gb Gray</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;505,000</div>
+                  <div class="shop-all-old-price">&#8358;510,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 40: Eddy Blender - 1.5l - 300w -->
+          <a href="https://www.konga.com/product/eddy-blender-1-5l-300w-7064646" class="shop-all-product-card" title="Eddy Blender - 1.5l - 300w">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/A/251919_1791299296.jpg" alt="Eddy Blender - 1.5l - 300w" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Eddy Blender - 1.5l - 300w">Eddy Blender - 1.5l - 300w</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;18,478</div>
+                  <div class="shop-all-old-price">&#8358;26,154</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 41: Mama Home Toastie Sandwich Maker &#8211; 750w -->
+          <a href="https://www.konga.com/product/mama-home-toastie-sandwich-maker-oe-750w-7063854" class="shop-all-product-card" title="Mama Home Toastie Sandwich Maker &#8211; 750w">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/S/251919_1791277313.jpg" alt="Mama Home Toastie Sandwich Maker &#8211; 750w" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Mama Home Toastie Sandwich Maker &#8211; 750w">Mama Home Toastie Sandwich Maker &#8211; 750w</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;14,674</div>
+                  <div class="shop-all-old-price">&#8358;20,769</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 42: Midea 1hp Split Unit Air Conditioner Msaf-09crni-25 (with 3m Kit) -->
+          <a href="https://www.konga.com/product/midea-midea-1hp-split-unit-air-conditioner-msaf-09crni-25-with-3m-kit-7012629" class="shop-all-product-card" title="Midea 1hp Split Unit Air Conditioner Msaf-09crni-25 (with 3m Kit)">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-7%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/C/A/118566_1783941573.jpg" alt="Midea 1hp Split Unit Air Conditioner Msaf-09crni-25 (with 3m Kit)" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Midea 1hp Split Unit Air Conditioner Msaf-09crni-25 (with 3m Kit)">Midea 1hp Split Unit Air Conditioner Msaf-09crni-25 (with 3m Kit)</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;292,000</div>
+                  <div class="shop-all-old-price">&#8358;313,300</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 43: iTEC 43'' Led Full Hd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution (one Year Warranty) -->
+          <a href="https://www.konga.com/product/itec-itec-43-led-full-hd-tv-usb-hdmi-dolby-1920-1080-screen-resolution-one-year-warranty-6571253" class="shop-all-product-card" title="iTEC 43'' Led Full Hd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution (one Year Warranty)">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-6%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/O/_1730131461.png" alt="iTEC 43'' Led Full Hd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution (one Year Warranty)" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 43'' Led Full Hd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution (one Year Warranty)">iTEC 43'' Led Full Hd Tv- Usb, Hdmi, Dolby + 1920 * 1080 Screen Resolution (one Year Warranty)</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;243,362</div>
+                  <div class="shop-all-old-price">&#8358;260,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 5%;"></div>
+                </div>
+                <span class="shop-all-sold-text">5% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 44: Samsung Galaxy A37 5g 8gb+256gb White -->
+          <a href="https://www.konga.com/product/samsung-samsung-galaxy-a37-5g-8gb-256gb-white-6970530" class="shop-all-product-card" title="Samsung Galaxy A37 5g 8gb+256gb White">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-2%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/W/_1777056119.png" alt="Samsung Galaxy A37 5g 8gb+256gb White" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung Galaxy A37 5g 8gb+256gb White">Samsung Galaxy A37 5g 8gb+256gb White</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;535,000</div>
+                  <div class="shop-all-old-price">&#8358;545,500</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 90%;"></div>
+                </div>
+                <span class="shop-all-sold-text">90% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 45: Go Electro Electric Kettle 2ltr - Blue -->
+          <a href="https://www.konga.com/product/go-electro-electric-kettle-2ltr-blue-7064162" class="shop-all-product-card" title="Go Electro Electric Kettle 2ltr - Blue">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/X/J/251919_1791288116.jpg" alt="Go Electro Electric Kettle 2ltr - Blue" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Go Electro Electric Kettle 2ltr - Blue">Go Electro Electric Kettle 2ltr - Blue</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;11,957</div>
+                  <div class="shop-all-old-price">&#8358;16,923</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 18%;"></div>
+                </div>
+                <span class="shop-all-sold-text">18% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 46: LG 75'' QNED AI THINK, AI PROCESSOR, 4K, SMART TV -->
+          <a href="https://www.konga.com/product/lg-lg-75-qned-ai-think-ai-processor-4k-smart-tv-6957171" class="shop-all-product-card" title="LG 75'' QNED AI THINK, AI PROCESSOR, 4K, SMART TV">
+
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/K/O/_1790612483.jpg" alt="LG 75'' QNED AI THINK, AI PROCESSOR, 4K, SMART TV" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="LG 75'' QNED AI THINK, AI PROCESSOR, 4K, SMART TV">LG 75'' QNED AI THINK, AI PROCESSOR, 4K, SMART TV</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;2,850,000</div>
+                  
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 47: Samsung Galaxy A37 5g 8gb+256gb Graygreen -->
+          <a href="https://www.konga.com/product/samsung-samsung-galaxy-a37-5g-8gb-256gb-graygreen-6987359" class="shop-all-product-card" title="Samsung Galaxy A37 5g 8gb+256gb Graygreen">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-2%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/N/_1783662296.png" alt="Samsung Galaxy A37 5g 8gb+256gb Graygreen" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung Galaxy A37 5g 8gb+256gb Graygreen">Samsung Galaxy A37 5g 8gb+256gb Graygreen</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;535,000</div>
+                  <div class="shop-all-old-price">&#8358;545,500</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 33%;"></div>
+                </div>
+                <span class="shop-all-sold-text">33% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 48: Go Electro Electric Kettle &#8211; 2.0l -->
+          <a href="https://www.konga.com/product/go-electro-electric-kettle-oe-2-0l-7064035" class="shop-all-product-card" title="Go Electro Electric Kettle &#8211; 2.0l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/E/N/251919_1791285570.jpg" alt="Go Electro Electric Kettle &#8211; 2.0l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Go Electro Electric Kettle &#8211; 2.0l">Go Electro Electric Kettle &#8211; 2.0l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;11,957</div>
+                  <div class="shop-all-old-price">&#8358;16,923</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 49: Aqua Plus Electric Kettle &#8211; 2.5l -->
+          <a href="https://www.konga.com/product/aqua-plus-electric-kettle-oe-2-5l-7064234" class="shop-all-product-card" title="Aqua Plus Electric Kettle &#8211; 2.5l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Z/R/251919_1791288738.jpg" alt="Aqua Plus Electric Kettle &#8211; 2.5l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Aqua Plus Electric Kettle &#8211; 2.5l">Aqua Plus Electric Kettle &#8211; 2.5l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;11,957</div>
+                  <div class="shop-all-old-price">&#8358;16,923</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 19%;"></div>
+                </div>
+                <span class="shop-all-sold-text">19% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 50: iTEC 65'' Smart Uhd 4k Tv- Usb, Hdmi, Dolby + 3840* 2160 Screen Resolution (one Year Warranty) -->
+          <a href="https://www.konga.com/product/itec-itec-65-smart-uhd-4k-tv-usb-hdmi-dolby-3840-2160-screen-resolution-one-year-warranty-6571290" class="shop-all-product-card" title="iTEC 65'' Smart Uhd 4k Tv- Usb, Hdmi, Dolby + 3840* 2160 Screen Resolution (one Year Warranty)">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-8%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/P/H/_1730119390.png" alt="iTEC 65'' Smart Uhd 4k Tv- Usb, Hdmi, Dolby + 3840* 2160 Screen Resolution (one Year Warranty)" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 65'' Smart Uhd 4k Tv- Usb, Hdmi, Dolby + 3840* 2160 Screen Resolution (one Year Warranty)">iTEC 65'' Smart Uhd 4k Tv- Usb, Hdmi, Dolby + 3840* 2160 Screen Resolution (one Year Warranty)</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;735,346</div>
+                  <div class="shop-all-old-price">&#8358;800,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 80%;"></div>
+                </div>
+                <span class="shop-all-sold-text">80% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 51: Luna Aluminium Pressure Cooker 12l -->
+          <a href="https://www.konga.com/product/luna-aluminium-pressure-cooker-12l-7063892" class="shop-all-product-card" title="Luna Aluminium Pressure Cooker 12l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/N/Q/251919_1791280122.jpg" alt="Luna Aluminium Pressure Cooker 12l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Luna Aluminium Pressure Cooker 12l">Luna Aluminium Pressure Cooker 12l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;44,022</div>
+                  <div class="shop-all-old-price">&#8358;62,308</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 52: Luna Aluminium Pressure Cooker 10l -->
+          <a href="https://www.konga.com/product/luna-aluminium-pressure-cooker-10l-7063949" class="shop-all-product-card" title="Luna Aluminium Pressure Cooker 10l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/W/R/251919_1791281979.jpg" alt="Luna Aluminium Pressure Cooker 10l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Luna Aluminium Pressure Cooker 10l">Luna Aluminium Pressure Cooker 10l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;39,674</div>
+                  <div class="shop-all-old-price">&#8358;56,154</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 25%;"></div>
+                </div>
+                <span class="shop-all-sold-text">25% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 53: Samsung Galaxy A37 5g 6gb+128gb Charcoal -->
+          <a href="https://www.konga.com/product/samsung-samsung-galaxy-a37-5g-6gb-128gb-charcoal-6970531" class="shop-all-product-card" title="Samsung Galaxy A37 5g 6gb+128gb Charcoal">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-5%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/U/H/_1777308079.png" alt="Samsung Galaxy A37 5g 6gb+128gb Charcoal" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Samsung Galaxy A37 5g 6gb+128gb Charcoal">Samsung Galaxy A37 5g 6gb+128gb Charcoal</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;470,100</div>
+                  <div class="shop-all-old-price">&#8358;495,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 55%;"></div>
+                </div>
+                <span class="shop-all-sold-text">55% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 54: Eda Blender 1.5l - 600w Black -->
+          <a href="https://www.konga.com/product/eda-blender-1-5l-600w-black-7064735" class="shop-all-product-card" title="Eda Blender 1.5l - 600w Black">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Y/V/251919_1791300849.jpg" alt="Eda Blender 1.5l - 600w Black" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Eda Blender 1.5l - 600w Black">Eda Blender 1.5l - 600w Black</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;28,261</div>
+                  <div class="shop-all-old-price">&#8358;40,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 55: Oba Multifunctional Blender - 2000w - 2.5l -->
+          <a href="https://www.konga.com/product/oba-multifunctional-blender-2000w-2-5l-7064758" class="shop-all-product-card" title="Oba Multifunctional Blender - 2000w - 2.5l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/E/251919_1791301729.jpg" alt="Oba Multifunctional Blender - 2000w - 2.5l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Oba Multifunctional Blender - 2000w - 2.5l">Oba Multifunctional Blender - 2000w - 2.5l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;52,717</div>
+                  <div class="shop-all-old-price">&#8358;74,615</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 17%;"></div>
+                </div>
+                <span class="shop-all-sold-text">17% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 56: Luna Aluminium Pressure Cooker 7.5l -->
+          <a href="https://www.konga.com/product/luna-aluminium-pressure-cooker-7-5l-7063970" class="shop-all-product-card" title="Luna Aluminium Pressure Cooker 7.5l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/A/U/251919_1791282604.jpg" alt="Luna Aluminium Pressure Cooker 7.5l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Luna Aluminium Pressure Cooker 7.5l">Luna Aluminium Pressure Cooker 7.5l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;38,043</div>
+                  <div class="shop-all-old-price">&#8358;53,846</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 57: Luna Aluminium Pressure Cooker 5l -->
+          <a href="https://www.konga.com/product/luna-aluminium-pressure-cooker-5l-7063991" class="shop-all-product-card" title="Luna Aluminium Pressure Cooker 5l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/J/W/251919_1791283724.jpg" alt="Luna Aluminium Pressure Cooker 5l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Luna Aluminium Pressure Cooker 5l">Luna Aluminium Pressure Cooker 5l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;34,783</div>
+                  <div class="shop-all-old-price">&#8358;49,231</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 25%;"></div>
+                </div>
+                <span class="shop-all-sold-text">25% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 58: Jolly Multifunctional Blender &#8211; 2-in-1 Mill, 1.5l -->
+          <a href="https://www.konga.com/product/jolly-multifunctional-blender-oe-2-in-1-mill-1-5l-7064563" class="shop-all-product-card" title="Jolly Multifunctional Blender &#8211; 2-in-1 Mill, 1.5l">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-29%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/B/M/251919_1791297137.jpg" alt="Jolly Multifunctional Blender &#8211; 2-in-1 Mill, 1.5l" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Jolly Multifunctional Blender &#8211; 2-in-1 Mill, 1.5l">Jolly Multifunctional Blender &#8211; 2-in-1 Mill, 1.5l</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;25,543</div>
+                  <div class="shop-all-old-price">&#8358;36,154</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 20%;"></div>
+                </div>
+                <span class="shop-all-sold-text">20% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 59: Haier Thermocool Hst5000-gs Sandwich Maker -->
+          <a href="https://www.konga.com/product/haier-thermocool-haier-thermocool-hst5000-gs-sandwich-maker-6315480" class="shop-all-product-card" title="Haier Thermocool Hst5000-gs Sandwich Maker">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-49%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/L/K/_1775639554.jpg" alt="Haier Thermocool Hst5000-gs Sandwich Maker" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Haier Thermocool Hst5000-gs Sandwich Maker">Haier Thermocool Hst5000-gs Sandwich Maker</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;20,000</div>
+                  <div class="shop-all-old-price">&#8358;39,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 15%;"></div>
+                </div>
+                <span class="shop-all-sold-text">15% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 60: iTEC 50'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty). -->
+          <a href="https://www.konga.com/product/itec-itec-50-smart-uhd-tv-usb-hdmi-dolby-3840-21600-screen-resolution-one-year-warranty-6639717" class="shop-all-product-card" title="iTEC 50'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-11%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/Q/E/118566_1736779235.jpg" alt="iTEC 50'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty)." loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 50'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">iTEC 50'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;446,722</div>
+                  <div class="shop-all-old-price">&#8358;500,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 88%;"></div>
+                </div>
+                <span class="shop-all-sold-text">88% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 61: iTEC 18 Inch Rechargeable Stand Fan - Brown - Znx-item-001046 -->
+          <a href="https://www.konga.com/product/itec-18-inch-rechargeable-stand-fan-brown-znx-item-001046-6938391" class="shop-all-product-card" title="iTEC 18 Inch Rechargeable Stand Fan - Brown - Znx-item-001046">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-15%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/E/L/247480_1771424382.png" alt="iTEC 18 Inch Rechargeable Stand Fan - Brown - Znx-item-001046" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 18 Inch Rechargeable Stand Fan - Brown - Znx-item-001046">iTEC 18 Inch Rechargeable Stand Fan - Brown - Znx-item-001046</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;76,702</div>
+                  <div class="shop-all-old-price">&#8358;90,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 47%;"></div>
+                </div>
+                <span class="shop-all-sold-text">47% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 62: iTEC 18 Inch Rechargeable Stand Fan - White - Znx-item-001046 -->
+          <a href="https://www.konga.com/product/itec-18-inch-rechargeable-stand-fan-white-znx-item-001046-6938392" class="shop-all-product-card" title="iTEC 18 Inch Rechargeable Stand Fan - White - Znx-item-001046">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-15%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/N/Q/247480_1771424620.png" alt="iTEC 18 Inch Rechargeable Stand Fan - White - Znx-item-001046" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 18 Inch Rechargeable Stand Fan - White - Znx-item-001046">iTEC 18 Inch Rechargeable Stand Fan - White - Znx-item-001046</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;76,702</div>
+                  <div class="shop-all-old-price">&#8358;90,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 50%;"></div>
+                </div>
+                <span class="shop-all-sold-text">50% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 63: iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty). -->
+          <a href="https://www.konga.com/product/itec-65-smart-uhd-tv-usb-hdmi-dolby-3840-21600-screen-resolution-one-year-warranty-6639638" class="shop-all-product-card" title="iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-17%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/V/Z/118566_1736777648.jpg" alt="iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty)." loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">iTEC 65'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;747,722</div>
+                  <div class="shop-all-old-price">&#8358;900,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 41%;"></div>
+                </div>
+                <span class="shop-all-sold-text">41% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 64: iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty). -->
+          <a href="https://www.konga.com/product/itec-itec-75-smart-uhd-tv-usb-hdmi-dolby-3840-21600-screen-resolution-one-year-warranty-6639622" class="shop-all-product-card" title="iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-11%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/E/Y/118566_1736776781.jpg" alt="iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty)." loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).">iTEC 75'' Smart Uhd Tv- Usb, Hdmi, Dolby + 3840 * 21600 Screen Resolution (one Year Warranty).</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;1,070,000</div>
+                  <div class="shop-all-old-price">&#8358;1,200,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 80%;"></div>
+                </div>
+                <span class="shop-all-sold-text">80% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 65: iTEC 43'' Smart Led Full Hd Tv Usb,hdmi, Dolby,1920*1080 Screen Resolution (one Year Warranty). -->
+          <a href="https://www.konga.com/product/itec-itec-43-smart-led-full-hd-tv-usb-hdmi-dolby-1920-1080-screen-resolution-one-year-warranty-6639741" class="shop-all-product-card" title="iTEC 43'' Smart Led Full Hd Tv Usb,hdmi, Dolby,1920*1080 Screen Resolution (one Year Warranty).">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-33%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/T/R/118566_1736779953.jpg" alt="iTEC 43'' Smart Led Full Hd Tv Usb,hdmi, Dolby,1920*1080 Screen Resolution (one Year Warranty)." loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="iTEC 43'' Smart Led Full Hd Tv Usb,hdmi, Dolby,1920*1080 Screen Resolution (one Year Warranty).">iTEC 43'' Smart Led Full Hd Tv Usb,hdmi, Dolby,1920*1080 Screen Resolution (one Year Warranty).</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;302,194</div>
+                  <div class="shop-all-old-price">&#8358;450,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 23%;"></div>
+                </div>
+                <span class="shop-all-sold-text">23% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
+          <!-- Product 66: Tuya Zinc Smart Lock -->
+          <a href="https://www.konga.com/product/tuya-zinc-smart-lock-6906219" class="shop-all-product-card" title="Tuya Zinc Smart Lock">
+            <div class="shop-all-card-top-badges">
+              <span class="shop-all-discount-pill">-20%</span>
+            </div>
+            <div class="shop-all-img-wrap">
+              <img src="https://www-konga-com-res.cloudinary.com/image/upload/f_auto,q_auto,w_400,c_limit/media/catalog/product/H/D/246396_1765552412.jpg" alt="Tuya Zinc Smart Lock" loading="lazy">
+            </div>
+            <div class="shop-all-info-wrap">
+              <p class="shop-all-card-title" title="Tuya Zinc Smart Lock">Tuya Zinc Smart Lock</p>
+              <div class="shop-all-pricing-row">
+                <div>
+                  <div class="shop-all-cur-price">&#8358;176,000</div>
+                  <div class="shop-all-old-price">&#8358;220,000</div>
+                </div>
+              </div>
+              <div class="shop-all-deal-progress">
+                <div class="shop-all-progress-bar">
+                  <div class="shop-all-progress-fill" style="width: 30%;"></div>
+                </div>
+                <span class="shop-all-sold-text">30% sold</span>
+              </div>
+              <span class="shop-all-cart-btn">View Product</span>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
